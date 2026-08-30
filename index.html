@@ -189,6 +189,12 @@ input{font-family:inherit}
 .fl{font-size:10px;font-weight:800;color:var(--ink4);letter-spacing:.07em;text-transform:uppercase;margin-bottom:5px}
 
 .tog-list{display:flex;flex-direction:column;gap:5px}
+/* 2つのトグルを横並びに */
+.tog-pair{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.tog-pair .tog{min-width:0}
+.tog-pair .tog-label{font-size:11.5px;line-height:1.35}
+.tog-pair .tog-sub{font-size:9px;line-height:1.5}
+@media (max-width:520px){.tog-pair{grid-template-columns:1fr}}
 .tog{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:var(--r-sm);border:1.5px solid var(--border);background:var(--white);cursor:pointer;transition:all .2s;user-select:none}
 .tog.on{border-color:#86EFAC;background:var(--green-bg)}
 .tog-txt{flex:1}
@@ -337,14 +343,14 @@ tr:hover td{background:#FAFAFA}
 .note{font-size:3.3px;color:var(--ink4);text-align:center;line-height:1.5;padding-bottom:6px}
 
 /* ===== 初期費用・推移 詳細オーバーレイ ===== */
-#detail-overlay{position:fixed;inset:0;z-index:300;background:#F6F3EA;overflow-y:auto;-webkit-overflow-scrolling:touch}
-#detail-bar{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:10px;background:#fff;border-bottom:2px solid #DDB65A;padding:9px 14px}
+#detail-overlay{position:fixed;inset:0;z-index:300;background:#F6F3EA;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+#detail-bar{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:10px;background:#fff;border-bottom:2px solid #DDB65A;padding:9px 14px;padding-top:calc(9px + env(safe-area-inset-top));padding-left:calc(14px + env(safe-area-inset-left));padding-right:calc(14px + env(safe-area-inset-right))}
 .dbar-title{flex:1;font-size:14px;font-weight:900;color:#8C6516;text-align:center}
 .dbtn{border:none;border-radius:8px;padding:8px 14px;font-size:13px;font-weight:800;font-family:inherit;cursor:pointer;white-space:nowrap}
 .dbtn-close{background:#E7E3D8;color:#453B28}
 .dbtn-print{background:#8C6516;color:#fff}
 @media (max-width:600px){.dbar-title{display:none}.dbtn{padding:8px 10px;font-size:12px}}
-#detail-body{padding:16px}
+#detail-body{padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom));padding-left:calc(16px + env(safe-area-inset-left));padding-right:calc(16px + env(safe-area-inset-right))}
 #detail-body .wrap{max-width:1100px;margin:0 auto}
 #detail-body .phead{display:flex;align-items:center;gap:10px;background:#8C6516;color:#fff;border-radius:14px 14px 0 0;padding:11px 18px}
 #detail-body .phead-t{font-size:15px;font-weight:900;flex:1}
@@ -744,13 +750,15 @@ tr:hover td{background:#FAFAFA}
   </div>
   <div class="blk-body" style="padding-bottom:0">
   <div class="tog-list">
+  <div class="tog-pair">
   <div class="tog" id="tog-oyakoFam" onclick="setSharedToggle('oyakoFam')">
-  <div class="tog-txt"><div class="tog-label" data-txt="togOyakoFam">家族に「スマホデビューU15」契約者あり</div><div class="tog-sub"><span id="oyakoFam-mode"></span><span data-txt="togOyakoFamSub">親子割（家族）−¥550を最大12か月</span></div></div>
+  <div class="tog-txt"><div class="tog-label" data-txt="togOyakoFam">スマホデビュープランU15</div><div class="tog-sub"><span id="oyakoFam-mode"></span><span data-txt="togOyakoFamSub">親子割（家族）−¥550を最大12か月</span></div></div>
   <div class="sw" id="sw-oyakoFam"><div class="sw-k"></div></div>
   </div>
   <div class="tog" id="tog-famSrc" onclick="setSharedToggle('famSrc')">
-  <div class="tog-txt"><div class="tog-label" data-txt="togFamSrc">他回線にポイ活MAX／eximoポイ活あり</div><div class="tog-sub"><span id="famSrc-mode"></span><span data-txt="togFamSrcSub">ファミリー特典ポイントを加算</span></div></div>
+  <div class="tog-txt"><div class="tog-label" data-txt="togFamSrc">ポイ活ファミリー特典</div><div class="tog-sub"><span id="famSrc-mode"></span><span data-txt="togFamSrcSub">ファミリー特典ポイントを加算</span></div></div>
   <div class="sw" id="sw-famSrc"><div class="sw-k"></div></div>
+  </div>
   </div>
   </div>
   </div>
@@ -826,9 +834,9 @@ const TEXT = {
   togDenkiSub:     '−¥110/回線',
   togGas:          'ドコモガスを契約する',
   togGasSub:       '都市ガスエリアのみ対象・でんきセットで還元率UP',
-  togOyakoFam:     '家族に「スマホデビューU15」契約者あり',
+  togOyakoFam:     'スマホデビュープランU15',
   togOyakoFamSub:  'ONでMAX／ポイ活MAX／ahamoの回線に親子割（家族）−¥550を最大12か月適用',
-  togFamSrc:       '他回線にポイ活MAX／eximoポイ活あり',
+  togFamSrc:       'ポイ活ファミリー特典',
   togFamSrcSub:    'ONで保有者にファミリー特典pt（回線数×カード別pt）を計上',
 
   // ── 左パネル：項目名 ──
