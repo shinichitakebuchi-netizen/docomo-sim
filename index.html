@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-<title>ドコモ 料金シミュレーター v8.0</title>
-<link rel="apple-touch-icon" href="data:image/png;base64,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">
-<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>Jafar ─ 料金シミュレーター</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="料金シミュ">
-<meta name="theme-color" content="#8C1D18">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Yomogi&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+<meta name="apple-mobile-web-app-title" content="Jafar">
+<meta name="theme-color" content="#1A1A1A">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style id="print-style">
 .app.expand-mode{height:auto!important;overflow:visible!important;display:block!important}
 .app.expand-mode .hdr{position:sticky;top:0;z-index:50}
@@ -43,19 +43,19 @@
   @page{size:A4 landscape;margin:8mm}
   /* 印刷時は薄いグレー文字を濃くして視認性を確保（画面表示の色はそのまま） */
   :root{
-    --ink3:#3D3830!important;  /* 通常 #78736A → 濃く */
-    --ink4:#4A453C!important;  /* 通常 #9C978C → 濃く */
-    --ink2:#241E14!important;  /* 通常 #453B28 → 濃く */
+    --ink3:#333333!important;  /* 通常 #666666 → 濃く */
+    --ink4:#444444!important;  /* 通常 #8C8C8C → 濃く */
+    --ink2:#1A1A1A!important;  /* 通常 #333333 → 濃く */
   }
   /* 変数を使わず直接薄い色を指定している箇所も濃くする */
-  #panel-right [style*="color:#9CA3AF"],
-  #panel-right [style*="color:#6B7280"],
-  #panel-right [style*="color:#9C978C"],
-  #panel-right [style*="color:#78736A"]{color:#3D3830!important}
-  #detail-body [style*="color:#9C978C"],
-  #detail-body [style*="color:#78736A"],
+  #panel-right [style*="color:#9A9A9A"],
+  #panel-right [style*="color:#6E6E6E"],
+  #panel-right [style*="color:#9A9A9A"],
+  #panel-right [style*="color:#6E6E6E"]{color:#333333!important}
+  #detail-body [style*="color:#9A9A9A"],
+  #detail-body [style*="color:#6E6E6E"],
   #detail-body .drow-l,
-  #detail-body .dcard-sub{color:#3D3830!important}
+  #detail-body .dcard-sub{color:#333333!important}
   html,body{margin:0!important;padding:0!important;background:#fff!important;height:auto!important;overflow:visible!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
   /* 見積もり印刷時は詳細オーバーレイを出さない（詳細印刷時は printing-detail 側で制御） */
   body:not(.printing-detail) #detail-overlay{display:none!important}
@@ -128,49 +128,48 @@
   /* 見積もり下部のメモ欄：通常画面では非表示、印刷/PDF時のみ表示 */
   #print-memo-wrap{display:none!important}
   .note{font-size:3.3px!important;line-height:1.5!important;padding-bottom:2px!important}
-  .print-memo-box{border:1.5px dashed #D8D2C2!important;border-radius:10px!important;padding:7px 14px 3px!important;page-break-inside:avoid!important;break-inside:avoid!important}
-  .print-memo-title{font-size:9px!important;font-weight:800!important;color:#78736A!important;letter-spacing:.06em!important;margin-bottom:4px!important}
-  .print-memo-line{height:14px!important;border-bottom:1px solid #E7E3D8!important}
+  .print-memo-box{border:1.5px dashed #C6C6C6!important;border-radius:10px!important;padding:7px 14px 3px!important;page-break-inside:avoid!important;break-inside:avoid!important}
+  .print-memo-title{font-size:9px!important;font-weight:800!important;color:#6E6E6E!important;letter-spacing:.06em!important;margin-bottom:4px!important}
+  .print-memo-line{height:14px!important;border-bottom:1px solid #E2E2E2!important}
 }
 </style>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{
-  --red:#8C6516;--red-light:#FBF3DF;--red-mid:#DDB65A;
-  --ink:#211B10;--ink2:#453B28;--ink3:#78736A;--ink4:#9C978C;
-  --bg:#F6F3EA;--white:#FFFFFF;--border:#E7E3D8;--border2:#D8D2C2;
-  --green:#0B8F58;--green-bg:#E7F5EC;--green-border:#A7E3C0;
-  --amber:#B8892B;--amber-bg:#FFF7E0;--amber-border:#DDB65A;
-  --blue:#8C6516;--blue-bg:#FBF3DF;--blue-border:#DDB65A;
-  --purple:#7C3AED;--purple-bg:#F5F3FF;--purple-border:#DDD6FE;
-  --shadow-sm:0 1px 3px rgba(0,0,0,.08);
-  --shadow:0 4px 16px rgba(0,0,0,.08);
-  --r:14px;--r-sm:10px;
-  /* ★フォント：ここを書き換えると全体の書体が変わります
-     手書き風  : 'Yomogi', 'Zen Kurenaido', sans-serif
-     手書き(太): 'Zen Kurenaido', 'Yomogi', sans-serif
-     標準ゴシック: 'Noto Sans JP', sans-serif  */
-  --font:'Yomogi','Zen Kurenaido','Noto Sans JP','Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;
-  /* 金額など数字を強調したい箇所は読みやすさ優先で標準ゴシックにする場合はこちら
-     --font-num:'Noto Sans JP',sans-serif;  */
+  /* モノクロ：黒の濃さだけで階層を表現 */
+  --red:#1A1A1A;--red-light:#F0F0F0;--red-mid:#B0B0B0;--red-dark:#000000;
+  --ink:#111111;--ink2:#3A3A3A;--ink3:#6E6E6E;--ink4:#9A9A9A;
+  --bg:#F4F4F4;--white:#FFFFFF;--border:#E2E2E2;--border2:#C6C6C6;
+  /* 意味を持つ色も濃淡で区別（濃い＝重要・強調／薄い＝補足） */
+  --green:#2B2B2B;--green-bg:#F2F2F2;--green-border:#C6C6C6;
+  --amber:#4A4A4A;--amber-bg:#EDEDED;--amber-border:#BDBDBD;
+  --blue:#3A3A3A;--blue-bg:#F0F0F0;--blue-border:#C6C6C6;
+  --purple:#555555;--purple-bg:#EFEFEF;--purple-border:#C6C6C6;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.07);
+  --shadow:0 2px 8px rgba(0,0,0,.10);
+  --r:10px;--r-sm:7px;
+  --font:'Zen Maru Gothic','Hiragino Maru Gothic ProN','Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;
   --font-num:var(--font);
 }
-html,body{height:100%;min-height:100%;background:var(--bg);font-family:var(--font);color:var(--ink);overflow:hidden;overscroll-behavior:none}
+html,body{height:100%;min-height:100%;background:var(--bg);font-family:var(--font);color:var(--ink);overflow:hidden;overscroll-behavior:none;font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+/* 丸ゴシックは太字だと丸みが強く出るため、全体の太さを1段階抑えて細身の印象にする */
+[style*="font-weight:900"],.rcard-price,.sstat-val,.row-total-v,.hks-monthly{font-weight:700!important}
+b,strong{font-weight:700}
 button{cursor:pointer;font-family:inherit;border:none;background:none}
 input{font-family:inherit}
 .app{display:flex;flex-direction:column;height:100vh;height:100svh;height:100dvh;overflow:hidden}
 
-.hdr{background:var(--white);border-bottom:2px solid var(--red);padding:0 12px;padding-top:env(safe-area-inset-top);height:calc(52px + env(safe-area-inset-top));display:flex;align-items:center;gap:8px;flex-shrink:0;box-shadow:var(--shadow-sm);min-width:0;overflow:hidden;padding-left:calc(12px + env(safe-area-inset-left));padding-right:calc(12px + env(safe-area-inset-right))}
-.hdr-mark{width:26px;height:26px;background:var(--red);border-radius:6px;display:flex;align-items:center;justify-content:center}
-.hdr-mark svg{width:14px;height:14px;fill:white}
-.hdr-brand{font-size:16px;font-weight:900;color:var(--red);letter-spacing:-.02em}
-.hdr-sep{width:1px;height:22px;background:var(--border2)}
-.hdr-title{font-size:13px;font-weight:700;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.hdr-badge{display:flex;align-items:center;gap:5px;background:var(--red-light);border:1px solid var(--red-mid);border-radius:20px;padding:3px 11px;flex-shrink:0}
-.hdr-dot{width:6px;height:6px;border-radius:50%;background:var(--red);animation:pulse 2s infinite}
+.hdr{background:var(--red);border-bottom:none;padding:0 12px;padding-top:env(safe-area-inset-top);height:calc(52px + env(safe-area-inset-top));display:flex;align-items:center;gap:8px;flex-shrink:0;box-shadow:var(--shadow-sm);min-width:0;overflow:hidden;padding-left:calc(12px + env(safe-area-inset-left));padding-right:calc(12px + env(safe-area-inset-right))}
+.hdr-mark{width:26px;height:26px;background:var(--white);border-radius:5px;display:flex;align-items:center;justify-content:center}
+.hdr-mark svg{width:14px;height:14px;fill:var(--red)}
+.hdr-brand{font-size:17px;font-weight:900;color:var(--white);letter-spacing:.08em}
+.hdr-sep{width:1px;height:20px;background:rgba(255,255,255,.4)}
+.hdr-title{font-size:13px;font-weight:700;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hdr-badge{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:3px 11px;flex-shrink:0}
+.hdr-dot{width:6px;height:6px;border-radius:50%;background:var(--white);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hdr-badge-txt{font-size:11px;font-weight:800;color:var(--red);letter-spacing:.06em}
-.hdr-reset{display:flex;align-items:center;gap:5px;padding:6px 10px;border-radius:8px;border:1.5px solid var(--border2);color:var(--ink3);font-size:12px;font-weight:700;transition:all .15s;flex-shrink:0;white-space:nowrap}
+.hdr-badge-txt{font-size:11px;font-weight:800;color:var(--white);letter-spacing:.06em}
+.hdr-reset{display:flex;align-items:center;gap:5px;padding:6px 10px;border-radius:20px;border:1.5px solid rgba(255,255,255,.6);background:transparent;color:var(--white);font-size:12px;font-weight:700;transition:all .15s;flex-shrink:0;white-space:nowrap}
 .hdr-reset:hover{border-color:var(--red);color:var(--red);background:var(--red-light)}
 
 .body{display:grid;grid-template-columns:430px 1fr;flex:1;overflow:hidden;transition:grid-template-columns .25s ease}
@@ -196,7 +195,7 @@ input{font-family:inherit}
 .tog-pair .tog-sub{font-size:9px;line-height:1.5}
 @media (max-width:520px){.tog-pair{grid-template-columns:1fr}}
 .tog{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:var(--r-sm);border:1.5px solid var(--border);background:var(--white);cursor:pointer;transition:all .2s;user-select:none}
-.tog.on{border-color:#86EFAC;background:var(--green-bg)}
+.tog.on{border-color:#C6C6C6;background:var(--green-bg)}
 .tog-txt{flex:1}
 .tog-label{font-size:13px;font-weight:700}
 .tog-sub{font-size:10px;color:var(--ink4);margin-top:1px}
@@ -225,7 +224,7 @@ input{font-family:inherit}
 .lines-head{display:flex;align-items:center;justify-content:space-between;padding:9px 13px;background:var(--white);border-bottom:1px solid var(--border)}
 .lines-cnt{font-size:11px;font-weight:800;padding:2px 8px;border-radius:10px;background:var(--red);color:white;margin-left:6px}
 .add-btn{display:flex;align-items:center;gap:5px;padding:7px 13px;border-radius:8px;background:var(--red);color:white;font-size:12px;font-weight:800;transition:all .15s}
-.add-btn:hover{background:#6E4F10}
+.add-btn:hover{background:#2B2B2B}
 .add-btn:active{transform:scale(.97)}
 .line-wrap{padding:11px 13px;display:flex;flex-direction:column;gap:8px}
 
@@ -343,34 +342,34 @@ tr:hover td{background:#FAFAFA}
 .note{font-size:3.3px;color:var(--ink4);text-align:center;line-height:1.5;padding-bottom:6px}
 
 /* ===== 初期費用・推移 詳細オーバーレイ ===== */
-#detail-overlay{position:fixed;inset:0;z-index:300;background:#F6F3EA;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
-#detail-bar{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:10px;background:#fff;border-bottom:2px solid #DDB65A;padding:9px 14px;padding-top:calc(9px + env(safe-area-inset-top));padding-left:calc(14px + env(safe-area-inset-left));padding-right:calc(14px + env(safe-area-inset-right))}
-.dbar-title{flex:1;font-size:14px;font-weight:900;color:#8C6516;text-align:center}
+#detail-overlay{position:fixed;inset:0;z-index:300;background:#F4F4F4;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+#detail-bar{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:10px;background:#fff;border-bottom:2px solid #C6C6C6;padding:9px 14px;padding-top:calc(9px + env(safe-area-inset-top));padding-left:calc(14px + env(safe-area-inset-left));padding-right:calc(14px + env(safe-area-inset-right))}
+.dbar-title{flex:1;font-size:14px;font-weight:900;color:#1A1A1A;text-align:center}
 .dbtn{border:none;border-radius:8px;padding:8px 14px;font-size:13px;font-weight:800;font-family:inherit;cursor:pointer;white-space:nowrap}
-.dbtn-close{background:#E7E3D8;color:#453B28}
-.dbtn-print{background:#8C6516;color:#fff}
+.dbtn-close{background:#E2E2E2;color:#3A3A3A}
+.dbtn-print{background:#1A1A1A;color:#fff}
 @media (max-width:600px){.dbar-title{display:none}.dbtn{padding:8px 10px;font-size:12px}}
 #detail-body{padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom));padding-left:calc(16px + env(safe-area-inset-left));padding-right:calc(16px + env(safe-area-inset-right))}
 #detail-body .wrap{max-width:1100px;margin:0 auto}
-#detail-body .phead{display:flex;align-items:center;gap:10px;background:#8C6516;color:#fff;border-radius:14px 14px 0 0;padding:11px 18px}
+#detail-body .phead{display:flex;align-items:center;gap:10px;background:#1A1A1A;color:#fff;border-radius:14px 14px 0 0;padding:11px 18px}
 #detail-body .phead-t{font-size:15px;font-weight:900;flex:1}
 #detail-body .phead-s{font-size:12px;opacity:.85}
-#detail-body .ptotal{background:#fff;border:2px solid #DDB65A;border-top:none;border-radius:0 0 14px 14px;padding:14px 18px;display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
-#detail-body .ptotal-l{font-size:13px;font-weight:800;color:#453B28}
-#detail-body .ptotal-v{font-size:26px;font-weight:900;color:#8C6516}
-#detail-body .sect{font-size:12px;font-weight:800;color:#78736A;letter-spacing:.05em;margin:0 0 8px 2px}
+#detail-body .ptotal{background:#fff;border:2px solid #C6C6C6;border-top:none;border-radius:0 0 14px 14px;padding:14px 18px;display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
+#detail-body .ptotal-l{font-size:13px;font-weight:800;color:#3A3A3A}
+#detail-body .ptotal-v{font-size:26px;font-weight:900;color:#1A1A1A}
+#detail-body .sect{font-size:12px;font-weight:800;color:#6E6E6E;letter-spacing:.05em;margin:0 0 8px 2px}
 #detail-body .dcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:18px}
-#detail-body .dcard{background:#fff;border:2px solid #E7E3D8;border-radius:14px;overflow:hidden}
+#detail-body .dcard{background:#fff;border:2px solid #E2E2E2;border-radius:14px;overflow:hidden}
 #detail-body .dcard-head{padding:10px 13px;display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
 #detail-body .dcard-name{font-size:14px;font-weight:900}
-#detail-body .dcard-sub{font-size:10px;color:#9C978C;margin-top:2px}
+#detail-body .dcard-sub{font-size:10px;color:#9A9A9A;margin-top:2px}
 #detail-body .dcard-total{font-size:18px;font-weight:900;white-space:nowrap}
 #detail-body .dcard-body{padding:9px 13px}
-#detail-body .drow{display:flex;justify-content:space-between;gap:10px;align-items:baseline;padding:4px 0;border-bottom:1px solid #F0EDE4;font-size:11px}
+#detail-body .drow{display:flex;justify-content:space-between;gap:10px;align-items:baseline;padding:4px 0;border-bottom:1px solid #EFEFEF;font-size:11px}
 #detail-body .drow:last-child{border-bottom:none}
-#detail-body .drow-l{color:#78736A;flex:1;min-width:0}
+#detail-body .drow-l{color:#6E6E6E;flex:1;min-width:0}
 #detail-body .drow-v{font-weight:700;white-space:nowrap}
-#detail-body .trend{background:#fff;border:1.5px solid #E7E3D8;border-radius:14px;padding:14px}
+#detail-body .trend{background:#fff;border:1.5px solid #E2E2E2;border-radius:14px;padding:14px}
 @media (max-width:700px){#detail-body .dcards{grid-template-columns:1fr}}
 /* 詳細ページを印刷する時は、詳細だけを出力する */
 @media print{
@@ -390,11 +389,11 @@ tr:hover td{background:#FAFAFA}
   /* 詳細ページ印刷時も薄い文字を濃くする */
   body.printing-detail #detail-body .drow-l,
   body.printing-detail #detail-body .dcard-sub,
-  body.printing-detail #detail-body .sect{color:#3D3830!important}
-  body.printing-detail #detail-body [style*="color:#9CA3AF"],
-  body.printing-detail #detail-body [style*="color:#6B7280"],
+  body.printing-detail #detail-body .sect{color:#333333!important}
+  body.printing-detail #detail-body [style*="color:#9A9A9A"],
+  body.printing-detail #detail-body [style*="color:#6E6E6E"],
   body.printing-detail #detail-body [style*="color:var(--ink4)"],
-  body.printing-detail #detail-body [style*="color:var(--ink3)"]{color:#3D3830!important}
+  body.printing-detail #detail-body [style*="color:var(--ink3)"]{color:#333333!important}
 }
 .fade-in{animation:fadeIn .2s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
@@ -438,19 +437,19 @@ tr:hover td{background:#FAFAFA}
 <div class="app">
 <div class="hdr">
   <div class="hdr-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></div>
-  <span class="hdr-brand">docomo</span>
+  <span class="hdr-brand">Jafar</span>
   <div class="hdr-sep"></div>
-  <span class="hdr-title" data-txt="appTitle">料金シミュレーター</span><span style="font-size:10px;font-weight:700;color:var(--ink4);margin-left:2px">v8.0</span>
+  <span class="hdr-title" data-txt="appTitle">料金シミュレーター</span><span style="font-size:10px;font-weight:700;color:rgba(255,255,255,.6);margin-left:2px">v8.0</span>
   <div class="hdr-badge" style="margin-left:auto"><div class="hdr-dot"></div><span class="hdr-badge-txt" data-txt="staffBadge">STAFF TOOL</span></div>
   <button id="panel-toggle" onclick="togglePanel()" title="左パネルを開閉"
-  style="display:flex;align-items:center;padding:6px 10px;border-radius:8px;border:1.5px solid var(--border2);color:var(--ink3);font-size:13px;font-weight:700;flex-shrink:0">
+  style="display:flex;align-items:center;padding:6px 10px;border-radius:20px;border:1.5px solid rgba(255,255,255,.6);background:transparent;color:var(--white);font-size:13px;font-weight:700;flex-shrink:0">
   <span id="panel-toggle-icon">◀</span>
   </button>
   <button class="hdr-reset" onclick="resetAll()">↺<span class="rst-txt" data-txt="btnReset"> リセット</span></button>
-<button id="btn-otoku" onclick="showOtoku()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:8px;background:#0B8F58;color:white;font-size:12px;font-weight:800;flex-shrink:0;white-space:nowrap">💳<span class="btn-est-txt"> カード種別</span><span class="btn-est-sp" style="display:none"> カード</span></button>
-<button id="btn-net" onclick="showNetCompare()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:8px;background:#0369A1;color:white;font-size:12px;font-weight:800;flex-shrink:0;white-space:nowrap">🌐<span class="btn-est-txt"> ネット種別</span><span class="btn-est-sp" style="display:none"> ネット</span></button>
-  <button id="btn-estimate" onclick="showPrintMenu()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:8px;background:var(--red);color:white;font-size:12px;font-weight:800;flex-shrink:0;white-space:nowrap">📄<span class="btn-est-txt" data-txt="btnPdf"> PDFに保存</span><span class="btn-est-sp" style="display:none"> PDF</span></button>
-  <button id="btn-detail" onclick="openDetailPage()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:8px;background:var(--amber);color:white;font-size:12px;font-weight:800;flex-shrink:0;white-space:nowrap">🧾<span class="btn-est-txt"> 初期費用・推移</span><span class="btn-est-sp" style="display:none"> 内訳</span></button>
+<button id="btn-otoku" onclick="showOtoku()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:12px;font-weight:800;flex-shrink:0;white-space:nowrap">💳<span class="btn-est-txt"> カード種別</span><span class="btn-est-sp" style="display:none"> カード</span></button>
+<button id="btn-net" onclick="showNetCompare()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:12px;font-weight:800;flex-shrink:0;white-space:nowrap">🌐<span class="btn-est-txt"> ネット種別</span><span class="btn-est-sp" style="display:none"> ネット</span></button>
+  <button id="btn-estimate" onclick="showPrintMenu()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:12px;font-weight:800;flex-shrink:0;white-space:nowrap">📄<span class="btn-est-txt" data-txt="btnPdf"> PDFに保存</span><span class="btn-est-sp" style="display:none"> PDF</span></button>
+  <button id="btn-detail" onclick="openDetailPage()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:12px;font-weight:800;flex-shrink:0;white-space:nowrap">🧾<span class="btn-est-txt"> 初期費用・推移</span><span class="btn-est-sp" style="display:none"> 内訳</span></button>
 </div>
 
 <div class="mob-tabs" id="mob-tabs">
@@ -492,7 +491,7 @@ tr:hover td{background:#FAFAFA}
   </select>
   </div>
   <div id="row-syugou-link" style="display:none">
-  <a href="https://hikariweb.ntt-east.co.jp/login.php" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#FBF3DF;border:1.5px solid var(--amber-border);text-decoration:none;color:var(--amber);font-size:11px;font-weight:800">
+  <a href="https://hikariweb.ntt-east.co.jp/login.php" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#F0F0F0;border:1.5px solid var(--amber-border);text-decoration:none;color:var(--amber);font-size:11px;font-weight:800">
   <span style="font-size:14px">🏢</span><span style="flex:1">建物の設備状況を確認する（NTT東日本）</span><span style="font-size:13px">↗</span>
   </a>
   <div style="font-size:9px;color:var(--ink4);line-height:1.6;margin-top:2px">※ 集合住宅は配線方式により提供可否・料金が変わる場合があります</div>
@@ -633,7 +632,7 @@ tr:hover td{background:#FAFAFA}
   <div id="home-denwa-detail" style="display:none">
   <div class="hk-sub">
   <div style="font-size:11px;font-weight:800;color:var(--blue)">☎️ homeでんわ 詳細</div>
-  <a href="https://www.docomo.ne.jp/home_denwa/area/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#E8F2FA;border:1.5px solid #A9CDE8;text-decoration:none;color:var(--blue);font-size:11px;font-weight:800;margin-bottom:2px">
+  <a href="https://www.docomo.ne.jp/home_denwa/area/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#F0F0F0;border:1.5px solid #C6C6C6;text-decoration:none;color:var(--blue);font-size:11px;font-weight:800;margin-bottom:2px">
   <span style="font-size:14px">📍</span><span style="flex:1">提供エリアを確認する</span><span style="font-size:13px">↗</span>
   </a>
   <div style="font-size:9px;color:var(--ink4);line-height:1.6;margin-bottom:4px">※ homeでんわの提供エリアは一部地域のみです。申込前に必ずご確認ください</div>
@@ -898,20 +897,20 @@ const TEXT = {
 // mpr: ケータイ料金還元率(×10。100=10%) ※MAX系のみ対象
 // poi: ポイ活特典（ショッピング額に対する還元、上限pt付き）※ポイ活系のみ
 const PLANS = {
-  sma_u15_5:{n:"デビューU15(5GB以下)",fn:"スマホデビューU15（5GB以下）",data:"5GB以下",base:2508,col:"#0B8F58",
+  sma_u15_5:{n:"デビューU15(5GB以下)",fn:"スマホデビューU15（5GB以下）",data:"5GB以下",base:2508,col:"#2B2B2B",
     u15:true, oyakoDisc:1100, familyDisc:false,setDisc:true, noHikariDenki:true, capGb:5,
     mpr:{platinum:0,gold:0,gold_u:0,dcard:0,none:0},restricted:true},
-  sma_u15_20:{n:"デビューU15(20GB以下)",fn:"スマホデビューU15（5GB超20GB以下）",data:"5GB超20GB以下",base:3278,col:"#0B8F58",
+  sma_u15_20:{n:"デビューU15(20GB以下)",fn:"スマホデビューU15（5GB超20GB以下）",data:"5GB超20GB以下",base:3278,col:"#2B2B2B",
     u15:true, oyakoDisc:1870, familyDisc:false,setDisc:true, noHikariDenki:true, capGb:20,
     mpr:{platinum:0,gold:0,gold_u:0,dcard:0,none:0},restricted:true},
-  u15_5_old:{n:"旧U15(5GB)",fn:"U15はじめてスマホ（5GB・2026/8/6以前契約の継続案内用）",data:"5GB",base:1980,col:"#9C978C",
+  u15_5_old:{n:"旧U15(5GB)",fn:"U15はじめてスマホ（5GB・2026/8/6以前契約の継続案内用）",data:"5GB",base:1980,col:"#9A9A9A",
     u15:true, u15Old:true, ispDisc:165, u15pt:500, u15PayOverride:187, familyDisc:false,setDisc:false, noHikariDenki:true, capGb:5,
     mpr:{platinum:0,gold:0,gold_u:0,dcard:0,none:0},restricted:true},
-  u15_10_old:{n:"旧U15(10GB)",fn:"U15はじめてスマホ（10GB・2026/8/6以前契約の継続案内用）",data:"10GB",base:2860,col:"#9C978C",
+  u15_10_old:{n:"旧U15(10GB)",fn:"U15はじめてスマホ（10GB・2026/8/6以前契約の継続案内用）",data:"10GB",base:2860,col:"#9A9A9A",
     u15:true, u15Old:true, ispDisc:165, u15pt:1000, u15PayOverride:187, familyDisc:false,setDisc:false, noHikariDenki:true, capGb:10,
     mpr:{platinum:0,gold:0,gold_u:0,dcard:0,none:0},restricted:true},
 
-  docomo_max:{n:"MAX",fn:"ドコモ MAX",data:"〜1GB〜無制限",base:8448,col:"#8C6516",
+  docomo_max:{n:"MAX",fn:"ドコモ MAX",data:"〜1GB〜無制限",base:8448,col:"#1A1A1A",
   familyDisc:true,setDisc:true, capGb:9999, oyakoFamEligible:true, keitai:true, ahamoMaxCp:2750,
   tiers:[{l:"〜1GB ¥5,698",v:5698,capGb:1},{l:"〜3GB ¥6,798",v:6798,capGb:3},{l:"3GB〜 ¥8,448",v:8448,capGb:9999}],
   tiersYoung:[
@@ -921,34 +920,34 @@ const PLANS = {
   ],
   mpr:{platinum:100,gold:100,gold_u:50,dcard:0,none:0}},
 
-  poi_max:{n:"ポイ活MAX",fn:"ドコモ ポイ活 MAX（無制限）",data:"無制限",base:11748,col:"#B8892B",
+  poi_max:{n:"ポイ活MAX",fn:"ドコモ ポイ活 MAX（無制限）",data:"無制限",base:11748,col:"#4A4A4A",
   familyDisc:true,setDisc:true, capGb:9999, famSrc:true, oyakoFamEligible:true, keitai:true, ahamoMaxCp:2200,
   poi:{cap:5000, rate:{none:0,dcard:0.03,gold_u:0.05,gold:0.05,platinum:0.10}},
   mpr:{platinum:100,gold:100,gold_u:50,dcard:0,none:0}},
 
-  poi20_20:{n:"ポイ活20(20GB)",fn:"ドコモ ポイ活 20（〜20GB）",data:"〜20GB",base:7898,col:"#B8892B",
+  poi20_20:{n:"ポイ活20(20GB)",fn:"ドコモ ポイ活 20（〜20GB）",data:"〜20GB",base:7898,col:"#4A4A4A",
   familyDisc:true,setDisc:true, capGb:20, keitai:true,
   poi:{cap:2500, rate:{none:0,dcard:0.01,gold_u:0.02,gold:0.02,platinum:0.05}},
   mpr:{platinum:100,gold:100,gold_u:50,dcard:0,none:0}},
-  poi20_un:{n:"ポイ活20(無制限)",fn:"ドコモ ポイ活 20（無制限）",data:"無制限",base:9570,col:"#B8892B",
+  poi20_un:{n:"ポイ活20(無制限)",fn:"ドコモ ポイ活 20（無制限）",data:"無制限",base:9570,col:"#4A4A4A",
   familyDisc:true,setDisc:true, capGb:9999, keitai:true,
   poi:{cap:2500, rate:{none:0,dcard:0.01,gold_u:0.02,gold:0.02,platinum:0.05}},
   mpr:{platinum:100,gold:100,gold_u:50,dcard:0,none:0}},
 
-  mini_4:{n:"mini 6GB",fn:"ドコモ mini（6GB・期間限定+2GB）",data:"6GB",base:2750,col:"#78736A",
+  mini_4:{n:"mini 6GB",fn:"ドコモ mini（6GB・期間限定+2GB）",data:"6GB",base:2750,col:"#6E6E6E",
   familyDisc:false,setDisc:true, capGb:6,
   mpr:{platinum:10,gold:10,gold_u:10,dcard:5,none:0},restricted:true},
-  mini_10:{n:"mini 12GB",fn:"ドコモ mini（12GB・期間限定+2GB）",data:"12GB",base:3850,col:"#78736A",
+  mini_10:{n:"mini 12GB",fn:"ドコモ mini（12GB・期間限定+2GB）",data:"12GB",base:3850,col:"#6E6E6E",
   familyDisc:false,setDisc:true, capGb:12,
   mpr:{platinum:10,gold:10,gold_u:10,dcard:5,none:0},restricted:true},
 
-  ahamo:{n:"ahamo",fn:"ahamo（40GB・期間限定+10GB）",data:"40GB",base:2970,col:"#0B8F58",
+  ahamo:{n:"ahamo",fn:"ahamo（40GB・期間限定+10GB）",data:"40GB",base:2970,col:"#2B2B2B",
   familyDisc:false,setDisc:false, capGb:40, oyakoFamEligible:true,
   mpr:{platinum:10,gold:10,gold_u:10,dcard:5,none:0},restricted:true},
-  ahamo_big:{n:"ahamo大盛り",fn:"ahamo大盛り（120GB・期間限定+10GB）",data:"120GB",base:4950,col:"#0B8F58",
+  ahamo_big:{n:"ahamo大盛り",fn:"ahamo大盛り（120GB・期間限定+10GB）",data:"120GB",base:4950,col:"#2B2B2B",
   familyDisc:false,setDisc:false, capGb:120,
   mpr:{platinum:10,gold:10,gold_u:10,dcard:5,none:0},restricted:true},
-  ahamo_poi:{n:"ahamoポイ活",fn:"ahamoポイ活（120GB・期間限定+10GB）",data:"120GB",base:7150,col:"#0B8F58",
+  ahamo_poi:{n:"ahamoポイ活",fn:"ahamoポイ活（120GB・期間限定+10GB）",data:"120GB",base:7150,col:"#2B2B2B",
   familyDisc:false,setDisc:false, capGb:120,
   poi:{cap:4000, rate:{none:0,dcard:0.03,gold_u:0.05,gold:0.05,platinum:0.10}},
   mpr:{platinum:0,gold:0,gold_u:0,dcard:0,none:0},restricted:true},
@@ -956,15 +955,15 @@ const PLANS = {
 
 // ---- カード定義 ----
 const CARDS = {
-  platinum:{n:"PLATINUM",fn:"dカード PLATINUM",fee:29700,disc:550,col:"#8C6516",emoji:"💳",ageOnly:false,
+  platinum:{n:"PLATINUM",fn:"dカード PLATINUM",fee:29700,disc:550,col:"#1A1A1A",emoji:"💳",ageOnly:false,
     annualBonus:(s)=>Math.min(Math.floor(s/1e6),4)*10000}, // 年間ご利用額特典：100万円ごと1万円・最大4万円（4段階制）
-  gold:  {n:"GOLD",  fn:"dカード GOLD",  fee:11000,disc:550,col:"#B8892B",emoji:"💳",ageOnly:false,
+  gold:  {n:"GOLD",  fn:"dカード GOLD",  fee:11000,disc:550,col:"#4A4A4A",emoji:"💳",ageOnly:false,
     annualBonus:(s)=>s>=1e6?10000:0}, // 年間ご利用額特典：100万円以上で一律1万円（単一段階・複数の2026年最新情報で確認済み）
-  gold_u:{n:"GOLD U",fn:"dカード GOLD U",fee:3300,disc:550,col:"#7C3AED",emoji:"💳",ageOnly:true,
+  gold_u:{n:"GOLD U",fn:"dカード GOLD U",fee:3300,disc:550,col:"#555555",emoji:"💳",ageOnly:true,
     annualBonus:()=>0}, // GOLD Uは年間ご利用額特典の対象外
-  dcard: {n:"dカード",fn:"dカード",fee:0,disc:220,col:"#8C6516",emoji:"💳",ageOnly:false,
+  dcard: {n:"dカード",fn:"dカード",fee:0,disc:220,col:"#1A1A1A",emoji:"💳",ageOnly:false,
     annualBonus:()=>0},
-  none:  {n:"なし",fn:"カードなし",fee:0,disc:0,col:"#9CA3AF",emoji:"",ageOnly:false,
+  none:  {n:"なし",fn:"カードなし",fee:0,disc:0,col:"#9A9A9A",emoji:"",ageOnly:false,
     annualBonus:()=>0},
 };
 
@@ -1046,7 +1045,7 @@ const DEVICE_CATALOG = {
     {n:"らくらくスマートフォン", p:67144, zMnp:9240, zHen:9240},
   ],
 };
-const LINE_COLORS=["#8C6516","#B8892B","#0B8F58","#7C3AED","#78736A","#453B28"];
+const LINE_COLORS=["#1A1A1A","#4A4A4A","#2B2B2B","#555555","#6E6E6E","#3A3A3A"];
 const LINE_LABELS=["Aさん","Bさん","Cさん","Dさん","Eさん","Fさん"];
 
 let S={
@@ -1223,10 +1222,10 @@ function renderDenkiDetail(){
   if(desc){
     if(plan==='green'){
       desc.innerHTML=`🌿 <b>Green</b>：基本料金 <b>+¥500/月</b><br>カードなし0.5% / dカード3% / GOLD・GOLD U6% / PLATINUM12% 還元${gasBonusNote}`;
-      desc.style.borderLeft='3px solid #0B8F58';
+      desc.style.borderLeft='3px solid #2B2B2B';
     } else {
       desc.innerHTML=`📋 <b>Basic</b>：基本料金 <b>追加なし</b><br>カードなし0.5% / dカード1% / GOLD・GOLD U2% / PLATINUM2% 還元${gasBonusNote}`;
-      desc.style.borderLeft='3px solid #78736A';
+      desc.style.borderLeft='3px solid #6E6E6E';
     }
   }
   const inp=document.getElementById('inp-denki-bill');
@@ -1236,7 +1235,7 @@ function renderDenkiDetail(){
     const pts=calcDenkiPts(plan,card,monthlyBill);
     const rate=denkiRateFor(plan,card);
     const cardName=card==='none'?'カードなし':CARDS[card].n;
-    preview.innerHTML=`<div style="padding:8px 10px;border-radius:8px;background:${plan==='green'?'#E7F5EC':'#F3F4F6'};border:1.5px solid ${plan==='green'?'#A7E3C0':'#D1D5DB'}">
+    preview.innerHTML=`<div style="padding:8px 10px;border-radius:8px;background:${plan==='green'?'#F2F2F2':'#F2F2F2'};border:1.5px solid ${plan==='green'?'#C6C6C6':'#C6C6C6'}">
     <div style="font-size:11px;color:var(--ink4);margin-bottom:3px">月間ポイント試算（${cardName}・${plan==='green'?'Green':'Basic'} ${rate}%）</div>
     <div style="font-size:18px;font-weight:900;color:${plan==='green'?'var(--green)':'var(--ink2)'}">+${pts.toLocaleString()}pt<span style="font-size:11px;font-weight:400;color:var(--ink4)">/月</span></div>
     <div style="font-size:10px;color:var(--ink4)">年間 +${(pts*12).toLocaleString()}pt</div>
@@ -1266,7 +1265,7 @@ function renderGasDetail(){
   const preview=document.getElementById('gas-pts-preview');
   if(preview&&S.gasCfg.monthlyBill>0){
     const pts=calcGasPts(S.gasCfg.monthlyBill);
-    preview.innerHTML=`<div style="padding:8px 10px;border-radius:8px;background:#FFF7E0;border:1.5px solid #DDB65A">
+    preview.innerHTML=`<div style="padding:8px 10px;border-radius:8px;background:#EDEDED;border:1.5px solid #C6C6C6">
     <div style="font-size:11px;color:var(--ink4);margin-bottom:3px">月間ポイント試算（還元率 ${gasRate()}%・でんきセット${S.shared.denki?'あり':'なし'}）</div>
     <div style="font-size:18px;font-weight:900;color:var(--amber)">+${pts.toLocaleString()}pt<span style="font-size:11px;font-weight:400;color:var(--ink4)">/月</span></div>
     <div style="font-size:10px;color:var(--ink4)">年間 +${(pts*12).toLocaleString()}pt ／ ガス料金自体は地域ガス会社と同額</div>
@@ -2131,12 +2130,12 @@ function renderLines(){
     el.style.borderColor=line.open?col+'66':'var(--border)';
 
     const roleTag=isHolder
-      ?`<span style="font-size:10px;padding:2px 7px;border-radius:5px;font-weight:800;background:#EDE9FE;color:#7C3AED;white-space:nowrap">💳 保有者</span>`
+      ?`<span style="font-size:10px;padding:2px 7px;border-radius:5px;font-weight:800;background:#EFEFEF;color:#555555;white-space:nowrap">💳 保有者</span>`
       :line.cardRole==="billedTogether"
-      ?`<span style="font-size:10px;padding:2px 7px;border-radius:5px;font-weight:800;background:#FBF3DF;color:#8C6516;white-space:nowrap">一括請求</span>`
+      ?`<span style="font-size:10px;padding:2px 7px;border-radius:5px;font-weight:800;background:#F0F0F0;color:#1A1A1A;white-space:nowrap">一括請求</span>`
       :line.cardRole==="familyCard"
-      ?`<span style="font-size:10px;padding:2px 7px;border-radius:5px;font-weight:800;background:#E7F5EC;color:#0B8F58;white-space:nowrap">👨‍👩‍👧 家族カード</span>`
-      :`<span style="font-size:10px;padding:2px 7px;border-radius:5px;font-weight:800;background:#F3F4F6;color:#9CA3AF;white-space:nowrap">対象外</span>`;
+      ?`<span style="font-size:10px;padding:2px 7px;border-radius:5px;font-weight:800;background:#F2F2F2;color:#2B2B2B;white-space:nowrap">👨‍👩‍👧 家族カード</span>`
+      :`<span style="font-size:10px;padding:2px 7px;border-radius:5px;font-weight:800;background:#F2F2F2;color:#9A9A9A;white-space:nowrap">対象外</span>`;
 
     const planWarnMsg=plan.restricted
       ?(!plan.familyDisc&&!plan.setDisc?'⚠️ みんなドコモ割・セット割・dカード割 全て対象外（カウントのみ）'
@@ -2181,15 +2180,15 @@ function renderLines(){
     <div class="fl">${TEXT.lblDataTier}</div>
     ${plan.tiersYoung&&(line.age==='u22'||line.age==='u29')?`<div style="margin-bottom:5px">
     <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
-    <button style="padding:5px 11px;border-radius:18px;border:1.5px solid ${line.u22?'#7C3AED':'var(--border2)'};font-size:11px;font-weight:700;color:${line.u22?'white':'var(--ink3)'};background:${line.u22?'#7C3AED':'var(--white)'};cursor:pointer"
+    <button style="padding:5px 11px;border-radius:18px;border:1.5px solid ${line.u22?'#555555':'var(--border2)'};font-size:11px;font-weight:700;color:${line.u22?'white':'var(--ink3)'};background:${line.u22?'#555555':'var(--white)'};cursor:pointer"
     onclick="setLineU22(${line.id},${!line.u22})">U22/U29割引</button>
     </div>
-    ${line.u22?`<select class="sel" onchange="setLineYoungType(${line.id},this.value)" style="margin-bottom:4px;border-color:#7C3AED;font-size:11px">
+    ${line.u22?`<select class="sel" onchange="setLineYoungType(${line.id},this.value)" style="margin-bottom:4px;border-color:#555555;font-size:11px">
     <option value="u29" ${line.age==='u29'?'selected':''} ${line.age!=='u29'?'disabled':''}>U29割（最大3か月）</option>
     <option value="u22" ${line.age==='u22'?'selected':''} ${line.age!=='u22'?'disabled':''}>U22割（最大7か月）</option>
     </select>`:''}
     </div>`:''}
-    ${line.u22&&plan.tiersYoung&&(line.age==='u22'||line.age==='u29')?`<select class="sel" onchange="setLineU22Tier(${line.id},Number(this.value))" style="font-size:11px;border-color:#7C3AED">
+    ${line.u22&&plan.tiersYoung&&(line.age==='u22'||line.age==='u29')?`<select class="sel" onchange="setLineU22Tier(${line.id},Number(this.value))" style="font-size:11px;border-color:#555555">
     ${plan.tiersYoung.map((t,idx)=>`<option value="${idx}" ${(line.u22tierIdx??2)===idx?'selected':''}>${t.l}</option>`).join('')}
     </select>`:`<select class="sel" onchange="setLineTier(${line.id},Number(this.value))" style="font-size:11px;border-color:${plan.col}">
     ${plan.tiers.map(t=>`<option value="${t.v}" ${line.planTier===t.v&&!line.u22?'selected':''}>${t.l}</option>`).join('')}
@@ -2215,7 +2214,7 @@ function renderLines(){
       <span style="font-size:12px;font-weight:800;color:var(--ink2);white-space:nowrap">💳 カードの種類・利用額</span>
       <span style="font-size:9px;color:var(--ink4);margin-left:auto;flex-shrink:0;display:inline-block;${open?'transform:rotate(180deg)':''}">▼</span>
       </div>
-      <div style="font-size:10px;color:#7C3AED;font-weight:700;margin-top:3px;line-height:1.4">${esc(summary)}</div>
+      <div style="font-size:10px;color:#555555;font-weight:700;margin-top:3px;line-height:1.4">${esc(summary)}</div>
       </div>
       ${open?`<div style="padding:0 10px 10px;display:flex;flex-direction:column;gap:9px;border-top:1px solid var(--border)">
       <div style="margin-top:9px">
@@ -2311,7 +2310,7 @@ function renderLines(){
       ${(()=>{
         const man=line.discManualItems||{};
         const anyManual=Object.values(man).some(v=>v===true);
-        return `<span style="font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;white-space:nowrap;line-height:1.2;background:${anyManual?'#FFF7E0':'#E7F5EC'};color:${anyManual?'var(--amber)':'var(--green)'}">${anyManual?'一部手動':'自動'}</span>`;
+        return `<span style="font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;white-space:nowrap;line-height:1.2;background:${anyManual?'#EDEDED':'#F2F2F2'};color:${anyManual?'var(--amber)':'var(--green)'}">${anyManual?'一部手動':'自動'}</span>`;
       })()}
       <span style="font-size:9px;color:var(--ink4);margin-left:auto;flex-shrink:0;display:inline-block;${open?'transform:rotate(180deg)':''}">▼</span>
       </div>
@@ -2387,7 +2386,7 @@ function renderLines(){
     </div>
     ${line.plan==='ahamo'?`<div>
     <div class="fl">データオプション（ahamo）</div>
-    <select class="sel" onchange="setLineData(${line.id},this.value)" style="border-color:#0B8F58">
+    <select class="sel" onchange="setLineData(${line.id},this.value)" style="border-color:#2B2B2B">
     <option value="none" ${(line.dataOpt||'none')==='none'?'selected':''}>なし</option>
     <option value="ahamo_ohmori" ${line.dataOpt==='ahamo_ohmori'?'selected':''}>大盛り（ahamo大盛りプランをご検討ください）</option>
     </select>
@@ -2568,7 +2567,7 @@ function calcInitialCostGroups(){
     if(hkKoujiIsIkkatsu())items.push({label:`工事費（一括 ¥${hkKoujiTotal().toLocaleString()}）`,amt:hkKoujiTotal()});
     else if(hkKoujiMonths())items.push({label:`工事費（${hkKoujiMonths()}回・1回目）`,amt:hkKoujiFirst()});
     const list=items.filter(it=>it.amt>0);
-    groups.push({title:hkName(),sub:'ドコモ光',color:'#8C6516',items:list,total:list.reduce((s,it)=>s+it.amt,0)});
+    groups.push({title:hkName(),sub:'ドコモ光',color:'#1A1A1A',items:list,total:list.reduce((s,it)=>s+it.amt,0)});
   }
   if(S.shared.home5g){
     const items=[
@@ -2580,7 +2579,7 @@ function calcInitialCostGroups(){
       if(a>0)items.push({label:'本体代（一括）',amt:a});
     }
     const list=items.filter(it=>it.amt>0);
-    groups.push({title:'home 5G',sub:'インターネット',color:'#0B8F58',items:list,total:list.reduce((s,it)=>s+it.amt,0)});
+    groups.push({title:'home 5G',sub:'インターネット',color:'#2B2B2B',items:list,total:list.reduce((s,it)=>s+it.amt,0)});
   }
   if(S.shared.homeDenwa){
     const numberFee=2200+(S.homeDenwaCfg.numberType==='portability'?2200:0);
@@ -2590,7 +2589,7 @@ function calcInitialCostGroups(){
     ];
     if(homeDenwaInitialDevice()>0)items.push({label:'HP01端末代（一括）',amt:homeDenwaInitialDevice()});
     const list=items.filter(it=>it.amt>0);
-    groups.push({title:'homeでんわ',sub:'固定電話',color:'#B8892B',items:list,total:list.reduce((s,it)=>s+it.amt,0)});
+    groups.push({title:'homeでんわ',sub:'固定電話',color:'#4A4A4A',items:list,total:list.reduce((s,it)=>s+it.amt,0)});
   }
   return groups;
 }
@@ -2759,9 +2758,9 @@ function buildPaymentGraph(){
   }
   const rows=periods.map((p,i)=>{
     const isFirst=i===0;
-    return `<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-radius:8px;background:${isFirst?'#FBF3DF':(i%2===0?'#FAFAFA':'#FFFFFF')};border:1px solid ${isFirst?'#DDB65A':'#E5E7EB'};margin-bottom:4px">
-      <span style="font-size:12px;font-weight:700;color:${isFirst?'#8C6516':'#374151'}">${periodLabel(p)}</span>
-      <span style="font-size:14px;font-weight:900;color:${isFirst?'#8C6516':'#111827'}">¥${p.amt.toLocaleString()}${isFirst?'':'/月'}</span>
+    return `<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-radius:8px;background:${isFirst?'#F0F0F0':(i%2===0?'#FAFAFA':'#FFFFFF')};border:1px solid ${isFirst?'#C6C6C6':'#E2E2E2'};margin-bottom:4px">
+      <span style="font-size:12px;font-weight:700;color:${isFirst?'#1A1A1A':'#3A3A3A'}">${periodLabel(p)}</span>
+      <span style="font-size:14px;font-weight:900;color:${isFirst?'#1A1A1A':'#111111'}">¥${p.amt.toLocaleString()}${isFirst?'':'/月'}</span>
     </div>`;
   }).join('');
   const changeNote=periods.length>1
@@ -2894,8 +2893,8 @@ function renderRightContent(){
       :`一括（月々サポート割 2〜48回目−¥${H5G_SUPPORT_M2.toLocaleString()}）本体¥${H5G_HONTAL.toLocaleString()}${disc>0?`（値引後¥${(H5G_HONTAL-disc).toLocaleString()}）`:''}（別途）`;
     const h5gOptLines=(S.h5gCfg.options||[]).filter(o=>o.name||o.price)
       .map(o=>`<div class="hks-row"><span class="hks-label">　└ ${o.name||'オプション'}</span><span class="hks-val">+¥${(Number(o.price)||0).toLocaleString()}/月</span></div>`).join('');
-    qi('h5g-strip-wrap',`<div class="hk-strip" style="background:#E7F5EC;border-color:#A7E3C0">
-    <div class="hks-head" style="border-bottom-color:#A7E3C0">
+    qi('h5g-strip-wrap',`<div class="hk-strip" style="background:#F2F2F2;border-color:#C6C6C6">
+    <div class="hks-head" style="border-bottom-color:#C6C6C6">
     <div class="hks-head-l"><span class="hks-icon">📡</span><span class="hks-title" style="color:var(--green)">home 5G${is48?' （48回）':''}</span></div>
     <div class="hks-head-r">
     <div class="hks-monthly" style="color:var(--green)">¥${h5gMth.toLocaleString()}</div>
@@ -2916,8 +2915,8 @@ function renderRightContent(){
     const mth=homeDenwaMonthly();
     const isPort=S.homeDenwaCfg.numberType==='portability';
     const numberFee=2200+(isPort?2200:0);
-    qi('home-denwa-strip-wrap',`<div class="hk-strip" style="background:#FBF3DF;border-color:#DDB65A">
-    <div class="hks-head" style="border-bottom-color:#DDB65A">
+    qi('home-denwa-strip-wrap',`<div class="hk-strip" style="background:#F0F0F0;border-color:#C6C6C6">
+    <div class="hks-head" style="border-bottom-color:#C6C6C6">
     <div class="hks-head-l"><span class="hks-icon">☎️</span><span class="hks-title" style="color:var(--blue)">homeでんわ（${S.homeDenwaCfg.plan==='basic'?'ベーシック':'ライト'}）${homeDenwaSetEligible()?'':' ※セット割対象外'}</span></div>
     <div class="hks-head-r">
     <div class="hks-monthly" style="color:var(--blue)">¥${mth.toLocaleString()}</div>
@@ -2937,16 +2936,16 @@ function renderRightContent(){
     const mPtsTotal=calcs.reduce((s,x)=>s+(x.c.mPts||0),0);
     const isPlatinum=holderL.card==='platinum';
     const pRate=isPlatinum?platinumMpr()/10:null;
-    qi('card-strip-wrap',`<div class="hk-strip" style="background:#F5F3FF;border-color:#DDD6FE">
-    <div class="hks-head" style="border-bottom-color:#DDD6FE">
-    <div class="hks-head-l"><span class="hks-icon">${hc.emoji||'💳'}</span><span class="hks-title" style="color:#7C3AED">ご利用カード：${hc.fn}${hc.ageOnly?'（18〜29歳限定）':''}</span></div>
+    qi('card-strip-wrap',`<div class="hk-strip" style="background:#EFEFEF;border-color:#C6C6C6">
+    <div class="hks-head" style="border-bottom-color:#C6C6C6">
+    <div class="hks-head-l"><span class="hks-icon">${hc.emoji||'💳'}</span><span class="hks-title" style="color:#555555">ご利用カード：${hc.fn}${hc.ageOnly?'（18〜29歳限定）':''}</span></div>
     <div class="hks-head-r">
-    <div class="hks-monthly" style="color:#7C3AED;font-size:15px">${hc.fee>0?`¥${hc.fee.toLocaleString()}`:'無料'}</div>
+    <div class="hks-monthly" style="color:#555555;font-size:15px">${hc.fee>0?`¥${hc.fee.toLocaleString()}`:'無料'}</div>
     <div class="hks-unit">${hc.fee>0?'年会費／年':'年会費'}</div>
     </div>
     </div>
     <div class="hks-info">
-    ${mPtsTotal>0?`<div class="hks-row"><span class="hks-label">ケータイ料金還元（対象回線合計）</span><span class="hks-val" style="color:#7C3AED">+${mPtsTotal.toLocaleString()}pt/月</span></div>`:`<div class="hks-detail" style="color:var(--ink4)">ケータイ料金還元：対象プラン・カードなし（mini/ahamo/U15やdカード等は対象外）</div>`}
+    ${mPtsTotal>0?`<div class="hks-row"><span class="hks-label">ケータイ料金還元（対象回線合計）</span><span class="hks-val" style="color:#555555">+${mPtsTotal.toLocaleString()}pt/月</span></div>`:`<div class="hks-detail" style="color:var(--ink4)">ケータイ料金還元：対象プラン・カードなし（mini/ahamo/U15やdカード等は対象外）</div>`}
     <div class="hks-detail">お支払い割対象プランで−¥${hc.disc.toLocaleString()}／回線</div>
     ${isPlatinum?`<div class="hks-detail" style="color:var(--amber)">PLATINUMのケータイ/光還元率は月間カード利用額で変動（10万円未満10%／10万円以上15%／20万円以上20%）。入会初年度は一律20%。現在は${pRate}%として計算中</div>`:''}
     </div>
@@ -2959,8 +2958,8 @@ function renderRightContent(){
     const dRate=denkiRateFor(S.denkiCfg.plan,holderCardId);
     const dPts=calcDenkiPts(S.denkiCfg.plan,holderCardId,S.denkiCfg.monthlyBill);
     const dp=DENKI_PLANS[S.denkiCfg.plan];
-    qi('denki-strip-wrap',`<div class="hk-strip" style="background:#E7F5EC;border-color:#A7E3C0">
-    <div class="hks-head" style="border-bottom-color:#A7E3C0">
+    qi('denki-strip-wrap',`<div class="hk-strip" style="background:#F2F2F2;border-color:#C6C6C6">
+    <div class="hks-head" style="border-bottom-color:#C6C6C6">
     <div class="hks-head-l"><span class="hks-icon">⚡</span><span class="hks-title" style="color:var(--green)">ドコモでんき（${dp.label}${dp.extra>0?`・+¥${dp.extra}/月`:''}）</span></div>
     <div class="hks-head-r">
     <div class="hks-monthly" style="color:var(--green);font-size:15px">+${dPts.toLocaleString()}pt</div>
@@ -2978,8 +2977,8 @@ function renderRightContent(){
   if(S.shared.gas && S.gasCfg.monthlyBill>0){
     const gRate=gasRate();
     const gPts=calcGasPts(S.gasCfg.monthlyBill);
-    qi('gas-strip-wrap',`<div class="hk-strip" style="background:#FFF7E0;border-color:#DDB65A">
-    <div class="hks-head" style="border-bottom-color:#DDB65A">
+    qi('gas-strip-wrap',`<div class="hk-strip" style="background:#EDEDED;border-color:#C6C6C6">
+    <div class="hks-head" style="border-bottom-color:#C6C6C6">
     <div class="hks-head-l"><span class="hks-icon">🔥</span><span class="hks-title" style="color:var(--amber)">ドコモガス</span></div>
     <div class="hks-head-r">
     <div class="hks-monthly" style="color:var(--amber);font-size:15px">+${gPts.toLocaleString()}pt</div>
@@ -3046,7 +3045,7 @@ function renderRightContent(){
       <div>
       <div class="rcard-price" style="color:${col}">¥${(()=>{const dv=calcDevice(l.device);const devMth=dv&&dv.type!=='ikkatsu'?(dv.monthly_norm||0):0;return (c.monthly+devMth).toLocaleString();})()}</div>
       <div class="rcard-unit">/月${(()=>{const dv=calcDevice(l.device);return dv&&dv.type!=='ikkatsu'?'（端末込・税込）':'（税込）';})()}</div>
-      ${isH?`<div style="font-size:10px;font-weight:800;color:#7C3AED;text-align:right;margin-top:3px">💳 ${CARDS[l.card].n} 保有者</div>`:isFC?`<div style="font-size:10px;font-weight:800;color:#0B8F58;text-align:right;margin-top:3px">👨‍👩‍👧 家族カード（${CARDS[l.card]?.n||''}）</div>`:isBT?`<div style="font-size:10px;font-weight:800;color:#8C6516;text-align:right;margin-top:3px">一括請求対象</div>`:''}
+      ${isH?`<div style="font-size:10px;font-weight:800;color:#555555;text-align:right;margin-top:3px">💳 ${CARDS[l.card].n} 保有者</div>`:isFC?`<div style="font-size:10px;font-weight:800;color:#2B2B2B;text-align:right;margin-top:3px">👨‍👩‍👧 家族カード（${CARDS[l.card]?.n||''}）</div>`:isBT?`<div style="font-size:10px;font-weight:800;color:#1A1A1A;text-align:right;margin-top:3px">一括請求対象</div>`:''}
       </div>
       </div>
       <div class="rcard-body">
@@ -3100,10 +3099,10 @@ function renderRightContent(){
       ${c.annualBonus>0?`<div class="row" style="padding:0 15px 8px"><span class="row-l" style="color:var(--amber);font-size:11px">🎁 年間ご利用額特典（参考・クーポン）</span><span class="row-v" style="color:var(--amber)">+¥${c.annualBonus.toLocaleString()}/年</span></div>`:''}
       ${(!isH&&!isBT&&!isFC)?`<div class="warn-box">⚠️ dカード割引・ポイント還元なし</div>`:''}
       <div class="rcard-tags">
-      ${plan.restricted?`<span class="tag" style="background:#F3F4F6;color:#9CA3AF">高還元対象外</span>`:''}
-      ${plan.u15Old?`<span class="tag" style="background:#F3F4F6;color:#78736A">旧プラン・既存契約者向け</span>`:plan.u15?`<span class="tag" style="background:#E7F5EC;color:#0B8F58">U15専用（新規受付中）</span>`:''}
-      ${l.u22?`<span class="tag" style="background:#EDE9FE;color:#7C3AED">${l.age==='u29'?'U29':'U22'}</span>`:''}
-      ${plan.poi?`<span class="tag" style="background:#FFF7E0;color:#B8892B">ポイ活対象</span>`:''}
+      ${plan.restricted?`<span class="tag" style="background:#F2F2F2;color:#9A9A9A">高還元対象外</span>`:''}
+      ${plan.u15Old?`<span class="tag" style="background:#F2F2F2;color:#6E6E6E">旧プラン・既存契約者向け</span>`:plan.u15?`<span class="tag" style="background:#F2F2F2;color:#2B2B2B">U15専用（新規受付中）</span>`:''}
+      ${l.u22?`<span class="tag" style="background:#EFEFEF;color:#555555">${l.age==='u29'?'U29':'U22'}</span>`:''}
+      ${plan.poi?`<span class="tag" style="background:#EDEDED;color:#4A4A4A">ポイ活対象</span>`:''}
       </div>`;
     });
     const shown=printAll?calcs:calcs.filter(x=>x.l.id===S.activeLineId);
@@ -3259,7 +3258,7 @@ function showPrintMenu(){
   m.innerHTML=`<div style="background:#fff;border-radius:14px;max-width:340px;width:100%;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.25)">
     <div style="padding:14px 16px;border-bottom:1.5px solid var(--border);font-size:15px;font-weight:900">📄 PDFに保存</div>
     <div style="padding:10px 12px;display:flex;flex-direction:column;gap:7px">
-      ${S.lines.length?`<button onclick="doPrint('all')" style="text-align:left;padding:12px 14px;border:2px solid var(--red);border-radius:10px;background:#FBF3DF;color:var(--red);font-size:13px;font-weight:800;font-family:inherit;cursor:pointer">👨‍👩‍👧 全回線をまとめて<div style="font-size:10px;font-weight:600;color:var(--ink3);margin-top:2px">${S.lines.length}回線すべてを1つのPDFに</div></button>`:''}
+      ${S.lines.length?`<button onclick="doPrint('all')" style="text-align:left;padding:12px 14px;border:2px solid var(--red);border-radius:10px;background:#F0F0F0;color:var(--red);font-size:13px;font-weight:800;font-family:inherit;cursor:pointer">👨‍👩‍👧 全回線をまとめて<div style="font-size:10px;font-weight:600;color:var(--ink3);margin-top:2px">${S.lines.length}回線すべてを1つのPDFに</div></button>`:''}
       ${cur?`<button onclick="doPrint('one')" style="text-align:left;padding:12px 14px;border:2px solid var(--border2);border-radius:10px;background:#fff;font-size:13px;font-weight:800;font-family:inherit;cursor:pointer">👤 ${esc(cur.name)}の分だけ<div style="font-size:10px;font-weight:600;color:var(--ink3);margin-top:2px">いま表示している回線のみ</div></button>`:''}
       <button onclick="doPrint('svc')" style="text-align:left;padding:12px 14px;border:2px solid var(--border2);border-radius:10px;background:#fff;font-size:13px;font-weight:800;font-family:inherit;cursor:pointer">🌐 ネット・でんき・カード<div style="font-size:10px;font-weight:600;color:var(--ink3);margin-top:2px">サービスのページのみ</div></button>
     </div>
@@ -3400,24 +3399,24 @@ function showNetCompare(){
   const y4=plans.map(p=>({p,r:simulate(p,48)}));
 
   // サービスごとの色（優劣ではなく識別のための色分け）
-  const NET_COLORS={hk1g:'#8C6516',hk10g:'#7C3AED',h5g:'#0B8F58'};
+  const NET_COLORS={hk1g:'#1A1A1A',hk10g:'#555555',h5g:'#2B2B2B'};
   function section(title,arr,months){
     const rows=arr.map(({p,r})=>{
-      const col=NET_COLORS[p.key]||'#211B10';
+      const col=NET_COLORS[p.key]||'#111111';
       return `<div style="border:1.5px solid ${col}44;background:${col}0D;border-left:4px solid ${col};border-radius:10px;padding:11px 13px;margin-bottom:8px">
         <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:4px">
           <span style="font-size:13px;font-weight:900;color:${col}">${p.label}</span>
           <span style="font-size:18px;font-weight:900;color:${col}">¥${r.net.toLocaleString()}</span>
         </div>
-        <div style="font-size:10px;color:#78736A;line-height:1.6">${p.note}</div>
-        <div style="display:flex;gap:12px;font-size:10px;color:#78736A;margin-top:4px;flex-wrap:wrap">
+        <div style="font-size:10px;color:#6E6E6E;line-height:1.6">${p.note}</div>
+        <div style="display:flex;gap:12px;font-size:10px;color:#6E6E6E;margin-top:4px;flex-wrap:wrap">
           <span>支払総額 ¥${r.cost.toLocaleString()}</span>
-          <span style="color:#0B8F58">還元 +${r.pts.toLocaleString()}pt</span>
+          <span style="color:#2B2B2B">還元 +${r.pts.toLocaleString()}pt</span>
         </div>
       </div>`;
     }).join('');
     return `<div style="margin-bottom:16px">
-      <div style="font-size:12px;font-weight:800;color:#78736A;margin-bottom:6px">■ ${title}（${months}ヶ月）</div>
+      <div style="font-size:12px;font-weight:800;color:#6E6E6E;margin-bottom:6px">■ ${title}（${months}ヶ月）</div>
       ${rows}
     </div>`;
   }
@@ -3432,13 +3431,13 @@ function showNetCompare(){
   inner.style.cssText='flex:1;max-width:560px;margin:0 auto;background:white;overflow-y:auto;padding:20px 16px 30px;-webkit-overflow-scrolling:touch';
   inner.innerHTML=`<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
     <div><div style="font-size:18px;font-weight:900">🌐 ネット種別ごとの負担額</div>
-    <div style="font-size:11px;color:#9CA3AF">2年後・4年後の実質負担の目安</div></div>
-    <button onclick="document.getElementById('net-modal').remove()" style="padding:6px 12px;background:#6B7280;color:white;border:none;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer">✕ 閉じる</button>
+    <div style="font-size:11px;color:#9A9A9A">2年後・4年後の実質負担の目安</div></div>
+    <button onclick="document.getElementById('net-modal').remove()" style="padding:6px 12px;background:#6E6E6E;color:white;border:none;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer">✕ 閉じる</button>
     </div>
-    <div style="font-size:11px;color:#6B7280;background:#F9FAFB;border-radius:8px;padding:8px 12px;margin-bottom:14px;line-height:1.7">${cond}</div>
+    <div style="font-size:11px;color:#6E6E6E;background:#FAFAFA;border-radius:8px;padding:8px 12px;margin-bottom:14px;line-height:1.7">${cond}</div>
     ${section('2年後',y2,24)}
     ${section('4年後',y4,48)}
-    <div style="font-size:10px;color:#9CA3AF;line-height:1.8;margin-top:4px">
+    <div style="font-size:10px;color:#9A9A9A;line-height:1.8;margin-top:4px">
     ※ 表示額は「ネット料金の支払総額 − 獲得ポイント」の実質負担です（1pt=1円換算）。<br>
     ※ セット割（スマホ1回線につき−¥1,210）は3種類とも同条件で適用されるため、比較には含めていません${setDiscLines>0?`（対象${setDiscLines}回線なら毎月−¥${setDiscTotal.toLocaleString()}が別途スマホ料金から引かれます）`:''}。<br>
     ※ 工事費・事務手数料を初期費用として含みます。home 5Gは工事不要・本体は48回分割（月々サポート割で相殺）。<br>
@@ -3500,39 +3499,39 @@ function showOtoku(){
     const profit=totalBenefit-cd.fee;
     const isProfit=profit>=0;
     const barPct=cd.fee>0?Math.min(100,Math.round(totalBenefit/cd.fee*100)):100;
-    const pc=isProfit?'#0B8F58':'#8C6516';
+    const pc=isProfit?'#2B2B2B':'#1A1A1A';
     const badge=isCurrent?`<span style="font-size:9px;padding:2px 6px;border-radius:4px;background:${cd.col};color:white;margin-left:4px">現在</span>`:'';
-    const bd=isCurrent?`border:2px solid ${cd.col};`:'border:1px solid #E5E7EB;';
+    const bd=isCurrent?`border:2px solid ${cd.col};`:'border:1px solid #E2E2E2;';
     const bg=isCurrent?`background:${cd.col}18;`:'background:#FAFAFA;';
 
     let rows='';
-    if(totalCardDiscAnn>0)rows+=`<div style="display:flex;justify-content:space-between"><span>📉 カード割引（${discTargetCount}回線×¥${cd.disc}/月）</span><span style="color:#0B8F58;font-weight:700">+¥${totalCardDiscAnn.toLocaleString()}/年</span></div>`;
-    if(mobPtsAll>0)rows+=`<div style="display:flex;justify-content:space-between"><span>📱 ケータイ料金還元</span><span style="color:#0B8F58;font-weight:700">+${(mobPtsAll*12).toLocaleString()}pt/年</span></div>`;
-    if(poiPtsAll>0)rows+=`<div style="display:flex;justify-content:space-between"><span>🎯 ポイ活特典</span><span style="color:#0B8F58;font-weight:700">+${(poiPtsAll*12).toLocaleString()}pt/年</span></div>`;
-    if(hkPts2+h5gPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>🌐 ネット回線ポイント</span><span style="color:#0B8F58;font-weight:700">+${((hkPts2+h5gPts2)*12).toLocaleString()}pt/年</span></div>`;
-    if(sPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>🛒 ショッピング還元（¥${shopMth.toLocaleString()}/月）</span><span style="color:#0B8F58;font-weight:700">+${(sPts2*12).toLocaleString()}pt/年</span></div>`;
-    if(dkPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>⚡ でんきポイント</span><span style="color:#0B8F58;font-weight:700">+${(dkPts2*12).toLocaleString()}pt/年</span></div>`;
-    if(gsPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>🔥 ガスポイント</span><span style="color:#0B8F58;font-weight:700">+${(gsPts2*12).toLocaleString()}pt/年</span></div>`;
-    if(famPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>👨‍👩‍👧 ファミリー特典</span><span style="color:#0B8F58;font-weight:700">+${(famPts2*12).toLocaleString()}pt/年</span></div>`;
-    if(annualBonus>0)rows+=`<div style="display:flex;justify-content:space-between"><span>🎁 年間ご利用額特典</span><span style="color:#0B8F58;font-weight:700">+¥${annualBonus.toLocaleString()}</span></div>`;
-    rows+=`<div style="display:flex;justify-content:space-between;border-top:1px solid #E5E7EB;padding-top:4px;margin-top:2px;font-weight:700"><span>年間メリット合計</span><span style="color:#0B8F58">¥${totalBenefit.toLocaleString()}</span></div>`;
-    if(cd.fee>0)rows+=`<div style="display:flex;justify-content:space-between;color:#8C6516"><span>💸 年会費</span><span>−¥${cd.fee.toLocaleString()}</span></div>`;
+    if(totalCardDiscAnn>0)rows+=`<div style="display:flex;justify-content:space-between"><span>📉 カード割引（${discTargetCount}回線×¥${cd.disc}/月）</span><span style="color:#2B2B2B;font-weight:700">+¥${totalCardDiscAnn.toLocaleString()}/年</span></div>`;
+    if(mobPtsAll>0)rows+=`<div style="display:flex;justify-content:space-between"><span>📱 ケータイ料金還元</span><span style="color:#2B2B2B;font-weight:700">+${(mobPtsAll*12).toLocaleString()}pt/年</span></div>`;
+    if(poiPtsAll>0)rows+=`<div style="display:flex;justify-content:space-between"><span>🎯 ポイ活特典</span><span style="color:#2B2B2B;font-weight:700">+${(poiPtsAll*12).toLocaleString()}pt/年</span></div>`;
+    if(hkPts2+h5gPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>🌐 ネット回線ポイント</span><span style="color:#2B2B2B;font-weight:700">+${((hkPts2+h5gPts2)*12).toLocaleString()}pt/年</span></div>`;
+    if(sPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>🛒 ショッピング還元（¥${shopMth.toLocaleString()}/月）</span><span style="color:#2B2B2B;font-weight:700">+${(sPts2*12).toLocaleString()}pt/年</span></div>`;
+    if(dkPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>⚡ でんきポイント</span><span style="color:#2B2B2B;font-weight:700">+${(dkPts2*12).toLocaleString()}pt/年</span></div>`;
+    if(gsPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>🔥 ガスポイント</span><span style="color:#2B2B2B;font-weight:700">+${(gsPts2*12).toLocaleString()}pt/年</span></div>`;
+    if(famPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>👨‍👩‍👧 ファミリー特典</span><span style="color:#2B2B2B;font-weight:700">+${(famPts2*12).toLocaleString()}pt/年</span></div>`;
+    if(annualBonus>0)rows+=`<div style="display:flex;justify-content:space-between"><span>🎁 年間ご利用額特典</span><span style="color:#2B2B2B;font-weight:700">+¥${annualBonus.toLocaleString()}</span></div>`;
+    rows+=`<div style="display:flex;justify-content:space-between;border-top:1px solid #E2E2E2;padding-top:4px;margin-top:2px;font-weight:700"><span>年間メリット合計</span><span style="color:#2B2B2B">¥${totalBenefit.toLocaleString()}</span></div>`;
+    if(cd.fee>0)rows+=`<div style="display:flex;justify-content:space-between;color:#1A1A1A"><span>💸 年会費</span><span>−¥${cd.fee.toLocaleString()}</span></div>`;
 
-    const bar=cd.fee>0?(`<div style="height:7px;border-radius:4px;background:#E5E7EB;overflow:hidden;margin-bottom:3px"><div style="height:100%;width:${barPct}%;background:${pc};border-radius:4px"></div></div><div style="font-size:10px;color:#6B7280">年会費回収率 ${barPct}%</div>`):'<div style="font-size:10px;color:#0B8F58">✅ 年会費無料 — メリットがそのままプラス</div>';
+    const bar=cd.fee>0?(`<div style="height:7px;border-radius:4px;background:#E2E2E2;overflow:hidden;margin-bottom:3px"><div style="height:100%;width:${barPct}%;background:${pc};border-radius:4px"></div></div><div style="font-size:10px;color:#6E6E6E">年会費回収率 ${barPct}%</div>`):'<div style="font-size:10px;color:#2B2B2B">✅ 年会費無料 — メリットがそのままプラス</div>';
 
     cardsHTML+=`<div style="${bd}${bg}border-radius:10px;padding:12px 14px;margin-bottom:10px">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
         <div style="display:flex;align-items:center;gap:7px">
           <span style="font-size:20px">${cd.emoji}</span>
           <div><div style="font-size:13px;font-weight:900;color:${cd.col}">${cd.fn}${badge}</div>
-          <div style="font-size:10px;color:#9CA3AF">年会費 ${cd.fee>0?'¥'+cd.fee.toLocaleString():'無料'}</div></div>
+          <div style="font-size:10px;color:#9A9A9A">年会費 ${cd.fee>0?'¥'+cd.fee.toLocaleString():'無料'}</div></div>
         </div>
         <div style="text-align:right">
           <div style="font-size:20px;font-weight:900;color:${pc}">${isProfit?'＋':'−'}¥${Math.abs(profit).toLocaleString()}</div>
-          <div style="font-size:10px;color:#6B7280">/年（${isProfit?'✅ お得':'⚠️ 損失'}）</div>
+          <div style="font-size:10px;color:#6E6E6E">/年（${isProfit?'✅ お得':'⚠️ 損失'}）</div>
         </div>
       </div>
-      <div style="font-size:11px;color:#374151;display:flex;flex-direction:column;gap:3px;margin-bottom:8px;padding:8px 10px;background:white;border-radius:7px;border:1px solid #E5E7EB">${rows}</div>
+      <div style="font-size:11px;color:#3A3A3A;display:flex;flex-direction:column;gap:3px;margin-bottom:8px;padding:8px 10px;background:white;border-radius:7px;border:1px solid #E2E2E2">${rows}</div>
       ${bar}
       </div>`;
   });
@@ -3548,16 +3547,16 @@ function showOtoku(){
   inner.style.cssText='flex:1;max-width:540px;margin:0 auto;background:white;overflow-y:auto;padding:20px 16px 30px';
   inner.innerHTML=`<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
     <div><div style="font-size:18px;font-weight:900">💰 dカード お得チェック</div>
-    <div style="font-size:11px;color:#9CA3AF">回線割引＋ポイント還元で年間いくらお得？</div></div>
-    <button onclick="document.getElementById('otoku-modal').remove()" style="padding:6px 12px;background:#6B7280;color:white;border:none;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer">✕ 閉じる</button>
+    <div style="font-size:11px;color:#9A9A9A">回線割引＋ポイント還元で年間いくらお得？</div></div>
+    <button onclick="document.getElementById('otoku-modal').remove()" style="padding:6px 12px;background:#6E6E6E;color:white;border:none;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer">✕ 閉じる</button>
     </div>
-    <div style="font-size:11px;color:#6B7280;background:#F9FAFB;border-radius:8px;padding:8px 12px;margin-bottom:12px;line-height:1.7">
+    <div style="font-size:11px;color:#6E6E6E;background:#FAFAFA;border-radius:8px;padding:8px 12px;margin-bottom:12px;line-height:1.7">
     保有者: <b>${esc(holderL.name)}</b>（${CARDS[holderL.card].fn}） ／
     対象回線: <b>${discTargetCount}回線</b> ／
     月間利用額: <b>¥${shopMth.toLocaleString()}</b>${denkiNote}${gasNote}
     </div>
     ${cardsHTML}
-    <div style="font-size:10px;color:#9CA3AF;line-height:1.8;margin-top:4px">
+    <div style="font-size:10px;color:#9A9A9A;line-height:1.8;margin-top:4px">
     ※ ポイントは1pt=1円換算。年間ご利用額特典はGOLD/PLATINUM、年間ショッピング額100万円ごとに1万円・最大4万円（クーポン形式）。<br>
     ※ でんき/ガスポイントは保有者カードの還元率で算出。ポイ活特典は保有者のプランがポイ活対象の場合のみ加算。
     </div>`;
