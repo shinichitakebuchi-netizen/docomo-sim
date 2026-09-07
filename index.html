@@ -2819,7 +2819,7 @@ function renderSummary(){
   <span class="sum-head-title">${TEXT.sumTitle}</span>
   <span class="sum-head-sub">${n}回線${S.shared.hikari?' + ドコモ光':''}${S.shared.home5g?' + home 5G':''}${S.shared.denki?' + でんき':''}${S.shared.gas?' + ガス':''}</span>
   </div>
-  <div class="sum-grid" style="grid-template-columns:repeat(5,1fr)">
+  <div class="sum-grid">
   <div class="sstat"><div class="sstat-val" style="color:var(--ink2)">¥${calcInitialCost().toLocaleString()}</div><div class="sstat-label">${TEXT.sumInitial}</div></div>
   <div class="sstat"><div class="sstat-val" style="color:var(--red)">¥${netMth.toLocaleString()}</div><div class="sstat-label">${TEXT.sumMonthly}</div></div>
   <div class="sstat"><div class="sstat-val" style="color:var(--green)">+${totMthPts.toLocaleString()}pt</div><div class="sstat-label">${TEXT.sumPtMonth}</div></div>
