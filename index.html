@@ -37,10 +37,10 @@
   align-items:flex-start!important;
 }
 .app.expand-mode .rcards .rcard{flex:1 1 0!important;min-width:0!important}
-.app.expand-mode .strips-grid{display:grid!important;gap:6px!important;align-items:stretch!important}
+.app.expand-mode .strips-grid{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:6px!important;align-items:stretch!important}
 
 @media print{
-  @page{size:A4 landscape;margin:8mm}
+  @page{size:A4 portrait;margin:7mm}
   /* 印刷時は薄いグレー文字を濃くして視認性を確保（画面表示の色はそのまま） */
   :root{
     --ink3:#333333!important;  /* 通常 #666666 → 濃く */
@@ -67,7 +67,7 @@
     width:100%!important;max-width:100%!important;
     height:auto!important;
     overflow:visible!important;
-    padding:8px!important;
+    padding:5px!important;
     position:static!important;
     flex:none!important;
   }
@@ -75,15 +75,15 @@
   #right-content{display:block!important;overflow:visible!important}
   #panel-right *{box-shadow:none!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
   #panel-right button{display:none!important}
-  .strips-grid{display:grid!important;gap:4px!important;align-items:stretch!important}
+  .strips-grid{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:5px!important;align-items:stretch!important}
   .strips-grid > div{height:100%!important}
   /* 新構造：タブ類は印刷しない */
   .pagetabs,.linetabs{display:none!important}
   /* 全回線印刷時は横並び、1回線のみの場合は1枚を大きく */
-  #line-detail{display:flex!important;flex-wrap:nowrap!important;gap:6px!important;align-items:stretch!important}
+  #line-detail{display:flex!important;flex-wrap:nowrap!important;gap:4px!important;align-items:stretch!important}
   #line-detail .rcard{flex:1 1 0!important;min-width:0!important;overflow:hidden!important;break-inside:avoid!important;page-break-inside:avoid!important}
   #line-detail .rcard:only-child{max-width:none!important}
-  .rcards{display:flex!important;flex-wrap:nowrap!important;gap:6px!important;align-items:stretch!important}
+  .rcards{display:flex!important;flex-wrap:nowrap!important;gap:4px!important;align-items:stretch!important}
   .strips-grid .hk-strip{padding:0!important;gap:0!important;height:100%!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;break-inside:avoid!important;page-break-inside:avoid!important}
   .strips-grid .hks-info{flex:1!important;padding:5px 7px 6px!important}
   .strips-grid .hks-head{padding:5px 7px 4px!important}
@@ -100,13 +100,13 @@
   .summary{margin-bottom:4px!important;overflow:hidden!important}
   .tbl-wrap{overflow:visible!important}
   /* 回線カード：内側の各要素は個別にfont-sizeを持つため、親(.rcard-body)への指定だけでは効かない。全要素を明示的に縮小する */
-  .rcard-top{padding:5px 7px!important}
+  .rcard-top{padding:5px 5px!important}
   .rcard-badge{font-size:9px!important;padding:2px 6px!important}
   .rcard-name{font-size:13px!important}
   .rcard-plan{font-size:9px!important;line-height:1.4!important;margin-top:2px!important}
   .rcard-price{font-size:17px!important}
   .rcard-unit{font-size:8.5px!important}
-  .rcard-body{padding:6px 8px!important;gap:0!important;font-size:10px!important}
+  .rcard-body{padding:5px 6px!important;gap:0!important;font-size:10px!important}
   .rcard .row{padding:1.5px 0!important;flex-wrap:nowrap!important;align-items:flex-start!important;gap:4px!important}
   .rcard .row-l{font-size:10px!important;line-height:1.4!important;flex:1 1 auto!important;min-width:0!important}
   .rcard .row-v{font-size:10px!important;white-space:nowrap!important;flex:0 0 auto!important}
@@ -256,10 +256,10 @@ input{font-family:inherit}
 .sum-head-title{font-size:16.8px;font-weight:900;color:white;flex:1}
 .sum-head-sub{font-size:14.4px;color:rgba(255,255,255,.7);font-weight:600}
 .sum-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.sstat{padding:13px;text-align:center;border-right:1px solid var(--border)}
+.sstat{padding:14px 8px;text-align:center;border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0}
 .sstat:last-child{border-right:none}
-.sstat-val{font-family:var(--font-num);font-size:24px;font-weight:900;line-height:1;margin-bottom:3px}
-.sstat-label{font-size:14.5px;font-weight:700;color:var(--ink4);letter-spacing:.04em}
+.sstat-val{font-family:var(--font-num);font-size:26px;font-weight:900;line-height:1.1;margin-bottom:5px;white-space:nowrap;letter-spacing:-.01em}
+.sstat-label{font-size:12px;font-weight:700;color:var(--ink3);letter-spacing:.02em;line-height:1.4}
 
 .hk-strip{background:var(--blue-bg);border:1.5px solid var(--blue-border);border-radius:var(--r);padding:0;display:flex;flex-direction:column;height:100%;overflow:hidden}
 .hks-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;padding:9px 12px 8px;background:rgba(255,255,255,.5);border-bottom:1px solid var(--blue-border)}
@@ -385,7 +385,7 @@ tr:hover td{background:#FAFAFA}
   body.printing-detail #detail-overlay{display:block!important;position:static!important;inset:auto!important;overflow:visible!important;background:#fff!important;height:auto!important;z-index:auto!important}
   body.printing-detail #detail-bar{display:none!important}
   body.printing-detail #detail-body{display:block!important;padding:0!important}
-  body.printing-detail #detail-body .dcards{grid-template-columns:repeat(3,1fr)!important;gap:7px!important}
+  body.printing-detail #detail-body .dcards{grid-template-columns:repeat(2,1fr)!important;gap:7px!important}
   body.printing-detail #detail-body .dcard-name{font-size:12px!important}
   body.printing-detail #detail-body .dcard-sub{font-size:9px!important}
   body.printing-detail #detail-body .dcard-total{font-size:15px!important}
@@ -430,7 +430,11 @@ tr:hover td{background:#FAFAFA}
 .is-mobile .right{flex:1;overflow-y:auto;display:none;padding:10px;width:100%}
 .is-mobile .right.mob-show{display:flex}
 .is-mobile .sum-grid{grid-template-columns:repeat(2,1fr)!important}
-.is-mobile .sstat-val{font-size:21px!important}
+.is-mobile .sstat-val{font-size:22px!important}
+.is-mobile .sstat-label{font-size:11px!important}
+/* 2列時は下段の右罫線を消して見た目を整える */
+.is-mobile .sstat:nth-child(2n){border-right:none}
+.is-mobile .sstat:nth-child(-n+2){border-bottom:1px solid var(--border)}
 .is-mobile .rcards{grid-template-columns:1fr!important}
 .is-mobile .strips-grid{grid-template-columns:1fr!important}
 .is-mobile .init-cost-grid{grid-template-columns:1fr!important}
@@ -3235,7 +3239,7 @@ ${fontLinks}
 ${styleTags}
 <style>
   /* 印刷対象を初期費用・お支払推移だけに固定する。 */
-  @page { size: A4 landscape; margin: 8mm; }
+  @page { size: A4 portrait; margin: 8mm; }
   html, body { margin:0; padding:0; background:#fff; }
   #detail-overlay { display:block !important; position:static !important; }
   #detail-bar { display:none !important; }
