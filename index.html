@@ -80,10 +80,10 @@
   /* 新構造：タブ類は印刷しない */
   .pagetabs,.linetabs{display:none!important}
   /* 全回線印刷時は横並び、1回線のみの場合は1枚を大きく */
-  #line-detail{display:flex!important;flex-wrap:nowrap!important;gap:4px!important;align-items:stretch!important}
-  #line-detail .rcard{flex:1 1 0!important;min-width:0!important;overflow:hidden!important;break-inside:avoid!important;page-break-inside:avoid!important}
+  #line-detail{display:block!important}
+  #line-detail .rcard{width:100%!important;margin-bottom:6px!important;overflow:hidden!important;break-inside:avoid!important;page-break-inside:avoid!important}
   #line-detail .rcard:only-child{max-width:none!important}
-  .rcards{display:flex!important;flex-wrap:nowrap!important;gap:4px!important;align-items:stretch!important}
+  .rcards{display:block!important}
   .strips-grid .hk-strip{padding:0!important;gap:0!important;height:100%!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;break-inside:avoid!important;page-break-inside:avoid!important}
   .strips-grid .hks-info{flex:1!important;padding:5px 7px 6px!important}
   .strips-grid .hks-head{padding:5px 7px 4px!important}
@@ -93,34 +93,39 @@
   .strips-grid .hks-unit,.strips-grid .hks-pt,.strips-grid .hks-kouji{font-size:9px!important;line-height:1.4!important}
   .strips-grid .hks-row{font-size:9px!important}
   .strips-grid .hks-icon{font-size:13px!important}
-  .rcards .rcard{flex:1 1 0!important;min-width:0!important;overflow:hidden!important;break-inside:avoid!important;page-break-inside:avoid!important}
+  .rcards .rcard{width:100%!important;margin-bottom:6px!important;overflow:hidden!important;break-inside:avoid!important;page-break-inside:avoid!important}
   #tbl-wrap-outer{display:none!important} /* お支払い推移・初期費用の内訳は印刷から除外 */
   .init-cost-grid .tbl-wrap{margin-bottom:8px!important;display:block!important}
   #panel-right{gap:6px!important}
-  .summary{margin-bottom:4px!important;overflow:hidden!important}
+  .summary{margin-bottom:6px!important;overflow:hidden!important}
+  /* 合計4項目：印刷でも折り返さず高さを揃える */
+  .sum-grid{grid-template-columns:repeat(4,1fr)!important}
+  .sstat{padding:8px 4px!important;gap:3px!important}
+  .sstat-val{font-size:17px!important;white-space:nowrap!important}
+  .sstat-label{font-size:9.5px!important;white-space:nowrap!important}
   .tbl-wrap{overflow:visible!important}
   /* 回線カード：内側の各要素は個別にfont-sizeを持つため、親(.rcard-body)への指定だけでは効かない。全要素を明示的に縮小する */
-  .rcard-top{padding:5px 5px!important}
+  .rcard-top{padding:7px 12px!important}
   .rcard-badge{font-size:9px!important;padding:2px 6px!important}
-  .rcard-name{font-size:13px!important}
-  .rcard-plan{font-size:9px!important;line-height:1.4!important;margin-top:2px!important}
-  .rcard-price{font-size:17px!important}
+  .rcard-name{font-size:14px!important}
+  .rcard-plan{font-size:10px!important;line-height:1.4!important;margin-top:2px!important}
+  .rcard-price{font-size:19px!important}
   .rcard-unit{font-size:8.5px!important}
-  .rcard-body{padding:5px 6px!important;gap:0!important;font-size:10px!important}
+  .rcard-body{padding:7px 12px!important;gap:0!important;font-size:11px!important}
   .rcard .row{padding:1.5px 0!important;flex-wrap:nowrap!important;align-items:flex-start!important;gap:4px!important}
-  .rcard .row-l{font-size:10px!important;line-height:1.4!important;flex:1 1 auto!important;min-width:0!important}
-  .rcard .row-v{font-size:10px!important;white-space:nowrap!important;flex:0 0 auto!important}
+  .rcard .row-l{font-size:11px!important;line-height:1.5!important;flex:1 1 auto!important;min-width:0!important}
+  .rcard .row-v{font-size:11px!important;white-space:nowrap!important;flex:0 0 auto!important}
   .rcard .row-div{margin:2px 0!important}
-  .rcard .row-detail{font-size:8.5px!important;line-height:1.5!important;padding:1px 0 3px!important}
+  .rcard .row-detail{font-size:9.5px!important;line-height:1.6!important;padding:2px 0 4px!important}
   .rcard .row-total{padding:3px 0 1px!important}
   .rcard .row-total-l{font-size:11px!important}
-  .rcard .row-total-v{font-size:15px!important}
+  .rcard .row-total-v{font-size:16px!important}
   .pts-box{margin:0 7px 6px!important;padding:5px 7px!important}
   .pts-top{margin-bottom:2px!important}
   .pts-label{font-size:10px!important}
   .pts-val{font-size:13px!important}
   .pts-rows{gap:1px!important}
-  .pts-row{font-size:9px!important}
+  .pts-row{font-size:10px!important}
   .warn-box{margin:0 8px 6px!important;padding:5px 8px!important;font-size:9px!important}
   /* 保有者/一括請求 等のインラインバッジ（rcard-top内、右寄せ） */
   .rcard-top > div:last-child > div[style*="font-size:10px"]{font-size:9px!important}
@@ -255,11 +260,11 @@ input{font-family:inherit}
 .sum-head{background:var(--red);padding:11px 18px;display:flex;align-items:center;gap:10px}
 .sum-head-title{font-size:16.8px;font-weight:900;color:white;flex:1}
 .sum-head-sub{font-size:14.4px;color:rgba(255,255,255,.7);font-weight:600}
-.sum-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.sstat{padding:14px 8px;text-align:center;border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0}
+.sum-grid{display:grid;grid-template-columns:repeat(4,1fr);align-items:stretch}
+.sstat{padding:14px 6px;text-align:center;border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;gap:5px;min-height:76px}
 .sstat:last-child{border-right:none}
-.sstat-val{font-family:var(--font-num);font-size:26px;font-weight:900;line-height:1.1;margin-bottom:5px;white-space:nowrap;letter-spacing:-.01em}
-.sstat-label{font-size:12px;font-weight:700;color:var(--ink3);letter-spacing:.02em;line-height:1.4}
+.sstat-val{font-family:var(--font-num);font-size:clamp(17px,2.4vw,26px);font-weight:900;line-height:1.1;margin-bottom:0;white-space:nowrap;letter-spacing:-.02em}
+.sstat-label{font-size:clamp(10px,1.1vw,12px);font-weight:700;color:var(--ink3);letter-spacing:0;line-height:1.3;white-space:nowrap}
 
 .hk-strip{background:var(--blue-bg);border:1.5px solid var(--blue-border);border-radius:var(--r);padding:0;display:flex;flex-direction:column;height:100%;overflow:hidden}
 .hks-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;padding:9px 12px 8px;background:rgba(255,255,255,.5);border-bottom:1px solid var(--blue-border)}
@@ -430,8 +435,9 @@ tr:hover td{background:#FAFAFA}
 .is-mobile .right{flex:1;overflow-y:auto;display:none;padding:10px;width:100%}
 .is-mobile .right.mob-show{display:flex}
 .is-mobile .sum-grid{grid-template-columns:repeat(2,1fr)!important}
-.is-mobile .sstat-val{font-size:22px!important}
-.is-mobile .sstat-label{font-size:11px!important}
+.is-mobile .sstat-val{font-size:clamp(16px,4.6vw,22px)!important}
+.is-mobile .sstat-label{font-size:clamp(9.5px,2.5vw,11px)!important}
+.is-mobile .sstat{min-height:66px}
 /* 2列時は下段の右罫線を消して見た目を整える */
 .is-mobile .sstat:nth-child(2n){border-right:none}
 .is-mobile .sstat:nth-child(-n+2){border-bottom:1px solid var(--border)}
@@ -888,10 +894,10 @@ const TEXT = {
 
   // ── 右パネル：見出し ──
   sumTitle:        '合計',
-  sumInitial:      '初月合計（初期費用）',
+  sumInitial:      '初月合計',
   sumMonthly:      '翌月以降 月額',
-  sumPtMonth:      '月間ポイント合計',
-  sumPtYear:       '年間ポイント合計',
+  sumPtMonth:      '月間ポイント',
+  sumPtYear:       '年間ポイント',
   sumNetYear:      '年間実質負担',
   trendTitle:      'お支払推移',
   initCostTitle:   '初期費用の内訳',
