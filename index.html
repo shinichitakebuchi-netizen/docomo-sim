@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Jafar">
 <meta name="theme-color" content="#2F5A7A">
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style id="print-style">
 .app.expand-mode{height:auto!important;overflow:visible!important;display:block!important}
 .app.expand-mode .hdr{position:sticky;top:0;z-index:50}
@@ -134,7 +134,7 @@
   #print-memo-wrap{display:none!important}
   .note{font-size:3.3px!important;line-height:1.5!important;padding-bottom:2px!important}
   .print-memo-box{border:1.5px dashed #C8C8C8!important;border-radius:10px!important;padding:7px 14px 3px!important;page-break-inside:avoid!important;break-inside:avoid!important}
-  .print-memo-title{font-size:9px!important;font-weight:800!important;color:#666666!important;letter-spacing:.06em!important;margin-bottom:4px!important}
+  .print-memo-title{font-size:9px!important;font-weight:600!important;color:#666666!important;letter-spacing:.06em!important;margin-bottom:4px!important}
   .print-memo-line{height:14px!important;border-bottom:1px solid #E0E0E0!important}
 }
 </style>
@@ -160,12 +160,14 @@
   --shadow-sm:0 1px 2px rgba(0,0,0,.07);
   --shadow:0 2px 8px rgba(0,0,0,.10);
   --r:10px;--r-sm:7px;
-  --font:'Zen Maru Gothic','Hiragino Maru Gothic ProN','Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;
+  /* 参照画面と同系統の標準ゴシック。iOS/Macではヒラギノ角ゴが優先され、
+     数字がくっきり見えるようにする */
+  --font:'Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic','Meiryo',sans-serif;
   --font-num:var(--font);
 }
 html,body{height:100%;min-height:100%;background:var(--bg);font-family:var(--font);color:var(--ink);overflow:hidden;overscroll-behavior:none;font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-/* 丸ゴシックは太字だと丸みが強く出るため、全体の太さを1段階抑えて細身の印象にする */
-[style*="font-weight:900"],.rcard-price,.sstat-val,.row-total-v,.hks-monthly{font-weight:700!important}
+/* 金額など主要な数値。太くしすぎず、読みやすさ優先 */
+.rcard-price,.sstat-val,.row-total-v,.hks-monthly{font-weight:700}
 b,strong{font-weight:700}
 button{cursor:pointer;font-family:inherit;border:none;background:none}
 input{font-family:inherit}
@@ -174,13 +176,13 @@ input{font-family:inherit}
 .hdr{background:linear-gradient(135deg,#2F5A7A,#588CB3);border-bottom:none;padding:0 12px;padding-top:env(safe-area-inset-top);height:calc(60px + env(safe-area-inset-top));display:flex;align-items:center;gap:8px;flex-shrink:0;box-shadow:var(--shadow-sm);min-width:0;overflow:hidden;padding-left:calc(12px + env(safe-area-inset-left));padding-right:calc(12px + env(safe-area-inset-right))}
 .hdr-mark{width:26px;height:26px;background:var(--white);border-radius:5px;display:flex;align-items:center;justify-content:center}
 .hdr-mark svg{width:14px;height:14px;fill:var(--red)}
-.hdr-brand{font-size:20.4px;font-weight:900;color:var(--white);letter-spacing:.08em}
+.hdr-brand{font-size:20.4px;font-weight:700;color:var(--white);letter-spacing:.08em}
 .hdr-sep{width:1px;height:20px;background:rgba(255,255,255,.4)}
 .hdr-title{font-size:15.6px;font-weight:700;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .hdr-badge{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:3px 11px;flex-shrink:0}
 .hdr-dot{width:6px;height:6px;border-radius:50%;background:var(--white);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hdr-badge-txt{font-size:15px;font-weight:800;color:var(--white);letter-spacing:.06em}
+.hdr-badge-txt{font-size:15px;font-weight:600;color:var(--white);letter-spacing:.06em}
 .hdr-reset{display:flex;align-items:center;gap:5px;padding:6px 10px;border-radius:20px;border:1.5px solid rgba(255,255,255,.6);background:transparent;color:var(--white);font-size:14.4px;font-weight:700;transition:all .15s;flex-shrink:0;white-space:nowrap}
 .hdr-reset:hover{border-color:var(--red);color:var(--red);background:var(--red-light)}
 
@@ -195,9 +197,9 @@ input{font-family:inherit}
 .blk{background:var(--bg);border-radius:var(--r);border:1.5px solid var(--border);overflow:hidden}
 .blk-head{padding:9px 13px;display:flex;align-items:center;gap:8px;background:var(--white);border-bottom:1px solid var(--border)}
 .blk-icon{width:26px;height:26px;border-radius:7px;background:var(--red-light);display:flex;align-items:center;justify-content:center;font-size:15.6px;flex-shrink:0}
-.blk-title{font-size:14.4px;font-weight:800;color:var(--ink2);letter-spacing:.04em}
+.blk-title{font-size:14.4px;font-weight:600;color:var(--ink2);letter-spacing:.04em}
 .blk-body{padding:11px 13px;display:flex;flex-direction:column;gap:9px}
-.fl{font-size:14.5px;font-weight:800;color:var(--ink4);letter-spacing:.07em;text-transform:uppercase;margin-bottom:5px}
+.fl{font-size:14.5px;font-weight:600;color:var(--ink4);letter-spacing:.07em;text-transform:uppercase;margin-bottom:5px}
 
 .tog-list{display:flex;flex-direction:column;gap:5px}
 /* 2つのトグルを横並びに */
@@ -231,21 +233,21 @@ input{font-family:inherit}
 .hks-label{color:var(--ink3)}
 .hks-val{font-weight:700}
 
-.info-note b{color:var(--ink);font-weight:800}
+.info-note b{color:var(--ink);font-weight:600}
 
 .lines-head{display:flex;align-items:center;justify-content:space-between;padding:9px 13px;background:var(--white);border-bottom:1px solid var(--border)}
-.lines-cnt{font-size:15px;font-weight:800;padding:2px 8px;border-radius:10px;background:var(--red);color:white;margin-left:6px}
-.add-btn{display:flex;align-items:center;gap:5px;padding:7px 13px;border-radius:8px;background:var(--red);color:white;font-size:14.4px;font-weight:800;transition:all .15s}
+.lines-cnt{font-size:15px;font-weight:600;padding:2px 8px;border-radius:10px;background:var(--red);color:white;margin-left:6px}
+.add-btn{display:flex;align-items:center;gap:5px;padding:7px 13px;border-radius:8px;background:var(--red);color:white;font-size:14.4px;font-weight:600;transition:all .15s}
 .add-btn:hover{background:#333333}
 .add-btn:active{transform:scale(.97)}
 .line-wrap{padding:11px 13px;display:flex;flex-direction:column;gap:8px}
 
 .lcard{border-radius:var(--r);border:2px solid var(--border);background:var(--white);overflow:hidden;box-shadow:var(--shadow-sm)}
 .lcard-head{padding:9px 13px;display:flex;align-items:center;gap:9px;cursor:pointer;user-select:none}
-.lnum{width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;flex-shrink:0;color:white}
-.lname{flex:1;font-size:16.8px;font-weight:800;border:none;outline:none;color:var(--ink);background:transparent;cursor:pointer;min-width:0}
+.lnum{width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0;color:white}
+.lname{flex:1;font-size:16.8px;font-weight:600;border:none;outline:none;color:var(--ink);background:transparent;cursor:pointer;min-width:0}
 .lname:focus{background:var(--bg);border-radius:5px;padding:2px 5px;cursor:text}
-.lprice{font-size:15.6px;font-weight:900;white-space:nowrap}
+.lprice{font-size:15.6px;font-weight:700;white-space:nowrap}
 .larrow{font-size:14.5px;color:var(--ink4);transition:transform .2s;margin-left:3px}
 .larrow.open{transform:rotate(180deg)}
 .lcard-body{padding:11px 13px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:9px;background:var(--bg)}
@@ -258,13 +260,13 @@ input{font-family:inherit}
 
 .summary{background:var(--white);border-radius:var(--r);border:2px solid var(--red-mid);overflow:hidden;box-shadow:var(--shadow)}
 .sum-head{background:var(--red);padding:11px 18px;display:flex;align-items:center;gap:10px}
-.sum-head-title{font-size:16.8px;font-weight:900;color:white;flex:1}
+.sum-head-title{font-size:16.8px;font-weight:700;color:white;flex:1}
 .sum-head-sub{font-size:14.4px;color:rgba(255,255,255,.7);font-weight:600}
 .sum-grid{display:grid;grid-template-columns:repeat(4,1fr);align-items:stretch}
 .sstat{padding:14px 6px;text-align:center;border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;gap:5px;min-height:76px}
 .sstat:last-child{border-right:none}
-.sstat-val{font-family:var(--font-num);font-size:clamp(17px,2.4vw,26px);font-weight:900;line-height:1.1;margin-bottom:0;white-space:nowrap;letter-spacing:-.02em}
-.sstat-label{font-size:clamp(10px,1.1vw,12px);font-weight:700;color:var(--ink3);letter-spacing:0;line-height:1.3;white-space:nowrap}
+.sstat-val{font-family:var(--font-num);font-size:clamp(17px,2.4vw,26px);font-weight:700;line-height:1.1;margin-bottom:0;white-space:nowrap;letter-spacing:-.02em}
+.sstat-label{font-size:clamp(10px,1.1vw,12px);font-weight:500;color:var(--ink3);letter-spacing:0;line-height:1.3;white-space:nowrap}
 
 .hk-strip{background:var(--blue-bg);border:1.5px solid var(--blue-border);border-radius:var(--r);padding:0;display:flex;flex-direction:column;height:100%;overflow:hidden}
 .hks-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;padding:9px 12px 8px;background:rgba(255,255,255,.5);border-bottom:1px solid var(--blue-border)}
@@ -272,11 +274,11 @@ input{font-family:inherit}
 .hks-head-r{text-align:right;flex-shrink:0}
 .hks-icon{font-size:19.2px;flex-shrink:0}
 .hks-info{flex:1;min-width:0;word-break:break-word;padding:8px 12px 10px;display:flex;flex-direction:column;gap:1px}
-.hks-title{font-size:16px;font-weight:800;color:var(--blue);line-height:1.35;min-width:0}
+.hks-title{font-size:16px;font-weight:600;color:var(--blue);line-height:1.35;min-width:0}
 .hks-detail{font-size:14.5px;color:var(--ink3);margin-top:2px;line-height:1.45}
-.hks-monthly{font-family:var(--font-num);font-size:22.8px;font-weight:900;color:var(--blue);line-height:1;white-space:nowrap}
+.hks-monthly{font-family:var(--font-num);font-size:22.8px;font-weight:700;color:var(--blue);line-height:1;white-space:nowrap}
 .hks-unit{font-size:13.5px;color:var(--ink4);white-space:nowrap}
-.hks-pt{font-size:14.5px;color:var(--green);font-weight:800;margin-top:2px;line-height:1.4}
+.hks-pt{font-size:14.5px;color:var(--green);font-weight:600;margin-top:2px;line-height:1.4}
 .hks-kouji{font-size:14.5px;color:var(--amber);font-weight:700;margin-top:2px;line-height:1.4}
 .strips-grid > div{height:100%}
 
@@ -284,13 +286,13 @@ input{font-family:inherit}
 
 /* ===== ページタブ（回線ごと / サービス） ===== */
 .pagetabs{display:flex;gap:6px;margin-bottom:8px}
-.pagetab{flex:1;padding:10px 8px;border-radius:11px;border:2px solid var(--border);background:var(--white);text-align:center;font-size:15px;font-weight:800;color:var(--ink3);cursor:pointer;user-select:none;transition:all .15s}
+.pagetab{flex:1;padding:10px 8px;border-radius:11px;border:2px solid var(--border);background:var(--white);text-align:center;font-size:15px;font-weight:600;color:var(--ink3);cursor:pointer;user-select:none;transition:all .15s}
 .pagetab.on{background:var(--red);color:#fff;border-color:var(--red)}
 /* ===== 回線タブ ===== */
 .linetabs{display:flex;gap:5px;margin-bottom:10px;flex-wrap:wrap}
-.linetab{padding:7px 12px;border-radius:9px;border:2px solid var(--border);background:var(--white);font-size:14.4px;font-weight:800;color:var(--ink3);cursor:pointer;display:flex;align-items:center;gap:6px;user-select:none;transition:all .15s}
+.linetab{padding:7px 12px;border-radius:9px;border:2px solid var(--border);background:var(--white);font-size:14.4px;font-weight:600;color:var(--ink3);cursor:pointer;display:flex;align-items:center;gap:6px;user-select:none;transition:all .15s}
 .lt-num{width:18px;height:18px;border-radius:50%;color:#fff;font-size:14.5px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.lt-amt{font-size:15px;font-weight:900}
+.lt-amt{font-size:15px;font-weight:700}
 /* ===== 選択中の回線を大きく表示 ===== */
 .bigcard .rcard-name{font-size:24px}
 .bigcard .rcard-plan{font-size:14.4px;margin-top:3px}
@@ -309,10 +311,10 @@ input{font-family:inherit}
 @media (max-width:900px){.strips-grid{grid-template-columns:1fr!important}}
 .rcard{background:var(--white);border-radius:var(--r);border:2px solid var(--border);overflow:hidden;box-shadow:var(--shadow-sm)}
 .rcard-top{padding:12px 15px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--border)}
-.rcard-badge{font-size:14.5px;font-weight:800;padding:2px 8px;border-radius:10px;color:white;margin-bottom:3px;display:inline-block}
-.rcard-name{font-size:18px;font-weight:900}
+.rcard-badge{font-size:14.5px;font-weight:600;padding:2px 8px;border-radius:10px;color:white;margin-bottom:3px;display:inline-block}
+.rcard-name{font-size:18px;font-weight:700}
 .rcard-plan{font-size:14px;color:var(--ink3);margin-top:3px}
-.rcard-price{font-family:var(--font-num);font-size:31.2px;font-weight:900;line-height:1;text-align:right}
+.rcard-price{font-family:var(--font-num);font-size:31.2px;font-weight:700;line-height:1;text-align:right}
 .rcard-unit{font-size:14.5px;color:var(--ink4);text-align:right;margin-top:2px}
 .rcard-body{padding:12px 15px;display:flex;flex-direction:column;gap:5px}
 .row{display:flex;justify-content:flex-start;align-items:center;padding:5px 0;border-bottom:1px solid var(--border);gap:8px}
@@ -324,12 +326,12 @@ input{font-family:inherit}
 .row-div{height:1px;background:var(--border);margin:3px 0}
 .row-detail{font-size:14px;color:var(--ink4);line-height:1.5;padding:1px 0 3px;word-break:break-word}
 .row-total{display:flex;justify-content:space-between;align-items:center;padding:7px 0 2px}
-.row-total-l{font-size:15.6px;font-weight:800}
-.row-total-v{font-family:var(--font-num);font-size:21.6px;font-weight:900}
+.row-total-l{font-size:15.6px;font-weight:600}
+.row-total-v{font-family:var(--font-num);font-size:21.6px;font-weight:700}
 .pts-box{margin:0 15px 10px;padding:9px 12px;border-radius:var(--r-sm);background:var(--green-bg);border:1.5px solid var(--green-border)}
 .pts-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
 .pts-label{font-size:14.4px;font-weight:700;color:var(--green)}
-.pts-val{font-size:19.2px;font-weight:900;color:var(--green)}
+.pts-val{font-size:19.2px;font-weight:700;color:var(--green)}
 .pts-rows{display:flex;flex-direction:column;gap:2px}
 .pts-row{display:flex;justify-content:space-between;font-size:14.5px;color:var(--green);opacity:.8}
 .warn-box{margin:0 15px 8px;padding:7px 11px;border-radius:var(--r-sm);background:var(--amber-bg);border:1.5px solid var(--amber-border);font-size:15px;color:var(--amber);font-weight:700}
@@ -338,44 +340,44 @@ input{font-family:inherit}
 .roi-box.warn{background:var(--amber-bg);border:1.5px solid var(--amber-border);color:var(--amber)}
 .roi-sub{font-size:14.5px;opacity:.8;margin-top:2px;font-weight:500}
 .rcard-tags{padding:9px 15px;display:flex;flex-wrap:wrap;gap:4px;border-top:1px solid var(--border);background:var(--bg)}
-.tag{font-size:14.5px;font-weight:800;padding:2px 7px;border-radius:5px}
+.tag{font-size:14.5px;font-weight:600;padding:2px 7px;border-radius:5px}
 
 .tbl-wrap{background:var(--white);border-radius:var(--r);border:1.5px solid var(--border);overflow:hidden;box-shadow:var(--shadow-sm)}
-.tbl-hd{padding:9px 15px;background:var(--bg);border-bottom:1.5px solid var(--border);font-size:15px;font-weight:800;color:var(--ink3);letter-spacing:.05em}
+.tbl-hd{padding:9px 15px;background:var(--bg);border-bottom:1.5px solid var(--border);font-size:15px;font-weight:600;color:var(--ink3);letter-spacing:.05em}
 table{width:100%;border-collapse:collapse}
-th{padding:8px 12px;text-align:center;font-size:15px;font-weight:800;color:var(--ink4);border-bottom:1.5px solid var(--border);background:var(--bg);white-space:nowrap}
+th{padding:8px 12px;text-align:center;font-size:15px;font-weight:600;color:var(--ink4);border-bottom:1.5px solid var(--border);background:var(--bg);white-space:nowrap}
 th:first-child{text-align:left}
 td{padding:9px 12px;text-align:center;font-size:14.4px;border-bottom:1px solid var(--border)}
 td:first-child{text-align:left}
 tr:last-child td{border-bottom:none}
 tr:hover td{background:#FAFAFA}
-.tr-total td{background:var(--red-light)!important;font-weight:800;border-top:2px solid var(--red-mid)}
+.tr-total td{background:var(--red-light)!important;font-weight:600;border-top:2px solid var(--red-mid)}
 
 .note{font-size:4px;color:var(--ink4);text-align:center;line-height:1.5;padding-bottom:6px}
 
 /* ===== 初期費用・推移 詳細オーバーレイ ===== */
 #detail-overlay{position:fixed;inset:0;z-index:300;background:#EFEFEF;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
 #detail-bar{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:10px;background:#fff;border-bottom:2px solid #C8C8C8;padding:9px 14px;padding-top:calc(9px + env(safe-area-inset-top));padding-left:calc(14px + env(safe-area-inset-left));padding-right:calc(14px + env(safe-area-inset-right))}
-.dbar-title{flex:1;font-size:16.8px;font-weight:900;color:#000000;text-align:center}
-.dbtn{border:none;border-radius:8px;padding:8px 14px;font-size:15.6px;font-weight:800;font-family:inherit;cursor:pointer;white-space:nowrap}
+.dbar-title{flex:1;font-size:16.8px;font-weight:700;color:#000000;text-align:center}
+.dbtn{border:none;border-radius:8px;padding:8px 14px;font-size:15.6px;font-weight:600;font-family:inherit;cursor:pointer;white-space:nowrap}
 .dbtn-close{background:#E0E0E0;color:#333333}
 .dbtn-print{background:#000000;color:#fff}
 @media (max-width:600px){.dbar-title{display:none}.dbtn{padding:8px 10px;font-size:14.4px}}
 #detail-body{padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom));padding-left:calc(16px + env(safe-area-inset-left));padding-right:calc(16px + env(safe-area-inset-right))}
 #detail-body .wrap{max-width:1100px;margin:0 auto}
 #detail-body .phead{display:flex;align-items:center;gap:10px;background:#000000;color:#fff;border-radius:14px 14px 0 0;padding:11px 18px}
-#detail-body .phead-t{font-size:18px;font-weight:900;flex:1}
+#detail-body .phead-t{font-size:18px;font-weight:700;flex:1}
 #detail-body .phead-s{font-size:14.4px;opacity:.85}
 #detail-body .ptotal{background:#fff;border:2px solid #C8C8C8;border-top:none;border-radius:0 0 14px 14px;padding:14px 18px;display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
-#detail-body .ptotal-l{font-size:15.6px;font-weight:800;color:#333333}
-#detail-body .ptotal-v{font-size:31.2px;font-weight:900;color:#000000}
-#detail-body .sect{font-size:14.4px;font-weight:800;color:#666666;letter-spacing:.05em;margin:0 0 8px 2px}
+#detail-body .ptotal-l{font-size:15.6px;font-weight:600;color:#333333}
+#detail-body .ptotal-v{font-size:31.2px;font-weight:700;color:#000000}
+#detail-body .sect{font-size:14.4px;font-weight:600;color:#666666;letter-spacing:.05em;margin:0 0 8px 2px}
 #detail-body .dcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:18px}
 #detail-body .dcard{background:#fff;border:2px solid #E0E0E0;border-radius:14px;overflow:hidden}
 #detail-body .dcard-head{padding:10px 13px;display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-#detail-body .dcard-name{font-size:16.8px;font-weight:900}
+#detail-body .dcard-name{font-size:16.8px;font-weight:700}
 #detail-body .dcard-sub{font-size:14.5px;color:#8C8C8C;margin-top:2px}
-#detail-body .dcard-total{font-size:21.6px;font-weight:900;white-space:nowrap}
+#detail-body .dcard-total{font-size:21.6px;font-weight:700;white-space:nowrap}
 #detail-body .dcard-body{padding:9px 13px}
 #detail-body .drow{display:flex;justify-content:space-between;gap:10px;align-items:baseline;padding:4px 0;border-bottom:1px solid #E4F1F3;font-size:15px}
 #detail-body .drow:last-child{border-bottom:none}
@@ -413,7 +415,7 @@ tr:hover td{background:#FAFAFA}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
 
 .mob-tabs{display:none}
-.mob-tab{flex:1;padding:12px 4px;font-size:15.6px;font-weight:800;color:var(--ink4);text-align:center;border:none;background:none;cursor:pointer;border-bottom:3px solid transparent}
+.mob-tab{flex:1;padding:12px 4px;font-size:15.6px;font-weight:600;color:var(--ink4);text-align:center;border:none;background:none;cursor:pointer;border-bottom:3px solid transparent}
 .mob-tab.active{color:var(--red);border-bottom-color:var(--red)}
 
 .is-mobile .mob-tabs{display:flex;background:var(--white);border-bottom:2px solid var(--border);flex-shrink:0}
@@ -463,10 +465,10 @@ tr:hover td{background:#FAFAFA}
   <span id="panel-toggle-icon">◀</span>
   </button>
   <button class="hdr-reset" onclick="resetAll()">↺<span class="rst-txt" data-txt="btnReset"> リセット</span></button>
-<button id="btn-otoku" onclick="showOtoku()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:14.4px;font-weight:800;flex-shrink:0;white-space:nowrap"><span class="btn-est-txt"> カード種別</span><span class="btn-est-sp" style="display:none"> カード</span></button>
-<button id="btn-net" onclick="showNetCompare()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:14.4px;font-weight:800;flex-shrink:0;white-space:nowrap"><span class="btn-est-txt"> ネット種別</span><span class="btn-est-sp" style="display:none"> ネット</span></button>
-  <button id="btn-estimate" onclick="showPrintMenu()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:14.4px;font-weight:800;flex-shrink:0;white-space:nowrap"><span class="btn-est-txt" data-txt="btnPdf"> PDFに保存</span><span class="btn-est-sp" style="display:none"> PDF</span></button>
-  <button id="btn-detail" onclick="openDetailPage()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:14.4px;font-weight:800;flex-shrink:0;white-space:nowrap"><span class="btn-est-txt"> 初期費用・推移</span><span class="btn-est-sp" style="display:none"> 内訳</span></button>
+<button id="btn-otoku" onclick="showOtoku()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:14.4px;font-weight:600;flex-shrink:0;white-space:nowrap"><span class="btn-est-txt"> カード種別</span><span class="btn-est-sp" style="display:none"> カード</span></button>
+<button id="btn-net" onclick="showNetCompare()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:14.4px;font-weight:600;flex-shrink:0;white-space:nowrap"><span class="btn-est-txt"> ネット種別</span><span class="btn-est-sp" style="display:none"> ネット</span></button>
+  <button id="btn-estimate" onclick="showPrintMenu()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:14.4px;font-weight:600;flex-shrink:0;white-space:nowrap"><span class="btn-est-txt" data-txt="btnPdf"> PDFに保存</span><span class="btn-est-sp" style="display:none"> PDF</span></button>
+  <button id="btn-detail" onclick="openDetailPage()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:14.4px;font-weight:600;flex-shrink:0;white-space:nowrap"><span class="btn-est-txt"> 初期費用・推移</span><span class="btn-est-sp" style="display:none"> 内訳</span></button>
 </div>
 
 <div class="mob-tabs" id="mob-tabs">
@@ -494,7 +496,7 @@ tr:hover td{background:#FAFAFA}
   </div>
   <div id="hikari-detail" style="display:none">
   <div class="hk-sub">
-  <div style="font-size:15px;font-weight:800;color:var(--blue)">プラン詳細</div>
+  <div style="font-size:15px;font-weight:600;color:var(--blue)">プラン詳細</div>
   <div class="sel-row"><span class="sel-label" data-txt="lblSpeed">速度プラン</span>
   <select class="sel" id="sel-hspeed" onchange="setHkCfg('speed',this.value)">
   <option value="1g">1G</option>
@@ -508,7 +510,7 @@ tr:hover td{background:#FAFAFA}
   </select>
   </div>
   <div id="row-syugou-link" style="display:none">
-  <a href="https://hikariweb.ntt-east.co.jp/login.php" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#E8F0F6;border:1.5px solid var(--amber-border);text-decoration:none;color:var(--amber);font-size:15px;font-weight:800">
+  <a href="https://hikariweb.ntt-east.co.jp/login.php" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#E8F0F6;border:1.5px solid var(--amber-border);text-decoration:none;color:var(--amber);font-size:15px;font-weight:600">
   <span style="font-size:16.8px"></span><span style="flex:1">建物の設備状況を確認する（NTT東日本）</span><span style="font-size:15.6px">↗</span>
   </a>
   <div style="font-size:13.5px;color:var(--ink4);line-height:1.6;margin-top:2px">※ 集合住宅は配線方式により提供可否・料金が変わる場合があります</div>
@@ -557,10 +559,10 @@ tr:hover td{background:#FAFAFA}
   </div>
   <div id="row-10garea" style="display:none">
   <div style="background:var(--amber-bg);border:1.5px solid var(--amber-border);border-radius:8px;padding:8px 10px;margin-top:4px">
-  <div style="font-size:15px;font-weight:800;color:var(--amber);margin-bottom:5px">10ギガは提供エリアが限られます</div>
+  <div style="font-size:15px;font-weight:600;color:var(--amber);margin-bottom:5px">10ギガは提供エリアが限られます</div>
   <div style="display:flex;gap:6px;flex-wrap:wrap">
-  <a href="https://flets.com/app2/search_c.html" target="_blank" rel="noopener" style="flex:1;min-width:120px;text-align:center;padding:7px 8px;border-radius:7px;background:var(--blue);color:#fff;font-size:15px;font-weight:800;text-decoration:none">NTT東日本で確認 ↗</a>
-  <a href="https://flets-w.com/area/" target="_blank" rel="noopener" style="flex:1;min-width:120px;text-align:center;padding:7px 8px;border-radius:7px;background:var(--green);color:#fff;font-size:15px;font-weight:800;text-decoration:none">NTT西日本で確認 ↗</a>
+  <a href="https://flets.com/app2/search_c.html" target="_blank" rel="noopener" style="flex:1;min-width:120px;text-align:center;padding:7px 8px;border-radius:7px;background:var(--blue);color:#fff;font-size:15px;font-weight:600;text-decoration:none">NTT東日本で確認 ↗</a>
+  <a href="https://flets-w.com/area/" target="_blank" rel="noopener" style="flex:1;min-width:120px;text-align:center;padding:7px 8px;border-radius:7px;background:var(--green);color:#fff;font-size:15px;font-weight:600;text-decoration:none">NTT西日本で確認 ↗</a>
   </div>
   <div style="font-size:14px;color:var(--ink3);line-height:1.6;margin-top:6px">
   ・東日本：「光アクセス（10G品目）の提供エリアです」と表示された場合のみ対象<br>
@@ -570,7 +572,7 @@ tr:hover td{background:#FAFAFA}
   </div>
   <div id="hk-opts-wrap">
   <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border2)">
-  <div style="font-size:15px;font-weight:800;color:var(--ink3);margin-bottom:4px">その他オプション</div>
+  <div style="font-size:15px;font-weight:600;color:var(--ink3);margin-bottom:4px">その他オプション</div>
   <div id="hk-opts-list"></div>
   <button onclick="addOpt('hk',0)" style="margin-top:6px;width:100%;padding:5px;border:1.5px dashed var(--border2);border-radius:7px;color:var(--ink4);font-size:15px;cursor:pointer;background:none">＋ オプション追加</button>
   </div>
@@ -600,7 +602,7 @@ tr:hover td{background:#FAFAFA}
   </div>
   <div id="h5g-detail" style="display:none">
   <div class="hk-sub" style="border-color:var(--green-border);background:var(--green-bg)">
-  <div style="font-size:15px;font-weight:800;color:var(--green)">home 5G 詳細</div>
+  <div style="font-size:15px;font-weight:600;color:var(--green)">home 5G 詳細</div>
   <div class="sel-row">
   <span class="sel-label" data-txt="lblH5gPayment">本体支払い</span>
   <select class="sel" id="sel-h5g-payment" onchange="setH5gCfg('payment',this.value)" style="border-color:var(--green-border)">
@@ -619,7 +621,7 @@ tr:hover td{background:#FAFAFA}
   </div>
   </div>
   <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--green-border)">
-  <div style="font-size:15px;font-weight:800;color:var(--green);margin-bottom:4px">その他オプション</div>
+  <div style="font-size:15px;font-weight:600;color:var(--green);margin-bottom:4px">その他オプション</div>
   <div id="h5g-opts-list"></div>
   <button onclick="addOpt('h5g',0)" style="margin-top:6px;width:100%;padding:5px;border:1.5px dashed var(--green-border);border-radius:7px;color:var(--green);font-size:15px;cursor:pointer;background:none">＋ オプション追加</button>
   </div>
@@ -648,8 +650,8 @@ tr:hover td{background:#FAFAFA}
   </div>
   <div id="home-denwa-detail" style="display:none">
   <div class="hk-sub">
-  <div style="font-size:15px;font-weight:800;color:var(--blue)">homeでんわ 詳細</div>
-  <a href="https://www.docomo.ne.jp/home_denwa/area/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#E8F0F6;border:1.5px solid #C8C8C8;text-decoration:none;color:var(--blue);font-size:15px;font-weight:800;margin-bottom:2px">
+  <div style="font-size:15px;font-weight:600;color:var(--blue)">homeでんわ 詳細</div>
+  <a href="https://www.docomo.ne.jp/home_denwa/area/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#E8F0F6;border:1.5px solid #C8C8C8;text-decoration:none;color:var(--blue);font-size:15px;font-weight:600;margin-bottom:2px">
   <span style="font-size:16.8px"></span><span style="flex:1">提供エリアを確認する</span><span style="font-size:15.6px">↗</span>
   </a>
   <div style="font-size:13.5px;color:var(--ink4);line-height:1.6;margin-bottom:4px">※ homeでんわの提供エリアは一部地域のみです。申込前に必ずご確認ください</div>
@@ -1199,7 +1201,7 @@ function renderHomeDenwaDetail(){
   <div class="hks-row"><span class="hks-label">プラン料金${homeDenwaSetEligible()?'（セット割込み）':'（セット割対象外）'}</span><span class="hks-val" style="color:var(--blue)">¥${planFee.toLocaleString()}/月</span></div>
   <div class="hks-row"><span class="hks-label">月々サポート割（36ヶ月）</span><span class="hks-val" style="color:var(--green)">−¥${HD_SUPPORT_DISC.toLocaleString()}/月</span></div>
   ${!isIkkatsu?`<div class="hks-row"><span class="hks-label">HP01端末代（36回）</span><span class="hks-val" style="color:var(--amber)">+¥${installment.toLocaleString()}/月</span></div>`:`<div class="hks-row"><span class="hks-label">HP01端末代</span><span class="hks-val" style="color:var(--amber)">¥${HD_DEVICE_PRICE.toLocaleString()}（一括・初月）</span></div>`}
-  <div class="hks-row"><span class="hks-label" style="font-weight:800">homeでんわ合計</span><span class="hks-val" style="font-weight:800;color:var(--blue)">¥${(afterSupport+installment).toLocaleString()}/月</span></div>
+  <div class="hks-row"><span class="hks-label" style="font-weight:600">homeでんわ合計</span><span class="hks-val" style="font-weight:600;color:var(--blue)">¥${(afterSupport+installment).toLocaleString()}/月</span></div>
   <div class="hks-row" style="border-top:1px solid var(--border);margin-top:4px;padding-top:6px"><span class="hks-label">契約事務手数料（初月）</span><span class="hks-val" style="color:var(--amber)">¥2,200</span></div>
   ${isPort?`<div class="hks-row"><span class="hks-label">番号継続登録料（初月・番号ポータビリティ）</span><span class="hks-val" style="color:var(--amber)">¥2,200</span></div>`:''}
   <div class="hks-row"><span class="hks-label" style="font-size:14.5px;color:var(--ink4)">初期費用合計 ¥${numberFee.toLocaleString()}${isIkkatsu?`＋HP01一括¥${HD_DEVICE_PRICE.toLocaleString()}`:''}</span></div>
@@ -1254,7 +1256,7 @@ function renderDenkiDetail(){
     const cardName=card==='none'?'カードなし':CARDS[card].n;
     preview.innerHTML=`<div style="padding:8px 10px;border-radius:8px;background:${plan==='green'?'#E4F1F3':'#E4F1F3'};border:1.5px solid ${plan==='green'?'#C8C8C8':'#C8C8C8'}">
     <div style="font-size:15px;color:var(--ink4);margin-bottom:3px">月間ポイント試算（${cardName}・${plan==='green'?'Green':'Basic'} ${rate}%）</div>
-    <div style="font-size:21.6px;font-weight:900;color:${plan==='green'?'var(--green)':'var(--ink2)'}">+${pts.toLocaleString()}pt<span style="font-size:15px;font-weight:400;color:var(--ink4)">/月</span></div>
+    <div style="font-size:21.6px;font-weight:700;color:${plan==='green'?'var(--green)':'var(--ink2)'}">+${pts.toLocaleString()}pt<span style="font-size:15px;font-weight:400;color:var(--ink4)">/月</span></div>
     <div style="font-size:14.5px;color:var(--ink4)">年間 +${(pts*12).toLocaleString()}pt</div>
     </div>`;
   } else if(preview){preview.innerHTML='';}
@@ -1284,7 +1286,7 @@ function renderGasDetail(){
     const pts=calcGasPts(S.gasCfg.monthlyBill);
     preview.innerHTML=`<div style="padding:8px 10px;border-radius:8px;background:#FFEDE4;border:1.5px solid #C8C8C8">
     <div style="font-size:15px;color:var(--ink4);margin-bottom:3px">月間ポイント試算（還元率 ${gasRate()}%・でんきセット${S.shared.denki?'あり':'なし'}）</div>
-    <div style="font-size:21.6px;font-weight:900;color:var(--amber)">+${pts.toLocaleString()}pt<span style="font-size:15px;font-weight:400;color:var(--ink4)">/月</span></div>
+    <div style="font-size:21.6px;font-weight:700;color:var(--amber)">+${pts.toLocaleString()}pt<span style="font-size:15px;font-weight:400;color:var(--ink4)">/月</span></div>
     <div style="font-size:14.5px;color:var(--ink4)">年間 +${(pts*12).toLocaleString()}pt ／ ガス料金自体は地域ガス会社と同額</div>
     </div>`;
   } else if(preview){preview.innerHTML='';}
@@ -1558,8 +1560,8 @@ function buildDeviceHTML(l,plan,d){
     const hasAdj=(dep>0||disc>0);
     return `<div style="margin-top:6px;padding:7px 10px;border-radius:8px;background:${hasAdj?'var(--amber-bg)':'var(--bg)'};border:1.5px solid ${hasAdj?'var(--amber-border)':'var(--border2)'}">
       <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
-        <span style="font-size:15px;font-weight:800;color:${hasAdj?'var(--amber)':'var(--ink3)'}">${hasAdj?'値引き後の本体価格':'本体価格'}</span>
-        <span style="font-size:19.2px;font-weight:900;color:${hasAdj?'var(--amber)':'var(--ink)'}">¥${after.toLocaleString()}</span>
+        <span style="font-size:15px;font-weight:600;color:${hasAdj?'var(--amber)':'var(--ink3)'}">${hasAdj?'値引き後の本体価格':'本体価格'}</span>
+        <span style="font-size:19.2px;font-weight:700;color:${hasAdj?'var(--amber)':'var(--ink)'}">¥${after.toLocaleString()}</span>
       </div>
       ${hasAdj?`<div style="font-size:13.5px;color:var(--ink4);margin-top:2px;line-height:1.5">本体¥${price.toLocaleString()}${dep>0?`　頭金 −¥${dep.toLocaleString()}`:''}${disc>0?`　割引 −¥${disc.toLocaleString()}`:''}</div>`:''}
     </div>`;
@@ -1579,8 +1581,8 @@ function buildDeviceHTML(l,plan,d){
     return `<div style="margin-top:6px;padding:8px 9px;border:1.5px solid var(--amber-border);border-radius:8px;background:var(--amber-bg)">
     <div style="font-size:14.5px;color:var(--amber);font-weight:700;margin-bottom:5px">契約種別（残価が変わります）</div>
     <div style="display:flex;gap:6px;margin-bottom:7px">
-      <button onclick="setLineKeiyaku(${l.id},'mnp')" style="flex:1;padding:6px;border-radius:7px;border:1.5px solid ${keiyaku==='mnp'?'var(--amber)':'var(--border2)'};background:${keiyaku==='mnp'?'var(--amber)':'var(--white)'};color:${keiyaku==='mnp'?'#fff':'var(--ink3)'};font-size:15px;font-weight:800;font-family:inherit;cursor:pointer">のりかえ（MNP）</button>
-      <button onclick="setLineKeiyaku(${l.id},'henkou')" style="flex:1;padding:6px;border-radius:7px;border:1.5px solid ${keiyaku==='henkou'?'var(--amber)':'var(--border2)'};background:${keiyaku==='henkou'?'var(--amber)':'var(--white)'};color:${keiyaku==='henkou'?'#fff':'var(--ink3)'};font-size:15px;font-weight:800;font-family:inherit;cursor:pointer">機種変更</button>
+      <button onclick="setLineKeiyaku(${l.id},'mnp')" style="flex:1;padding:6px;border-radius:7px;border:1.5px solid ${keiyaku==='mnp'?'var(--amber)':'var(--border2)'};background:${keiyaku==='mnp'?'var(--amber)':'var(--white)'};color:${keiyaku==='mnp'?'#fff':'var(--ink3)'};font-size:15px;font-weight:600;font-family:inherit;cursor:pointer">のりかえ（MNP）</button>
+      <button onclick="setLineKeiyaku(${l.id},'henkou')" style="flex:1;padding:6px;border-radius:7px;border:1.5px solid ${keiyaku==='henkou'?'var(--amber)':'var(--border2)'};background:${keiyaku==='henkou'?'var(--amber)':'var(--white)'};color:${keiyaku==='henkou'?'#fff':'var(--ink3)'};font-size:15px;font-weight:600;font-family:inherit;cursor:pointer">機種変更</button>
     </div>
     <div style="font-size:14.5px;color:var(--amber);font-weight:700;margin-bottom:4px">残価（24回目）${item&&(item.zMnp||item.zHen)?'　※自動入力':''}</div>
     <div style="display:flex;align-items:center;gap:4px">
@@ -2027,7 +2029,7 @@ function renderLeft(){
     if(!el)return;
     const manual=S.shared[mk]===true;
     el.textContent=manual?'［手動］':'［自動］';
-    el.style.cssText=`font-weight:800;margin-right:4px;color:${manual?'var(--amber)':'var(--green)'}`;
+    el.style.cssText=`font-weight:600;margin-right:4px;color:${manual?'var(--amber)':'var(--green)'}`;
   });
   renderKoujiCampaignUI();
   const dd=document.getElementById('denki-detail');
@@ -2147,12 +2149,12 @@ function renderLines(){
     el.style.borderColor=line.open?col+'66':'var(--border)';
 
     const roleTag=isHolder
-      ?`<span style="font-size:14.5px;padding:2px 7px;border-radius:5px;font-weight:800;background:#E4F1F3;color:#0240C3;white-space:nowrap">保有者</span>`
+      ?`<span style="font-size:14.5px;padding:2px 7px;border-radius:5px;font-weight:600;background:#E4F1F3;color:#0240C3;white-space:nowrap">保有者</span>`
       :line.cardRole==="billedTogether"
-      ?`<span style="font-size:14.5px;padding:2px 7px;border-radius:5px;font-weight:800;background:#E8F0F6;color:#000000;white-space:nowrap">一括請求</span>`
+      ?`<span style="font-size:14.5px;padding:2px 7px;border-radius:5px;font-weight:600;background:#E8F0F6;color:#000000;white-space:nowrap">一括請求</span>`
       :line.cardRole==="familyCard"
-      ?`<span style="font-size:14.5px;padding:2px 7px;border-radius:5px;font-weight:800;background:#E4F1F3;color:#333333;white-space:nowrap">家族カード</span>`
-      :`<span style="font-size:14.5px;padding:2px 7px;border-radius:5px;font-weight:800;background:#E4F1F3;color:#8C8C8C;white-space:nowrap">対象外</span>`;
+      ?`<span style="font-size:14.5px;padding:2px 7px;border-radius:5px;font-weight:600;background:#E4F1F3;color:#333333;white-space:nowrap">家族カード</span>`
+      :`<span style="font-size:14.5px;padding:2px 7px;border-radius:5px;font-weight:600;background:#E4F1F3;color:#8C8C8C;white-space:nowrap">対象外</span>`;
 
     const planWarnMsg=plan.restricted
       ?(!plan.familyDisc&&!plan.setDisc?'! みんなドコモ割・セット割・dカード割 全て対象外（カウントのみ）'
@@ -2228,7 +2230,7 @@ function renderLines(){
       return `<div style="border:1.5px solid var(--border2);border-radius:8px;overflow:hidden;background:var(--white)">
       <div onclick="toggleLineSection(${line.id},'card')" style="padding:8px 10px;cursor:pointer;user-select:none">
       <div style="display:flex;align-items:center;gap:6px">
-      <span style="font-size:14.4px;font-weight:800;color:var(--ink2);white-space:nowrap">カードの種類・利用額</span>
+      <span style="font-size:14.4px;font-weight:600;color:var(--ink2);white-space:nowrap">カードの種類・利用額</span>
       <span style="font-size:13.5px;color:var(--ink4);margin-left:auto;flex-shrink:0;display:inline-block;${open?'transform:rotate(180deg)':''}">▼</span>
       </div>
       <div style="font-size:14.5px;color:#0240C3;font-weight:700;margin-top:3px;line-height:1.4">${esc(summary)}</div>
@@ -2278,7 +2280,7 @@ function renderLines(){
       return `<div style="border:1.5px solid var(--border2);border-radius:8px;overflow:hidden;background:var(--white)">
       <div onclick="toggleLineSection(${line.id},'card')" style="padding:8px 10px;cursor:pointer;user-select:none">
       <div style="display:flex;align-items:center;gap:6px">
-      <span style="font-size:14.4px;font-weight:800;color:var(--ink2);white-space:nowrap">カードの種類・利用額</span>
+      <span style="font-size:14.4px;font-weight:600;color:var(--ink2);white-space:nowrap">カードの種類・利用額</span>
       <span style="font-size:13.5px;color:var(--ink4);margin-left:auto;flex-shrink:0;display:inline-block;${open?'transform:rotate(180deg)':''}">▼</span>
       </div>
       <div style="font-size:14.5px;color:var(--green);font-weight:700;margin-top:3px;line-height:1.4">${esc(summary)}</div>
@@ -2288,7 +2290,7 @@ function renderLines(){
       <div class="fl">dカード種類</div>
       <div style="display:flex;align-items:center;gap:7px;padding:6px 10px;border-radius:var(--r-sm);background:var(--green-bg);border:1.5px solid var(--green-border)">
       <span style="font-size:19.2px">${CARDS[line.card]?.emoji||''}</span>
-      <div><div style="font-size:14.4px;font-weight:800;color:var(--green)">${CARDS[line.card]?.fn||line.card}</div>
+      <div><div style="font-size:14.4px;font-weight:600;color:var(--green)">${CARDS[line.card]?.fn||line.card}</div>
       <div style="font-size:14.5px;color:var(--ink4)">保有者（${holderLine()?esc(holderLine().name):'未設定'}）のカードに自動連動</div></div>
       </div>
       </div>
@@ -2323,7 +2325,7 @@ function renderLines(){
       return `<div style="border:1.5px solid var(--border2);border-radius:8px;overflow:hidden;background:var(--white)">
       <div onclick="toggleLineSection(${line.id},'disc')" style="padding:8px 10px;cursor:pointer;user-select:none">
       <div style="display:flex;align-items:center;gap:6px">
-      <span style="font-size:14.4px;font-weight:800;color:var(--ink2);white-space:nowrap">割引の適用</span>
+      <span style="font-size:14.4px;font-weight:600;color:var(--ink2);white-space:nowrap">割引の適用</span>
       ${(()=>{
         const man=line.discManualItems||{};
         const anyManual=Object.values(man).some(v=>v===true);
@@ -2417,7 +2419,7 @@ function renderLines(){
       return `<div style="border:1.5px solid var(--border2);border-radius:8px;overflow:hidden;background:var(--white);margin-top:3px">
       <div onclick="toggleLineSection(${line.id},'device')" style="padding:8px 10px;cursor:pointer;user-select:none">
       <div style="display:flex;align-items:center;gap:6px">
-      <span style="font-size:14.4px;font-weight:800;color:var(--ink2);white-space:nowrap">端末購入</span>
+      <span style="font-size:14.4px;font-weight:600;color:var(--ink2);white-space:nowrap">端末購入</span>
       <span style="font-size:13.5px;color:var(--ink4);margin-left:auto;flex-shrink:0;display:inline-block;${open?'transform:rotate(180deg)':''}">▼</span>
       </div>
       <div style="font-size:14.5px;color:${d.price>0?'var(--amber)':'var(--ink4)'};font-weight:700;margin-top:3px;line-height:1.4">${esc(summary)}</div>
@@ -2428,7 +2430,7 @@ function renderLines(){
       </div>`;
     })()}
     <div style="margin-top:6px;padding-top:8px;border-top:1px solid var(--border)">
-    <div style="font-size:15px;font-weight:800;color:var(--ink3);margin-bottom:4px">その他オプション</div>
+    <div style="font-size:15px;font-weight:600;color:var(--ink3);margin-bottom:4px">その他オプション</div>
     ${(line.options||[]).map((o,oi)=>`
       <div style="display:flex;align-items:center;gap:5px;margin-bottom:4px">
         <input type="text" placeholder="オプション名" value="${esc(o.name||'')}"
@@ -2777,7 +2779,7 @@ function buildPaymentGraph(){
     const isFirst=i===0;
     return `<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-radius:8px;background:${isFirst?'#E8F0F6':(i%2===0?'#FAFAFA':'#FFFFFF')};border:1px solid ${isFirst?'#C8C8C8':'#E0E0E0'};margin-bottom:4px">
       <span style="font-size:14.4px;font-weight:700;color:${isFirst?'#000000':'#333333'}">${periodLabel(p)}</span>
-      <span style="font-size:16.8px;font-weight:900;color:${isFirst?'#000000':'#000000'}">¥${p.amt.toLocaleString()}${isFirst?'':'/月'}</span>
+      <span style="font-size:16.8px;font-weight:700;color:${isFirst?'#000000':'#000000'}">¥${p.amt.toLocaleString()}${isFirst?'':'/月'}</span>
     </div>`;
   }).join('');
   const changeNote=periods.length>1
@@ -2883,7 +2885,7 @@ function renderRightContent(){
     <div class="hks-head-l"><span class="hks-icon"></span><span class="hks-title">${hkName()}${is10g?' キャンペーン中':''}</span></div>
     <div class="hks-head-r">
     <div class="hks-monthly">¥${hkMth.toLocaleString()}</div>
-    <div class="hks-unit">/月（税込・合計）${is10g?'<span style="color:var(--amber);font-weight:800"> 6ヶ月限定</span>':''}</div>
+    <div class="hks-unit">/月（税込・合計）${is10g?'<span style="color:var(--amber);font-weight:600"> 6ヶ月限定</span>':''}</div>
     </div>
     </div>
     <div class="hks-info">
@@ -3060,7 +3062,7 @@ function renderRightContent(){
       <div>
       <div class="rcard-price" style="color:${col}">¥${(()=>{const dv=calcDevice(l.device);const devMth=dv&&dv.type!=='ikkatsu'?(dv.monthly_norm||0):0;return (c.monthly+devMth).toLocaleString();})()}</div>
       <div class="rcard-unit">/月${(()=>{const dv=calcDevice(l.device);return dv&&dv.type!=='ikkatsu'?'（端末込・税込）':'（税込）';})()}</div>
-      ${isH?`<div style="font-size:14.5px;font-weight:800;color:#0240C3;text-align:right;margin-top:3px">${CARDS[l.card].n} 保有者</div>`:isFC?`<div style="font-size:14.5px;font-weight:800;color:#333333;text-align:right;margin-top:3px">家族カード（${CARDS[l.card]?.n||''}）</div>`:isBT?`<div style="font-size:14.5px;font-weight:800;color:#000000;text-align:right;margin-top:3px">一括請求対象</div>`:''}
+      ${isH?`<div style="font-size:14.5px;font-weight:600;color:#0240C3;text-align:right;margin-top:3px">${CARDS[l.card].n} 保有者</div>`:isFC?`<div style="font-size:14.5px;font-weight:600;color:#333333;text-align:right;margin-top:3px">家族カード（${CARDS[l.card]?.n||''}）</div>`:isBT?`<div style="font-size:14.5px;font-weight:600;color:#000000;text-align:right;margin-top:3px">一括請求対象</div>`:''}
       </div>
       </div>
       <div class="rcard-body">
@@ -3090,7 +3092,7 @@ function renderRightContent(){
         <div class="row-div"></div>
         <div class="row-total" style="background:var(--amber-bg);border-radius:6px;padding:4px 6px;margin-top:2px"><span class="row-total-l" style="color:var(--amber)">端末込み合計</span><span class="row-total-v" style="color:var(--amber)">¥${total.toLocaleString()}</span></div>`;
       })()}
-      ${c.annFee>0?`<div class="row"><span class="row-l">${CARDS[l.card].emoji} カード年会費（${CARDS[l.card].n}）</span><span class="row-v" style="color:var(--amber);font-weight:800">¥${c.annFee.toLocaleString()}/年</span></div>`:''}
+      ${c.annFee>0?`<div class="row"><span class="row-l">${CARDS[l.card].emoji} カード年会費（${CARDS[l.card].n}）</span><span class="row-v" style="color:var(--amber);font-weight:600">¥${c.annFee.toLocaleString()}/年</span></div>`:''}
       </div>
       ${(()=>{
         const lmprX=(l.cardRole==='holder'&&l.card!=='none')?resolveMpr(HK_MPR_MAP,l.card):0;
@@ -3271,13 +3273,13 @@ function showPrintMenu(){
   m.id='print-menu';
   m.style.cssText='position:fixed;inset:0;z-index:250;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;padding:20px';
   m.innerHTML=`<div style="background:#fff;border-radius:14px;max-width:340px;width:100%;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.25)">
-    <div style="padding:14px 16px;border-bottom:1.5px solid var(--border);font-size:18px;font-weight:900">PDFに保存</div>
+    <div style="padding:14px 16px;border-bottom:1.5px solid var(--border);font-size:18px;font-weight:700">PDFに保存</div>
     <div style="padding:10px 12px;display:flex;flex-direction:column;gap:7px">
-      ${S.lines.length?`<button onclick="doPrint('all')" style="text-align:left;padding:12px 14px;border:2px solid var(--red);border-radius:10px;background:#E8F0F6;color:var(--red);font-size:15.6px;font-weight:800;font-family:inherit;cursor:pointer">全回線をまとめて<div style="font-size:14.5px;font-weight:600;color:var(--ink3);margin-top:2px">${S.lines.length}回線すべてを1つのPDFに</div></button>`:''}
-      ${cur?`<button onclick="doPrint('one')" style="text-align:left;padding:12px 14px;border:2px solid var(--border2);border-radius:10px;background:#fff;font-size:15.6px;font-weight:800;font-family:inherit;cursor:pointer">${esc(cur.name)}の分だけ<div style="font-size:14.5px;font-weight:600;color:var(--ink3);margin-top:2px">いま表示している回線のみ</div></button>`:''}
-      <button onclick="doPrint('svc')" style="text-align:left;padding:12px 14px;border:2px solid var(--border2);border-radius:10px;background:#fff;font-size:15.6px;font-weight:800;font-family:inherit;cursor:pointer">ネット・でんき・カード<div style="font-size:14.5px;font-weight:600;color:var(--ink3);margin-top:2px">サービスのページのみ</div></button>
+      ${S.lines.length?`<button onclick="doPrint('all')" style="text-align:left;padding:12px 14px;border:2px solid var(--red);border-radius:10px;background:#E8F0F6;color:var(--red);font-size:15.6px;font-weight:600;font-family:inherit;cursor:pointer">全回線をまとめて<div style="font-size:14.5px;font-weight:600;color:var(--ink3);margin-top:2px">${S.lines.length}回線すべてを1つのPDFに</div></button>`:''}
+      ${cur?`<button onclick="doPrint('one')" style="text-align:left;padding:12px 14px;border:2px solid var(--border2);border-radius:10px;background:#fff;font-size:15.6px;font-weight:600;font-family:inherit;cursor:pointer">${esc(cur.name)}の分だけ<div style="font-size:14.5px;font-weight:600;color:var(--ink3);margin-top:2px">いま表示している回線のみ</div></button>`:''}
+      <button onclick="doPrint('svc')" style="text-align:left;padding:12px 14px;border:2px solid var(--border2);border-radius:10px;background:#fff;font-size:15.6px;font-weight:600;font-family:inherit;cursor:pointer">ネット・でんき・カード<div style="font-size:14.5px;font-weight:600;color:var(--ink3);margin-top:2px">サービスのページのみ</div></button>
     </div>
-    <div style="padding:0 12px 14px"><button onclick="document.getElementById('print-menu').remove()" style="width:100%;padding:10px;border:none;border-radius:9px;background:var(--border);color:var(--ink2);font-size:14.4px;font-weight:800;font-family:inherit;cursor:pointer">キャンセル</button></div>
+    <div style="padding:0 12px 14px"><button onclick="document.getElementById('print-menu').remove()" style="width:100%;padding:10px;border:none;border-radius:9px;background:var(--border);color:var(--ink2);font-size:14.4px;font-weight:600;font-family:inherit;cursor:pointer">キャンセル</button></div>
   </div>`;
   m.addEventListener('click',e=>{if(e.target===m)m.remove();});
   document.body.appendChild(m);
@@ -3420,8 +3422,8 @@ function showNetCompare(){
       const col=NET_COLORS[p.key]||'#000000';
       return `<div style="border:1.5px solid ${col}44;background:${col}0D;border-left:4px solid ${col};border-radius:10px;padding:11px 13px;margin-bottom:8px">
         <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:4px">
-          <span style="font-size:15.6px;font-weight:900;color:${col}">${p.label}</span>
-          <span style="font-size:21.6px;font-weight:900;color:${col}">¥${r.net.toLocaleString()}</span>
+          <span style="font-size:15.6px;font-weight:700;color:${col}">${p.label}</span>
+          <span style="font-size:21.6px;font-weight:700;color:${col}">¥${r.net.toLocaleString()}</span>
         </div>
         <div style="font-size:14.5px;color:#666666;line-height:1.6">${p.note}</div>
         <div style="display:flex;gap:12px;font-size:14.5px;color:#666666;margin-top:4px;flex-wrap:wrap">
@@ -3431,7 +3433,7 @@ function showNetCompare(){
       </div>`;
     }).join('');
     return `<div style="margin-bottom:16px">
-      <div style="font-size:14.4px;font-weight:800;color:#666666;margin-bottom:6px">■ ${title}（${months}ヶ月）</div>
+      <div style="font-size:14.4px;font-weight:600;color:#666666;margin-bottom:6px">■ ${title}（${months}ヶ月）</div>
       ${rows}
     </div>`;
   }
@@ -3445,7 +3447,7 @@ function showNetCompare(){
   const inner=document.createElement('div');
   inner.style.cssText='flex:1;max-width:560px;margin:0 auto;background:white;overflow-y:auto;padding:20px 16px 30px;-webkit-overflow-scrolling:touch';
   inner.innerHTML=`<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
-    <div><div style="font-size:21.6px;font-weight:900">ネット種別ごとの負担額</div>
+    <div><div style="font-size:21.6px;font-weight:700">ネット種別ごとの負担額</div>
     <div style="font-size:15px;color:#8C8C8C">2年後・4年後の実質負担の目安</div></div>
     <button onclick="document.getElementById('net-modal').remove()" style="padding:6px 12px;background:#666666;color:white;border:none;border-radius:7px;font-size:14.4px;font-weight:700;cursor:pointer">✕ 閉じる</button>
     </div>
@@ -3538,11 +3540,11 @@ function showOtoku(){
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
         <div style="display:flex;align-items:center;gap:7px">
           <span style="font-size:24px">${cd.emoji}</span>
-          <div><div style="font-size:15.6px;font-weight:900;color:${cd.col}">${cd.fn}${badge}</div>
+          <div><div style="font-size:15.6px;font-weight:700;color:${cd.col}">${cd.fn}${badge}</div>
           <div style="font-size:14.5px;color:#8C8C8C">年会費 ${cd.fee>0?'¥'+cd.fee.toLocaleString():'無料'}</div></div>
         </div>
         <div style="text-align:right">
-          <div style="font-size:24px;font-weight:900;color:${pc}">${isProfit?'＋':'−'}¥${Math.abs(profit).toLocaleString()}</div>
+          <div style="font-size:24px;font-weight:700;color:${pc}">${isProfit?'＋':'−'}¥${Math.abs(profit).toLocaleString()}</div>
           <div style="font-size:14.5px;color:#666666">/年（${isProfit?'お得':'! 損失'}）</div>
         </div>
       </div>
@@ -3561,7 +3563,7 @@ function showOtoku(){
   const inner=document.createElement('div');
   inner.style.cssText='flex:1;max-width:540px;margin:0 auto;background:white;overflow-y:auto;padding:20px 16px 30px';
   inner.innerHTML=`<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
-    <div><div style="font-size:21.6px;font-weight:900">dカード お得チェック</div>
+    <div><div style="font-size:21.6px;font-weight:700">dカード お得チェック</div>
     <div style="font-size:15px;color:#8C8C8C">回線割引＋ポイント還元で年間いくらお得？</div></div>
     <button onclick="document.getElementById('otoku-modal').remove()" style="padding:6px 12px;background:#666666;color:white;border:none;border-radius:7px;font-size:14.4px;font-weight:700;cursor:pointer">✕ 閉じる</button>
     </div>
