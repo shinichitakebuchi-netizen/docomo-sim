@@ -2801,7 +2801,6 @@ function renderSummary(){
   // 期間限定の割引が途中で終わることを正しく反映するため、単純な×12にはしない）
   const annual=computeAnnualTotals();
   const totAnnPts=annual.pts;
-  const totNetAnnAll=annual.net;
   el.innerHTML=`
   <div class="sum-head">
   <span style="font-size:22.8px"></span>
@@ -2813,7 +2812,6 @@ function renderSummary(){
   <div class="sstat"><div class="sstat-val" style="color:var(--red)">¥${netMth.toLocaleString()}</div><div class="sstat-label">${TEXT.sumMonthly}</div></div>
   <div class="sstat"><div class="sstat-val" style="color:var(--green)">+${totMthPts.toLocaleString()}pt</div><div class="sstat-label">${TEXT.sumPtMonth}</div></div>
   <div class="sstat"><div class="sstat-val" style="color:var(--amber)">+${totAnnPts.toLocaleString()}pt</div><div class="sstat-label">${TEXT.sumPtYear}</div></div>
-  <div class="sstat"><div class="sstat-val" style="color:var(--red)">¥${totNetAnnAll.toLocaleString()}</div><div class="sstat-label">${TEXT.sumNetYear}</div></div>
   </div>`;
 }
 
