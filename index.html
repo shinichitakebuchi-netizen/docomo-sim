@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>Jafar ─ 料金シミュレーター</title>
-<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAABmJLR0QA/wD/AP+gvaeTAAAF6ElEQVR4nO3db0zUdQDH8d8dh6LIqSUM8E+b5Gw6RaVpy+1wWW46M9to6+/SJ85F+aDUfOTKaq7mmjo2Hhgq689yWonPai0R2iLniYpQ/iljcQgaZuDJAXf364Fbs82P+1KH9+PL+/X4t+PL7c33+/t+7w++wsJCB7gTf7oHAO8iDkjEAYk4IBEHJOKARByQiAMScUAiDkjEAYk4IBEHJOKARByQiAMScUAiDkjEAYk4IBEHJOKARByQiAMScUAiDkjEAYk4IBEHJOKARByQiAMScUAiDkjEAYk4IBEHJOKARByQiAMScUAiDkjEAYk4IBEHJOKARByQAukewDAQePS9hgNrCkz+juKnti9dVXExMeRjuieYOSARByTigEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAGJOCARBySLvt7alxEIZPh9Ble6yUQ8nnCHfETDnT1xBIrf/K6mvMjkF4qf373yifeb4kM+pmGOZQUScUAiDkjEAWlkxuFzTDY1I55FcQwMDBhe6csakzWIB/b5/OZPk2vRDtmeONzYzZjhpb7scdmDmDp8OTmml7uxWJ89ddgTR7Knuydpdql/3NQpE43r8E3IzR1lHEdvjDi8x70eaY8a1hGYMXtmpukDj55bMsvwrNDt6+rqIQ4PSrS3RkynjklLlpWMMrs2Z/Hy0ATDpynR3tZuyX+GdBy74vjtbEu3YR0Zk598eXmewVoRePC58lV5hs+S23/pYqtFh/IWxeH0NYWbBgwndX/uiq3bnp5y9+XCN37Rpt2bFo41vT1JnD95Omp47XBgUxzuH/W1TXHTJT8jf+WHX+x5NTT1zrvaUfmL1u4+/El5sXEaTiJy/HirRauK4yssLEz3GFLH/8C6r45tfThzEPtUt/9Kc31t/Y+N5yJd3Tf6/WPH319QNPeR0NJQcX7WoI7KEq17ykrfOm562DIM2BWH489/vrr2g8dy0nAAGr9Q8dTj209ZdMth1bLiOE6yo+ajmstpmNrdmw37Pj5jUxmOdXE4TrS+Yled6aYlVdz4pU93Hmq7xz91yFkXh5P8/fN3doWj9/IoKnH5y227Gmzap9ySkZOTk+4xpFqy69QP1+auXjrdfKPxP7j9F/atX7/3nOkLO8OIjXE4TvKvs3XNwdIVC3IHs3H5D9zE1dq312ysiVh2t3GLnXE4jtPbWvf1T/eVLis2ftFs0Nz4lWPvvrSuqsXCScNxHIvjcBw3+uvRw/U9M5csnh7MSHkgye7T+1574fUDF/tS/cjeYXEcjuM4fR0njxw82jlp3qJZuaN9KSrEjbV+u3PD2jf2nvzTtv3Jv1l2CKYEcueXvbJxw4uhaWONPvYkuLH2hoOVOys++77N1qXkdiMkjlsyxs8oXf3sM6uXL1kwLRgwj8Ttv/ZL+Ng3R748eKTu/HUr7z3vaETF8Y/AhOnzF5bMmzNn9kNFUycXFOTnTswek5U1OuAk+vtjfb3R61c7Ozout7Ve+LmlpflMONwcuWHTK2qGRmYcMGLfCSlShjggEQck4oBEHJCIAxJxQCIOSMQBiTggEQck4oBEHJCIA5Knv8E4MzNz8+bNZWVleXl56R5LikUikf3791dWVroe/hIxT7+HdMuWLeXl5dnZ2ekeSOoFg8FQKBSNRk+cOJHusUiefrNPY2OjfXPG7To6OkpKStI9CsnT9xzx+Mh5v6YXeTqOqqqqdA9haB06dCjdQ7gbT99zhMPh3t7eoqKiYDCY7rGkWGdnZ3V19Y4dO5JJ7372xdP3HEgvTy8rSC/igEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAHpb7VOZRLJvrbYAAAAAElFTkSuQmCC">
-<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Jafar">
-<meta name="theme-color" content="#1A1A1A">
+<meta name="theme-color" content="#3D2255">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style id="print-style">
 .app.expand-mode{height:auto!important;overflow:visible!important;display:block!important}
@@ -43,19 +43,19 @@
   @page{size:A4 landscape;margin:8mm}
   /* 印刷時は薄いグレー文字を濃くして視認性を確保（画面表示の色はそのまま） */
   :root{
-    --ink3:#333333!important;  /* 通常 #666666 → 濃く */
-    --ink4:#444444!important;  /* 通常 #8C8C8C → 濃く */
-    --ink2:#1A1A1A!important;  /* 通常 #333333 → 濃く */
+    --ink3:#332B3D!important;  /* 通常 #6B6478 → 濃く */
+    --ink4:#3F3648!important;  /* 通常 #9A93A6 → 濃く */
+    --ink2:#14101A!important;  /* 通常 #332B3D → 濃く */
   }
   /* 変数を使わず直接薄い色を指定している箇所も濃くする */
-  #panel-right [style*="color:#9A9A9A"],
-  #panel-right [style*="color:#6E6E6E"],
-  #panel-right [style*="color:#9A9A9A"],
-  #panel-right [style*="color:#6E6E6E"]{color:#333333!important}
-  #detail-body [style*="color:#9A9A9A"],
-  #detail-body [style*="color:#6E6E6E"],
+  #panel-right [style*="color:#9A93A6"],
+  #panel-right [style*="color:#6B6478"],
+  #panel-right [style*="color:#9A93A6"],
+  #panel-right [style*="color:#6B6478"]{color:#332B3D!important}
+  #detail-body [style*="color:#9A93A6"],
+  #detail-body [style*="color:#6B6478"],
   #detail-body .drow-l,
-  #detail-body .dcard-sub{color:#333333!important}
+  #detail-body .dcard-sub{color:#332B3D!important}
   html,body{margin:0!important;padding:0!important;background:#fff!important;height:auto!important;overflow:visible!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
   /* 見積もり印刷時は詳細オーバーレイを出さない（詳細印刷時は printing-detail 側で制御） */
   body:not(.printing-detail) #detail-overlay{display:none!important}
@@ -128,25 +128,25 @@
   /* 見積もり下部のメモ欄：通常画面では非表示、印刷/PDF時のみ表示 */
   #print-memo-wrap{display:none!important}
   .note{font-size:3.3px!important;line-height:1.5!important;padding-bottom:2px!important}
-  .print-memo-box{border:1.5px dashed #C6C6C6!important;border-radius:10px!important;padding:7px 14px 3px!important;page-break-inside:avoid!important;break-inside:avoid!important}
-  .print-memo-title{font-size:9px!important;font-weight:800!important;color:#6E6E6E!important;letter-spacing:.06em!important;margin-bottom:4px!important}
-  .print-memo-line{height:14px!important;border-bottom:1px solid #E2E2E2!important}
+  .print-memo-box{border:1.5px dashed #CAC3D4!important;border-radius:10px!important;padding:7px 14px 3px!important;page-break-inside:avoid!important;break-inside:avoid!important}
+  .print-memo-title{font-size:9px!important;font-weight:800!important;color:#6B6478!important;letter-spacing:.06em!important;margin-bottom:4px!important}
+  .print-memo-line{height:14px!important;border-bottom:1px solid #E3DFE9!important}
 }
 </style>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{
-  /* モノクロ：黒の濃さだけで階層を表現 */
-  --red:#1A1A1A;--red-light:#F0F0F0;--red-mid:#B0B0B0;--red-dark:#000000;
-  --ink:#111111;--ink2:#3A3A3A;--ink3:#6E6E6E;--ink4:#9A9A9A;
-  --bg:#F4F4F4;--white:#FFFFFF;--border:#E2E2E2;--border2:#C6C6C6;
-  /* 意味を持つ色も濃淡で区別（濃い＝重要・強調／薄い＝補足） */
-  --green:#2B2B2B;--green-bg:#F2F2F2;--green-border:#C6C6C6;
-  --amber:#4A4A4A;--amber-bg:#EDEDED;--amber-border:#BDBDBD;
-  --blue:#3A3A3A;--blue-bg:#F0F0F0;--blue-border:#C6C6C6;
-  --purple:#555555;--purple-bg:#EFEFEF;--purple-border:#C6C6C6;
-  --shadow-sm:0 1px 2px rgba(0,0,0,.07);
-  --shadow:0 2px 8px rgba(0,0,0,.10);
+  /* Jafar：深い紫 × 黒。彩度を抑えて業務利用でも目が疲れないよう調整 */
+  --red:#4A2C6D;--red-light:#F2EEF7;--red-mid:#D5C9E3;--red-dark:#3D2255;
+  --ink:#14101A;--ink2:#332B3D;--ink3:#6B6478;--ink4:#9A93A6;
+  --bg:#F5F3F7;--white:#FFFFFF;--border:#E3DFE9;--border2:#CAC3D4;
+  /* 区分色も紫〜黒の濃淡で統一（濃い＝重要／薄い＝補足） */
+  --green:#332B3D;--green-bg:#F0EEF3;--green-border:#CAC3D4;
+  --amber:#5A4A6E;--amber-bg:#EFEBF4;--amber-border:#C7BDD6;
+  --blue:#3D2255;--blue-bg:#F2EEF7;--blue-border:#CAC3D4;
+  --purple:#6B4494;--purple-bg:#F2EEF7;--purple-border:#D5C9E3;
+  --shadow-sm:0 1px 2px rgba(20,16,26,.07);
+  --shadow:0 2px 8px rgba(20,16,26,.11);
   --r:10px;--r-sm:7px;
   --font:'Zen Maru Gothic','Hiragino Maru Gothic ProN','Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;
   --font-num:var(--font);
@@ -168,7 +168,7 @@ input{font-family:inherit}
 .hdr-badge{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:3px 11px;flex-shrink:0}
 .hdr-dot{width:6px;height:6px;border-radius:50%;background:var(--white);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hdr-badge-txt{font-size:13.2px;font-weight:800;color:var(--white);letter-spacing:.06em}
+.hdr-badge-txt{font-size:15px;font-weight:800;color:var(--white);letter-spacing:.06em}
 .hdr-reset{display:flex;align-items:center;gap:5px;padding:6px 10px;border-radius:20px;border:1.5px solid rgba(255,255,255,.6);background:transparent;color:var(--white);font-size:14.4px;font-weight:700;transition:all .15s;flex-shrink:0;white-space:nowrap}
 .hdr-reset:hover{border-color:var(--red);color:var(--red);background:var(--red-light)}
 
@@ -185,20 +185,20 @@ input{font-family:inherit}
 .blk-icon{width:26px;height:26px;border-radius:7px;background:var(--red-light);display:flex;align-items:center;justify-content:center;font-size:15.6px;flex-shrink:0}
 .blk-title{font-size:14.4px;font-weight:800;color:var(--ink2);letter-spacing:.04em}
 .blk-body{padding:11px 13px;display:flex;flex-direction:column;gap:9px}
-.fl{font-size:12px;font-weight:800;color:var(--ink4);letter-spacing:.07em;text-transform:uppercase;margin-bottom:5px}
+.fl{font-size:14.5px;font-weight:800;color:var(--ink4);letter-spacing:.07em;text-transform:uppercase;margin-bottom:5px}
 
 .tog-list{display:flex;flex-direction:column;gap:5px}
 /* 2つのトグルを横並びに */
 .tog-pair{display:grid;grid-template-columns:1fr 1fr;gap:5px}
 .tog-pair .tog{min-width:0}
-.tog-pair .tog-label{font-size:13.8px;line-height:1.35}
-.tog-pair .tog-sub{font-size:10.8px;line-height:1.5}
+.tog-pair .tog-label{font-size:15.5px;line-height:1.35}
+.tog-pair .tog-sub{font-size:13.5px;line-height:1.5}
 @media (max-width:520px){.tog-pair{grid-template-columns:1fr}}
 .tog{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:var(--r-sm);border:1.5px solid var(--border);background:var(--white);cursor:pointer;transition:all .2s;user-select:none}
-.tog.on{border-color:#C6C6C6;background:var(--green-bg)}
+.tog.on{border-color:#CAC3D4;background:var(--green-bg)}
 .tog-txt{flex:1}
 .tog-label{font-size:15.6px;font-weight:700}
-.tog-sub{font-size:12px;color:var(--ink4);margin-top:1px}
+.tog-sub{font-size:14.5px;color:var(--ink4);margin-top:1px}
 .sw{width:38px;height:21px;border-radius:11px;background:var(--border2);position:relative;transition:background .25s;flex-shrink:0}
 .sw.on{background:var(--green)}
 .sw-k{width:15px;height:15px;border-radius:50%;background:white;position:absolute;top:3px;left:3px;transition:left .25s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
@@ -222,24 +222,24 @@ input{font-family:inherit}
 .info-note b{color:var(--ink);font-weight:800}
 
 .lines-head{display:flex;align-items:center;justify-content:space-between;padding:9px 13px;background:var(--white);border-bottom:1px solid var(--border)}
-.lines-cnt{font-size:13.2px;font-weight:800;padding:2px 8px;border-radius:10px;background:var(--red);color:white;margin-left:6px}
+.lines-cnt{font-size:15px;font-weight:800;padding:2px 8px;border-radius:10px;background:var(--red);color:white;margin-left:6px}
 .add-btn{display:flex;align-items:center;gap:5px;padding:7px 13px;border-radius:8px;background:var(--red);color:white;font-size:14.4px;font-weight:800;transition:all .15s}
-.add-btn:hover{background:#2B2B2B}
+.add-btn:hover{background:#332B3D}
 .add-btn:active{transform:scale(.97)}
 .line-wrap{padding:11px 13px;display:flex;flex-direction:column;gap:8px}
 
 .lcard{border-radius:var(--r);border:2px solid var(--border);background:var(--white);overflow:hidden;box-shadow:var(--shadow-sm)}
 .lcard-head{padding:9px 13px;display:flex;align-items:center;gap:9px;cursor:pointer;user-select:none}
-.lnum{width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13.2px;font-weight:900;flex-shrink:0;color:white}
+.lnum{width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;flex-shrink:0;color:white}
 .lname{flex:1;font-size:16.8px;font-weight:800;border:none;outline:none;color:var(--ink);background:transparent;cursor:pointer;min-width:0}
 .lname:focus{background:var(--bg);border-radius:5px;padding:2px 5px;cursor:text}
 .lprice{font-size:15.6px;font-weight:900;white-space:nowrap}
-.larrow{font-size:12px;color:var(--ink4);transition:transform .2s;margin-left:3px}
+.larrow{font-size:14.5px;color:var(--ink4);transition:transform .2s;margin-left:3px}
 .larrow.open{transform:rotate(180deg)}
 .lcard-body{padding:11px 13px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:9px;background:var(--bg)}
-.del-btn{align-self:flex-end;padding:5px 10px;border-radius:7px;border:1.5px solid var(--border2);color:var(--ink4);font-size:13.2px;font-weight:700;transition:all .15s}
+.del-btn{align-self:flex-end;padding:5px 10px;border-radius:7px;border:1.5px solid var(--border2);color:var(--ink4);font-size:15px;font-weight:700;transition:all .15s}
 .del-btn:hover{border-color:var(--red);color:var(--red);background:var(--red-light)}
-.plan-warn{font-size:12px;color:var(--amber);background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:5px;padding:3px 8px;font-weight:700;margin-top:5px;display:inline-block}
+.plan-warn{font-size:14.5px;color:var(--amber);background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:5px;padding:3px 8px;font-weight:700;margin-top:5px;display:inline-block}
 
 .empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--ink4)}
 .empty-cir{width:76px;height:76px;border-radius:50%;background:var(--white);border:2px dashed var(--border2);display:flex;align-items:center;justify-content:center;font-size:36px}
@@ -252,7 +252,7 @@ input{font-family:inherit}
 .sstat{padding:13px;text-align:center;border-right:1px solid var(--border)}
 .sstat:last-child{border-right:none}
 .sstat-val{font-family:var(--font-num);font-size:24px;font-weight:900;line-height:1;margin-bottom:3px}
-.sstat-label{font-size:12px;font-weight:700;color:var(--ink4);letter-spacing:.04em}
+.sstat-label{font-size:14.5px;font-weight:700;color:var(--ink4);letter-spacing:.04em}
 
 .hk-strip{background:var(--blue-bg);border:1.5px solid var(--blue-border);border-radius:var(--r);padding:0;display:flex;flex-direction:column;height:100%;overflow:hidden}
 .hks-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;padding:9px 12px 8px;background:rgba(255,255,255,.5);border-bottom:1px solid var(--blue-border)}
@@ -260,12 +260,12 @@ input{font-family:inherit}
 .hks-head-r{text-align:right;flex-shrink:0}
 .hks-icon{font-size:19.2px;flex-shrink:0}
 .hks-info{flex:1;min-width:0;word-break:break-word;padding:8px 12px 10px;display:flex;flex-direction:column;gap:1px}
-.hks-title{font-size:14.4px;font-weight:800;color:var(--blue);line-height:1.35;min-width:0}
-.hks-detail{font-size:12px;color:var(--ink3);margin-top:2px;line-height:1.45}
+.hks-title{font-size:16px;font-weight:800;color:var(--blue);line-height:1.35;min-width:0}
+.hks-detail{font-size:14.5px;color:var(--ink3);margin-top:2px;line-height:1.45}
 .hks-monthly{font-family:var(--font-num);font-size:22.8px;font-weight:900;color:var(--blue);line-height:1;white-space:nowrap}
-.hks-unit{font-size:10.8px;color:var(--ink4);white-space:nowrap}
-.hks-pt{font-size:12px;color:var(--green);font-weight:800;margin-top:2px;line-height:1.4}
-.hks-kouji{font-size:12px;color:var(--amber);font-weight:700;margin-top:2px;line-height:1.4}
+.hks-unit{font-size:13.5px;color:var(--ink4);white-space:nowrap}
+.hks-pt{font-size:14.5px;color:var(--green);font-weight:800;margin-top:2px;line-height:1.4}
+.hks-kouji{font-size:14.5px;color:var(--amber);font-weight:700;margin-top:2px;line-height:1.4}
 .strips-grid > div{height:100%}
 
 .rcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(275px,1fr));gap:11px}
@@ -277,31 +277,31 @@ input{font-family:inherit}
 /* ===== 回線タブ ===== */
 .linetabs{display:flex;gap:5px;margin-bottom:10px;flex-wrap:wrap}
 .linetab{padding:7px 12px;border-radius:9px;border:2px solid var(--border);background:var(--white);font-size:14.4px;font-weight:800;color:var(--ink3);cursor:pointer;display:flex;align-items:center;gap:6px;user-select:none;transition:all .15s}
-.lt-num{width:18px;height:18px;border-radius:50%;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.lt-amt{font-size:13.2px;font-weight:900}
+.lt-num{width:18px;height:18px;border-radius:50%;color:#fff;font-size:14.5px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.lt-amt{font-size:15px;font-weight:900}
 /* ===== 選択中の回線を大きく表示 ===== */
 .bigcard .rcard-name{font-size:24px}
 .bigcard .rcard-plan{font-size:14.4px;margin-top:3px}
 .bigcard .rcard-price{font-size:38.4px}
-.bigcard .rcard-unit{font-size:12px}
+.bigcard .rcard-unit{font-size:14.5px}
 .bigcard .rcard-body{padding:12px 16px}
 .bigcard .row{padding:6px 0;font-size:15.6px}
 .bigcard .row-total-v{font-size:28.8px}
 .bigcard .row-total-l{font-size:16.8px}
 .bigcard .pts-val{font-size:21.6px}
-.bigcard .pts-row{font-size:13.2px}
-.bigcard .row-detail{font-size:12px;line-height:1.6}
+.bigcard .pts-row{font-size:15px}
+.bigcard .row-detail{font-size:14.5px;line-height:1.6}
 .strips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;align-items:start}
 .strips-grid > div:empty{display:none}
 @media (max-width:1200px){.strips-grid[data-count='3'],.strips-grid[data-count='4'],.strips-grid[data-count='5'],.strips-grid[data-count='6']{grid-template-columns:repeat(2,1fr)!important}}
 @media (max-width:900px){.strips-grid{grid-template-columns:1fr!important}}
 .rcard{background:var(--white);border-radius:var(--r);border:2px solid var(--border);overflow:hidden;box-shadow:var(--shadow-sm)}
 .rcard-top{padding:12px 15px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--border)}
-.rcard-badge{font-size:12px;font-weight:800;padding:2px 8px;border-radius:10px;color:white;margin-bottom:3px;display:inline-block}
+.rcard-badge{font-size:14.5px;font-weight:800;padding:2px 8px;border-radius:10px;color:white;margin-bottom:3px;display:inline-block}
 .rcard-name{font-size:18px;font-weight:900}
-.rcard-plan{font-size:13.2px;color:var(--ink4);margin-top:2px}
+.rcard-plan{font-size:14px;color:var(--ink3);margin-top:3px}
 .rcard-price{font-family:var(--font-num);font-size:31.2px;font-weight:900;line-height:1;text-align:right}
-.rcard-unit{font-size:12px;color:var(--ink4);text-align:right;margin-top:2px}
+.rcard-unit{font-size:14.5px;color:var(--ink4);text-align:right;margin-top:2px}
 .rcard-body{padding:12px 15px;display:flex;flex-direction:column;gap:5px}
 .row{display:flex;justify-content:flex-start;align-items:center;padding:5px 0;border-bottom:1px solid var(--border);gap:8px}
 .row:last-child{border-bottom:none}
@@ -310,7 +310,7 @@ input{font-family:inherit}
 .row-v.red{color:var(--red)}
 .row-v.gray{color:var(--ink4)}
 .row-div{height:1px;background:var(--border);margin:3px 0}
-.row-detail{font-size:11.4px;color:var(--ink4);line-height:1.5;padding:1px 0 3px;word-break:break-word}
+.row-detail{font-size:14px;color:var(--ink4);line-height:1.5;padding:1px 0 3px;word-break:break-word}
 .row-total{display:flex;justify-content:space-between;align-items:center;padding:7px 0 2px}
 .row-total-l{font-size:15.6px;font-weight:800}
 .row-total-v{font-family:var(--font-num);font-size:21.6px;font-weight:900}
@@ -319,57 +319,57 @@ input{font-family:inherit}
 .pts-label{font-size:14.4px;font-weight:700;color:var(--green)}
 .pts-val{font-size:19.2px;font-weight:900;color:var(--green)}
 .pts-rows{display:flex;flex-direction:column;gap:2px}
-.pts-row{display:flex;justify-content:space-between;font-size:12px;color:var(--green);opacity:.8}
-.warn-box{margin:0 15px 8px;padding:7px 11px;border-radius:var(--r-sm);background:var(--amber-bg);border:1.5px solid var(--amber-border);font-size:13.2px;color:var(--amber);font-weight:700}
+.pts-row{display:flex;justify-content:space-between;font-size:14.5px;color:var(--green);opacity:.8}
+.warn-box{margin:0 15px 8px;padding:7px 11px;border-radius:var(--r-sm);background:var(--amber-bg);border:1.5px solid var(--amber-border);font-size:15px;color:var(--amber);font-weight:700}
 .roi-box{margin:0 15px 12px;padding:8px 11px;border-radius:var(--r-sm);display:flex;align-items:flex-start;gap:7px;font-size:14.4px;font-weight:700}
 .roi-box.ok{background:var(--green-bg);border:1.5px solid var(--green-border);color:var(--green)}
 .roi-box.warn{background:var(--amber-bg);border:1.5px solid var(--amber-border);color:var(--amber)}
-.roi-sub{font-size:12px;opacity:.8;margin-top:2px;font-weight:500}
+.roi-sub{font-size:14.5px;opacity:.8;margin-top:2px;font-weight:500}
 .rcard-tags{padding:9px 15px;display:flex;flex-wrap:wrap;gap:4px;border-top:1px solid var(--border);background:var(--bg)}
-.tag{font-size:12px;font-weight:800;padding:2px 7px;border-radius:5px}
+.tag{font-size:14.5px;font-weight:800;padding:2px 7px;border-radius:5px}
 
 .tbl-wrap{background:var(--white);border-radius:var(--r);border:1.5px solid var(--border);overflow:hidden;box-shadow:var(--shadow-sm)}
-.tbl-hd{padding:9px 15px;background:var(--bg);border-bottom:1.5px solid var(--border);font-size:13.2px;font-weight:800;color:var(--ink3);letter-spacing:.05em}
+.tbl-hd{padding:9px 15px;background:var(--bg);border-bottom:1.5px solid var(--border);font-size:15px;font-weight:800;color:var(--ink3);letter-spacing:.05em}
 table{width:100%;border-collapse:collapse}
-th{padding:8px 12px;text-align:center;font-size:13.2px;font-weight:800;color:var(--ink4);border-bottom:1.5px solid var(--border);background:var(--bg);white-space:nowrap}
+th{padding:8px 12px;text-align:center;font-size:15px;font-weight:800;color:var(--ink4);border-bottom:1.5px solid var(--border);background:var(--bg);white-space:nowrap}
 th:first-child{text-align:left}
 td{padding:9px 12px;text-align:center;font-size:14.4px;border-bottom:1px solid var(--border)}
 td:first-child{text-align:left}
 tr:last-child td{border-bottom:none}
-tr:hover td{background:#FAFAFA}
+tr:hover td{background:#FAF9FB}
 .tr-total td{background:var(--red-light)!important;font-weight:800;border-top:2px solid var(--red-mid)}
 
 .note{font-size:4px;color:var(--ink4);text-align:center;line-height:1.5;padding-bottom:6px}
 
 /* ===== 初期費用・推移 詳細オーバーレイ ===== */
-#detail-overlay{position:fixed;inset:0;z-index:300;background:#F4F4F4;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
-#detail-bar{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:10px;background:#fff;border-bottom:2px solid #C6C6C6;padding:9px 14px;padding-top:calc(9px + env(safe-area-inset-top));padding-left:calc(14px + env(safe-area-inset-left));padding-right:calc(14px + env(safe-area-inset-right))}
-.dbar-title{flex:1;font-size:16.8px;font-weight:900;color:#1A1A1A;text-align:center}
+#detail-overlay{position:fixed;inset:0;z-index:300;background:#F5F3F7;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+#detail-bar{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:10px;background:#fff;border-bottom:2px solid #CAC3D4;padding:9px 14px;padding-top:calc(9px + env(safe-area-inset-top));padding-left:calc(14px + env(safe-area-inset-left));padding-right:calc(14px + env(safe-area-inset-right))}
+.dbar-title{flex:1;font-size:16.8px;font-weight:900;color:#14101A;text-align:center}
 .dbtn{border:none;border-radius:8px;padding:8px 14px;font-size:15.6px;font-weight:800;font-family:inherit;cursor:pointer;white-space:nowrap}
-.dbtn-close{background:#E2E2E2;color:#3A3A3A}
-.dbtn-print{background:#1A1A1A;color:#fff}
+.dbtn-close{background:#E3DFE9;color:#332B3D}
+.dbtn-print{background:#14101A;color:#fff}
 @media (max-width:600px){.dbar-title{display:none}.dbtn{padding:8px 10px;font-size:14.4px}}
 #detail-body{padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom));padding-left:calc(16px + env(safe-area-inset-left));padding-right:calc(16px + env(safe-area-inset-right))}
 #detail-body .wrap{max-width:1100px;margin:0 auto}
-#detail-body .phead{display:flex;align-items:center;gap:10px;background:#1A1A1A;color:#fff;border-radius:14px 14px 0 0;padding:11px 18px}
+#detail-body .phead{display:flex;align-items:center;gap:10px;background:#14101A;color:#fff;border-radius:14px 14px 0 0;padding:11px 18px}
 #detail-body .phead-t{font-size:18px;font-weight:900;flex:1}
 #detail-body .phead-s{font-size:14.4px;opacity:.85}
-#detail-body .ptotal{background:#fff;border:2px solid #C6C6C6;border-top:none;border-radius:0 0 14px 14px;padding:14px 18px;display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
-#detail-body .ptotal-l{font-size:15.6px;font-weight:800;color:#3A3A3A}
-#detail-body .ptotal-v{font-size:31.2px;font-weight:900;color:#1A1A1A}
-#detail-body .sect{font-size:14.4px;font-weight:800;color:#6E6E6E;letter-spacing:.05em;margin:0 0 8px 2px}
+#detail-body .ptotal{background:#fff;border:2px solid #CAC3D4;border-top:none;border-radius:0 0 14px 14px;padding:14px 18px;display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
+#detail-body .ptotal-l{font-size:15.6px;font-weight:800;color:#332B3D}
+#detail-body .ptotal-v{font-size:31.2px;font-weight:900;color:#14101A}
+#detail-body .sect{font-size:14.4px;font-weight:800;color:#6B6478;letter-spacing:.05em;margin:0 0 8px 2px}
 #detail-body .dcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:18px}
-#detail-body .dcard{background:#fff;border:2px solid #E2E2E2;border-radius:14px;overflow:hidden}
+#detail-body .dcard{background:#fff;border:2px solid #E3DFE9;border-radius:14px;overflow:hidden}
 #detail-body .dcard-head{padding:10px 13px;display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
 #detail-body .dcard-name{font-size:16.8px;font-weight:900}
-#detail-body .dcard-sub{font-size:12px;color:#9A9A9A;margin-top:2px}
+#detail-body .dcard-sub{font-size:14.5px;color:#9A93A6;margin-top:2px}
 #detail-body .dcard-total{font-size:21.6px;font-weight:900;white-space:nowrap}
 #detail-body .dcard-body{padding:9px 13px}
-#detail-body .drow{display:flex;justify-content:space-between;gap:10px;align-items:baseline;padding:4px 0;border-bottom:1px solid #EFEFEF;font-size:13.2px}
+#detail-body .drow{display:flex;justify-content:space-between;gap:10px;align-items:baseline;padding:4px 0;border-bottom:1px solid #F0EEF3;font-size:15px}
 #detail-body .drow:last-child{border-bottom:none}
-#detail-body .drow-l{color:#6E6E6E;flex:1;min-width:0}
+#detail-body .drow-l{color:#6B6478;flex:1;min-width:0}
 #detail-body .drow-v{font-weight:700;white-space:nowrap}
-#detail-body .trend{background:#fff;border:1.5px solid #E2E2E2;border-radius:14px;padding:14px}
+#detail-body .trend{background:#fff;border:1.5px solid #E3DFE9;border-radius:14px;padding:14px}
 @media (max-width:700px){#detail-body .dcards{grid-template-columns:1fr}}
 /* 詳細ページを印刷する時は、詳細だけを出力する */
 @media print{
@@ -389,11 +389,11 @@ tr:hover td{background:#FAFAFA}
   /* 詳細ページ印刷時も薄い文字を濃くする */
   body.printing-detail #detail-body .drow-l,
   body.printing-detail #detail-body .dcard-sub,
-  body.printing-detail #detail-body .sect{color:#333333!important}
-  body.printing-detail #detail-body [style*="color:#9A9A9A"],
-  body.printing-detail #detail-body [style*="color:#6E6E6E"],
+  body.printing-detail #detail-body .sect{color:#332B3D!important}
+  body.printing-detail #detail-body [style*="color:#9A93A6"],
+  body.printing-detail #detail-body [style*="color:#6B6478"],
   body.printing-detail #detail-body [style*="color:var(--ink4)"],
-  body.printing-detail #detail-body [style*="color:var(--ink3)"]{color:#333333!important}
+  body.printing-detail #detail-body [style*="color:var(--ink3)"]{color:#332B3D!important}
 }
 .fade-in{animation:fadeIn .2s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
@@ -412,8 +412,8 @@ tr:hover td{background:#FAFAFA}
 .is-mobile .hdr-title{display:none}
 .is-mobile .hdr-sep{display:none}
 .is-mobile .hdr-badge{display:none}
-.is-mobile .hdr-badge-txt{font-size:12px;letter-spacing:0}
-.is-mobile .hdr-reset{padding:5px 8px;font-size:13.2px}
+.is-mobile .hdr-badge-txt{font-size:14.5px;letter-spacing:0}
+.is-mobile .hdr-reset{padding:5px 8px;font-size:15px}
 .is-mobile #panel-toggle{display:none}
 .is-mobile #btn-estimate .btn-est-txt{display:none}.is-mobile #btn-estimate .btn-est-sp{display:inline!important}.is-mobile #btn-estimate{padding:6px 10px;font-size:16.8px}.is-mobile #btn-detail .btn-est-txt{display:none}.is-mobile #btn-detail .btn-est-sp{display:inline!important}.is-mobile #btn-detail{padding:6px 10px;font-size:16.8px}.is-mobile #btn-otoku .btn-est-txt{display:none}.is-mobile #btn-otoku .btn-est-sp{display:inline!important}.is-mobile #btn-otoku{padding:6px 10px;font-size:16.8px}.is-mobile #btn-net .btn-est-txt{display:none}.is-mobile #btn-net .btn-est-sp{display:inline!important}.is-mobile #btn-net{padding:6px 10px;font-size:16.8px}.is-mobile .hdr-reset .rst-txt{display:none}.is-mobile .hdr-reset{padding:6px 10px}
 .is-mobile .body{display:flex;flex-direction:column;overflow:hidden;grid-template-columns:unset!important}
@@ -423,7 +423,7 @@ tr:hover td{background:#FAFAFA}
 .is-mobile .right{flex:1;overflow-y:auto;display:none;padding:10px;width:100%}
 .is-mobile .right.mob-show{display:flex}
 .is-mobile .sum-grid{grid-template-columns:repeat(2,1fr)!important}
-.is-mobile .sstat-val{font-size:18px!important}
+.is-mobile .sstat-val{font-size:21px!important}
 .is-mobile .rcards{grid-template-columns:1fr!important}
 .is-mobile .strips-grid{grid-template-columns:1fr!important}
 .is-mobile .init-cost-grid{grid-template-columns:1fr!important}
@@ -439,7 +439,7 @@ tr:hover td{background:#FAFAFA}
   <div class="hdr-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></div>
   <span class="hdr-brand">Jafar</span>
   <div class="hdr-sep"></div>
-  <span class="hdr-title" data-txt="appTitle">料金シミュレーター</span><span style="font-size:12px;font-weight:700;color:rgba(255,255,255,.6);margin-left:2px">v8.0</span>
+  <span class="hdr-title" data-txt="appTitle">料金シミュレーター</span><span style="font-size:14.5px;font-weight:700;color:rgba(255,255,255,.6);margin-left:2px">v8.0</span>
   <div class="hdr-badge" style="margin-left:auto"><div class="hdr-dot"></div><span class="hdr-badge-txt" data-txt="staffBadge">STAFF TOOL</span></div>
   <button id="panel-toggle" onclick="togglePanel()" title="左パネルを開閉"
   style="display:flex;align-items:center;padding:6px 10px;border-radius:20px;border:1.5px solid rgba(255,255,255,.6);background:transparent;color:var(--white);font-size:15.6px;font-weight:700;flex-shrink:0">
@@ -464,8 +464,8 @@ tr:hover td{background:#FAFAFA}
   <div class="blk-head" style="cursor:pointer;user-select:none" onclick="toggleBlk('hikari-blk')">
   <div class="blk-icon"></div>
   <span class="blk-title" data-txt="secHikari">ドコモ光</span>
-  <span id="hikari-blk-status" style="margin-left:auto;font-size:13.2px;font-weight:700;color:var(--ink4)"></span>
-  <span id="hikari-blk-arrow" style="font-size:12px;color:var(--ink4);margin-left:6px;transition:transform .2s">▼</span>
+  <span id="hikari-blk-status" style="margin-left:auto;font-size:15px;font-weight:700;color:var(--ink4)"></span>
+  <span id="hikari-blk-arrow" style="font-size:14.5px;color:var(--ink4);margin-left:6px;transition:transform .2s">▼</span>
   </div>
   <div id="hikari-blk" style="display:none">
   <div class="blk-body">
@@ -477,7 +477,7 @@ tr:hover td{background:#FAFAFA}
   </div>
   <div id="hikari-detail" style="display:none">
   <div class="hk-sub">
-  <div style="font-size:13.2px;font-weight:800;color:var(--blue)">プラン詳細</div>
+  <div style="font-size:15px;font-weight:800;color:var(--blue)">プラン詳細</div>
   <div class="sel-row"><span class="sel-label" data-txt="lblSpeed">速度プラン</span>
   <select class="sel" id="sel-hspeed" onchange="setHkCfg('speed',this.value)">
   <option value="1g">1G</option>
@@ -491,10 +491,10 @@ tr:hover td{background:#FAFAFA}
   </select>
   </div>
   <div id="row-syugou-link" style="display:none">
-  <a href="https://hikariweb.ntt-east.co.jp/login.php" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#F0F0F0;border:1.5px solid var(--amber-border);text-decoration:none;color:var(--amber);font-size:13.2px;font-weight:800">
+  <a href="https://hikariweb.ntt-east.co.jp/login.php" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#F2EEF7;border:1.5px solid var(--amber-border);text-decoration:none;color:var(--amber);font-size:15px;font-weight:800">
   <span style="font-size:16.8px"></span><span style="flex:1">建物の設備状況を確認する（NTT東日本）</span><span style="font-size:15.6px">↗</span>
   </a>
-  <div style="font-size:10.8px;color:var(--ink4);line-height:1.6;margin-top:2px">※ 集合住宅は配線方式により提供可否・料金が変わる場合があります</div>
+  <div style="font-size:13.5px;color:var(--ink4);line-height:1.6;margin-top:2px">※ 集合住宅は配線方式により提供可否・料金が変わる場合があります</div>
   </div>
   <div class="sel-row"><span class="sel-label" data-txt="lblHikariPhone">光でんわ</span>
   <select class="sel" id="sel-hphone" onchange="setHkCfg('phone',this.value==='true')">
@@ -505,9 +505,9 @@ tr:hover td{background:#FAFAFA}
   <div class="sel-row"><span class="sel-label" data-txt="lblOpenDate">開通日</span>
   <input type="date" id="inp-hikari-kaitsu" class="sel" onchange="setHkCfg('kaitsuDate',this.value)" style="cursor:pointer">
   </div>
-  <div style="font-size:12px;color:var(--ink4);padding:0 0 4px">初月の日割り計算・事務手数料はこの開通日を基準にします（未入力時は本日を使用）</div>
+  <div style="font-size:14.5px;color:var(--ink4);padding:0 0 4px">初月の日割り計算・事務手数料はこの開通日を基準にします（未入力時は本日を使用）</div>
   <div class="sel-row"><span class="sel-label" data-txt="lblKouji">工事費</span>
-  <select class="sel" id="sel-hkouji" onchange="setHkCfg('kouji',this.value)" style="font-size:13.2px">
+  <select class="sel" id="sel-hkouji" onchange="setHkCfg('kouji',this.value)" style="font-size:15px">
   <option value="nashi">なし（工事不要）</option>
   <option value="ikkatsu">一括 ¥28,600（戸建て）</option>
   <option value="ikkatsu_3300">一括 ¥3,300（集合住宅）</option>
@@ -521,13 +521,13 @@ tr:hover td{background:#FAFAFA}
   <span class="sel-label">工事費無料</span>
   <div style="display:flex;align-items:center;gap:8px">
   <div class="tog" id="tog-kouji-campaign" onclick="setHkCfg('koujiCampaign',!S.hkCfg.koujiCampaign)" style="padding:5px 10px;cursor:pointer">
-  <div class="tog-txt"><div class="tog-label" style="font-size:13.2px" data-txt="lblKoujiFree">実質無料キャンペーン</div><div class="tog-sub" data-txt="lblKoujiFreeSub">工事費相当をdポイントで24ヶ月分割進呈</div></div>
+  <div class="tog-txt"><div class="tog-label" style="font-size:15px" data-txt="lblKoujiFree">実質無料キャンペーン</div><div class="tog-sub" data-txt="lblKoujiFreeSub">工事費相当をdポイントで24ヶ月分割進呈</div></div>
   <div class="sw" id="sw-kouji-campaign"><div class="sw-k"></div></div>
   </div>
   </div>
   </div>
   <div id="row-kouji-campaign-detail" style="display:none;padding:4px 0 2px">
-  <div style="font-size:12px;color:var(--blue);background:var(--blue-bg);border:1px solid var(--blue-border);border-radius:7px;padding:5px 9px;line-height:1.7" id="kouji-campaign-detail-txt"></div>
+  <div style="font-size:14.5px;color:var(--blue);background:var(--blue-bg);border:1px solid var(--blue-border);border-radius:7px;padding:5px 9px;line-height:1.7" id="kouji-campaign-detail-txt"></div>
   </div>
   <div id="row-10gcampaign" style="display:none">
   <div style="display:flex;align-items:center;gap:8px;padding:6px 0">
@@ -540,12 +540,12 @@ tr:hover td{background:#FAFAFA}
   </div>
   <div id="row-10garea" style="display:none">
   <div style="background:var(--amber-bg);border:1.5px solid var(--amber-border);border-radius:8px;padding:8px 10px;margin-top:4px">
-  <div style="font-size:13.2px;font-weight:800;color:var(--amber);margin-bottom:5px">10ギガは提供エリアが限られます</div>
+  <div style="font-size:15px;font-weight:800;color:var(--amber);margin-bottom:5px">10ギガは提供エリアが限られます</div>
   <div style="display:flex;gap:6px;flex-wrap:wrap">
-  <a href="https://flets.com/app2/search_c.html" target="_blank" rel="noopener" style="flex:1;min-width:120px;text-align:center;padding:7px 8px;border-radius:7px;background:var(--blue);color:#fff;font-size:13.2px;font-weight:800;text-decoration:none">NTT東日本で確認 ↗</a>
-  <a href="https://flets-w.com/area/" target="_blank" rel="noopener" style="flex:1;min-width:120px;text-align:center;padding:7px 8px;border-radius:7px;background:var(--green);color:#fff;font-size:13.2px;font-weight:800;text-decoration:none">NTT西日本で確認 ↗</a>
+  <a href="https://flets.com/app2/search_c.html" target="_blank" rel="noopener" style="flex:1;min-width:120px;text-align:center;padding:7px 8px;border-radius:7px;background:var(--blue);color:#fff;font-size:15px;font-weight:800;text-decoration:none">NTT東日本で確認 ↗</a>
+  <a href="https://flets-w.com/area/" target="_blank" rel="noopener" style="flex:1;min-width:120px;text-align:center;padding:7px 8px;border-radius:7px;background:var(--green);color:#fff;font-size:15px;font-weight:800;text-decoration:none">NTT西日本で確認 ↗</a>
   </div>
-  <div style="font-size:11.4px;color:var(--ink3);line-height:1.6;margin-top:6px">
+  <div style="font-size:14px;color:var(--ink3);line-height:1.6;margin-top:6px">
   ・東日本：「光アクセス（10G品目）の提供エリアです」と表示された場合のみ対象<br>
   ・西日本：「光アクセスサービス（10G）の提供納期」が表示された場合のみ対象
   </div>
@@ -553,9 +553,9 @@ tr:hover td{background:#FAFAFA}
   </div>
   <div id="hk-opts-wrap">
   <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border2)">
-  <div style="font-size:13.2px;font-weight:800;color:var(--ink3);margin-bottom:4px">その他オプション</div>
+  <div style="font-size:15px;font-weight:800;color:var(--ink3);margin-bottom:4px">その他オプション</div>
   <div id="hk-opts-list"></div>
-  <button onclick="addOpt('hk',0)" style="margin-top:6px;width:100%;padding:5px;border:1.5px dashed var(--border2);border-radius:7px;color:var(--ink4);font-size:13.2px;cursor:pointer;background:none">＋ オプション追加</button>
+  <button onclick="addOpt('hk',0)" style="margin-top:6px;width:100%;padding:5px;border:1.5px dashed var(--border2);border-radius:7px;color:var(--ink4);font-size:15px;cursor:pointer;background:none">＋ オプション追加</button>
   </div>
   </div>
   <div class="hk-sum" id="hikari-sum"></div>
@@ -570,8 +570,8 @@ tr:hover td{background:#FAFAFA}
   <div class="blk-head" style="cursor:pointer;user-select:none" onclick="toggleBlk('h5g-blk')">
   <div class="blk-icon"></div>
   <span class="blk-title" data-txt="secH5g">home 5G</span>
-  <span id="h5g-blk-status" style="margin-left:auto;font-size:13.2px;font-weight:700;color:var(--ink4)"></span>
-  <span id="h5g-blk-arrow" style="font-size:12px;color:var(--ink4);margin-left:6px;transition:transform .2s">▼</span>
+  <span id="h5g-blk-status" style="margin-left:auto;font-size:15px;font-weight:700;color:var(--ink4)"></span>
+  <span id="h5g-blk-arrow" style="font-size:14.5px;color:var(--ink4);margin-left:6px;transition:transform .2s">▼</span>
   </div>
   <div id="h5g-blk" style="display:none">
   <div class="blk-body">
@@ -583,7 +583,7 @@ tr:hover td{background:#FAFAFA}
   </div>
   <div id="h5g-detail" style="display:none">
   <div class="hk-sub" style="border-color:var(--green-border);background:var(--green-bg)">
-  <div style="font-size:13.2px;font-weight:800;color:var(--green)">home 5G 詳細</div>
+  <div style="font-size:15px;font-weight:800;color:var(--green)">home 5G 詳細</div>
   <div class="sel-row">
   <span class="sel-label" data-txt="lblH5gPayment">本体支払い</span>
   <select class="sel" id="sel-h5g-payment" onchange="setH5gCfg('payment',this.value)" style="border-color:var(--green-border)">
@@ -598,13 +598,13 @@ tr:hover td{background:#FAFAFA}
   <input type="number" id="inp-h5g-disc" min="0" max="71280" step="100"
   style="width:90px;border:1.5px solid var(--green-border);border-radius:8px;padding:5px 8px;font-size:15.6px;font-weight:700;font-family:inherit"
   placeholder="0" oninput="setH5gCfg('discount',this.value)">
-  <span style="font-size:13.2px;color:var(--ink4)">円</span>
+  <span style="font-size:15px;color:var(--ink4)">円</span>
   </div>
   </div>
   <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--green-border)">
-  <div style="font-size:13.2px;font-weight:800;color:var(--green);margin-bottom:4px">その他オプション</div>
+  <div style="font-size:15px;font-weight:800;color:var(--green);margin-bottom:4px">その他オプション</div>
   <div id="h5g-opts-list"></div>
-  <button onclick="addOpt('h5g',0)" style="margin-top:6px;width:100%;padding:5px;border:1.5px dashed var(--green-border);border-radius:7px;color:var(--green);font-size:13.2px;cursor:pointer;background:none">＋ オプション追加</button>
+  <button onclick="addOpt('h5g',0)" style="margin-top:6px;width:100%;padding:5px;border:1.5px dashed var(--green-border);border-radius:7px;color:var(--green);font-size:15px;cursor:pointer;background:none">＋ オプション追加</button>
   </div>
   <div class="hk-sum" id="h5g-sum"></div>
   </div>
@@ -618,8 +618,8 @@ tr:hover td{background:#FAFAFA}
   <div class="blk-head" style="cursor:pointer;user-select:none" onclick="toggleBlk('hd-blk')">
   <div class="blk-icon"></div>
   <span class="blk-title" data-txt="secHomeDenwa">homeでんわ</span>
-  <span id="hd-blk-status" style="margin-left:auto;font-size:13.2px;font-weight:700;color:var(--ink4)"></span>
-  <span id="hd-blk-arrow" style="font-size:12px;color:var(--ink4);margin-left:6px;transition:transform .2s">▼</span>
+  <span id="hd-blk-status" style="margin-left:auto;font-size:15px;font-weight:700;color:var(--ink4)"></span>
+  <span id="hd-blk-arrow" style="font-size:14.5px;color:var(--ink4);margin-left:6px;transition:transform .2s">▼</span>
   </div>
   <div id="hd-blk" style="display:none">
   <div class="blk-body">
@@ -631,11 +631,11 @@ tr:hover td{background:#FAFAFA}
   </div>
   <div id="home-denwa-detail" style="display:none">
   <div class="hk-sub">
-  <div style="font-size:13.2px;font-weight:800;color:var(--blue)">homeでんわ 詳細</div>
-  <a href="https://www.docomo.ne.jp/home_denwa/area/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#F0F0F0;border:1.5px solid #C6C6C6;text-decoration:none;color:var(--blue);font-size:13.2px;font-weight:800;margin-bottom:2px">
+  <div style="font-size:15px;font-weight:800;color:var(--blue)">homeでんわ 詳細</div>
+  <a href="https://www.docomo.ne.jp/home_denwa/area/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#F2EEF7;border:1.5px solid #CAC3D4;text-decoration:none;color:var(--blue);font-size:15px;font-weight:800;margin-bottom:2px">
   <span style="font-size:16.8px"></span><span style="flex:1">提供エリアを確認する</span><span style="font-size:15.6px">↗</span>
   </a>
-  <div style="font-size:10.8px;color:var(--ink4);line-height:1.6;margin-bottom:4px">※ homeでんわの提供エリアは一部地域のみです。申込前に必ずご確認ください</div>
+  <div style="font-size:13.5px;color:var(--ink4);line-height:1.6;margin-bottom:4px">※ homeでんわの提供エリアは一部地域のみです。申込前に必ずご確認ください</div>
   <div class="sel-row"><span class="sel-label">プラン</span>
   <select class="sel" id="sel-hd-plan" onchange="setHomeDenwaCfg('plan',this.value)">
   <option value="light">ライト（セット割¥550/月）</option>
@@ -654,7 +654,7 @@ tr:hover td{background:#FAFAFA}
   <option value="portability">今の番号を継続（番号ポータビリティ）</option>
   </select>
   </div>
-  <div id="hd-setwarn" style="display:none;font-size:12px;color:var(--amber);background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:7px;padding:5px 9px;line-height:1.6">セット割の対象となる回線・home 5Gがありません（セット割なしの通常料金になります）</div>
+  <div id="hd-setwarn" style="display:none;font-size:14.5px;color:var(--amber);background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:7px;padding:5px 9px;line-height:1.6">セット割の対象となる回線・home 5Gがありません（セット割なしの通常料金になります）</div>
   <div class="hk-sum" id="home-denwa-sum"></div>
   </div>
   </div>
@@ -667,8 +667,8 @@ tr:hover td{background:#FAFAFA}
   <div class="blk-head" style="cursor:pointer;user-select:none" onclick="toggleBlk('denki-blk')">
   <div class="blk-icon"></div>
   <span class="blk-title" data-txt="secDenki">ドコモでんき</span>
-  <span id="denki-blk-status" style="margin-left:auto;font-size:13.2px;font-weight:700;color:var(--ink4)"></span>
-  <span id="denki-blk-arrow" style="font-size:12px;color:var(--ink4);margin-left:6px;transition:transform .2s">▼</span>
+  <span id="denki-blk-status" style="margin-left:auto;font-size:15px;font-weight:700;color:var(--ink4)"></span>
+  <span id="denki-blk-arrow" style="font-size:14.5px;color:var(--ink4);margin-left:6px;transition:transform .2s">▼</span>
   </div>
   <div id="denki-blk" style="display:none">
   <div class="blk-body">
@@ -685,7 +685,7 @@ tr:hover td{background:#FAFAFA}
   <option value="basic">Basic（追加なし）</option>
   <option value="green">Green（+¥500/月）</option>
   </select>
-  <div id="denki-plan-desc" style="font-size:13.2px;color:var(--ink3);padding:6px 9px;border-radius:8px;background:var(--bg);line-height:1.7"></div>
+  <div id="denki-plan-desc" style="font-size:15px;color:var(--ink3);padding:6px 9px;border-radius:8px;background:var(--bg);line-height:1.7"></div>
   </div>
   <div style="margin-top:8px">
   <div class="fl" data-txt="lblDenkiBill">月間電気料金（目安）</div>
@@ -709,8 +709,8 @@ tr:hover td{background:#FAFAFA}
   <div class="blk-head" style="cursor:pointer;user-select:none" onclick="toggleBlk('gas-blk')">
   <div class="blk-icon"></div>
   <span class="blk-title" data-txt="secGas">ドコモガス</span>
-  <span id="gas-blk-status" style="margin-left:auto;font-size:13.2px;font-weight:700;color:var(--ink4)"></span>
-  <span id="gas-blk-arrow" style="font-size:12px;color:var(--ink4);margin-left:6px;transition:transform .2s">▼</span>
+  <span id="gas-blk-status" style="margin-left:auto;font-size:15px;font-weight:700;color:var(--ink4)"></span>
+  <span id="gas-blk-arrow" style="font-size:14.5px;color:var(--ink4);margin-left:6px;transition:transform .2s">▼</span>
   </div>
   <div id="gas-blk" style="display:none">
   <div class="blk-body">
@@ -897,20 +897,20 @@ const TEXT = {
 // mpr: ケータイ料金還元率(×10。100=10%) ※MAX系のみ対象
 // poi: ポイ活特典（ショッピング額に対する還元、上限pt付き）※ポイ活系のみ
 const PLANS = {
-  sma_u15_5:{n:"デビューU15(5GB以下)",fn:"スマホデビューU15（5GB以下）",data:"5GB以下",base:2508,col:"#2B2B2B",
+  sma_u15_5:{n:"デビューU15(5GB以下)",fn:"スマホデビューU15（5GB以下）",data:"5GB以下",base:2508,col:"#332B3D",
     u15:true, oyakoDisc:1100, familyDisc:false,setDisc:true, noHikariDenki:true, capGb:5,
     mpr:{platinum:0,gold:0,gold_u:0,dcard:0,none:0},restricted:true},
-  sma_u15_20:{n:"デビューU15(20GB以下)",fn:"スマホデビューU15（5GB超20GB以下）",data:"5GB超20GB以下",base:3278,col:"#2B2B2B",
+  sma_u15_20:{n:"デビューU15(20GB以下)",fn:"スマホデビューU15（5GB超20GB以下）",data:"5GB超20GB以下",base:3278,col:"#332B3D",
     u15:true, oyakoDisc:1870, familyDisc:false,setDisc:true, noHikariDenki:true, capGb:20,
     mpr:{platinum:0,gold:0,gold_u:0,dcard:0,none:0},restricted:true},
-  u15_5_old:{n:"旧U15(5GB)",fn:"U15はじめてスマホ（5GB・2026/8/6以前契約の継続案内用）",data:"5GB",base:1980,col:"#9A9A9A",
+  u15_5_old:{n:"旧U15(5GB)",fn:"U15はじめてスマホ（5GB・2026/8/6以前契約の継続案内用）",data:"5GB",base:1980,col:"#9A93A6",
     u15:true, u15Old:true, ispDisc:165, u15pt:500, u15PayOverride:187, familyDisc:false,setDisc:false, noHikariDenki:true, capGb:5,
     mpr:{platinum:0,gold:0,gold_u:0,dcard:0,none:0},restricted:true},
-  u15_10_old:{n:"旧U15(10GB)",fn:"U15はじめてスマホ（10GB・2026/8/6以前契約の継続案内用）",data:"10GB",base:2860,col:"#9A9A9A",
+  u15_10_old:{n:"旧U15(10GB)",fn:"U15はじめてスマホ（10GB・2026/8/6以前契約の継続案内用）",data:"10GB",base:2860,col:"#9A93A6",
     u15:true, u15Old:true, ispDisc:165, u15pt:1000, u15PayOverride:187, familyDisc:false,setDisc:false, noHikariDenki:true, capGb:10,
     mpr:{platinum:0,gold:0,gold_u:0,dcard:0,none:0},restricted:true},
 
-  docomo_max:{n:"MAX",fn:"ドコモ MAX",data:"〜1GB〜無制限",base:8448,col:"#1A1A1A",
+  docomo_max:{n:"MAX",fn:"ドコモ MAX",data:"〜1GB〜無制限",base:8448,col:"#14101A",
   familyDisc:true,setDisc:true, capGb:9999, oyakoFamEligible:true, keitai:true, ahamoMaxCp:2750,
   tiers:[{l:"〜1GB ¥5,698",v:5698,capGb:1},{l:"〜3GB ¥6,798",v:6798,capGb:3},{l:"3GB〜 ¥8,448",v:8448,capGb:9999}],
   tiersYoung:[
@@ -920,34 +920,34 @@ const PLANS = {
   ],
   mpr:{platinum:100,gold:100,gold_u:50,dcard:0,none:0}},
 
-  poi_max:{n:"ポイ活MAX",fn:"ドコモ ポイ活 MAX（無制限）",data:"無制限",base:11748,col:"#4A4A4A",
+  poi_max:{n:"ポイ活MAX",fn:"ドコモ ポイ活 MAX（無制限）",data:"無制限",base:11748,col:"#5A4A6E",
   familyDisc:true,setDisc:true, capGb:9999, famSrc:true, oyakoFamEligible:true, keitai:true, ahamoMaxCp:2200,
   poi:{cap:5000, rate:{none:0,dcard:0.03,gold_u:0.05,gold:0.05,platinum:0.10}},
   mpr:{platinum:100,gold:100,gold_u:50,dcard:0,none:0}},
 
-  poi20_20:{n:"ポイ活20(20GB)",fn:"ドコモ ポイ活 20（〜20GB）",data:"〜20GB",base:7898,col:"#4A4A4A",
+  poi20_20:{n:"ポイ活20(20GB)",fn:"ドコモ ポイ活 20（〜20GB）",data:"〜20GB",base:7898,col:"#5A4A6E",
   familyDisc:true,setDisc:true, capGb:20, keitai:true,
   poi:{cap:2500, rate:{none:0,dcard:0.01,gold_u:0.02,gold:0.02,platinum:0.05}},
   mpr:{platinum:100,gold:100,gold_u:50,dcard:0,none:0}},
-  poi20_un:{n:"ポイ活20(無制限)",fn:"ドコモ ポイ活 20（無制限）",data:"無制限",base:9570,col:"#4A4A4A",
+  poi20_un:{n:"ポイ活20(無制限)",fn:"ドコモ ポイ活 20（無制限）",data:"無制限",base:9570,col:"#5A4A6E",
   familyDisc:true,setDisc:true, capGb:9999, keitai:true,
   poi:{cap:2500, rate:{none:0,dcard:0.01,gold_u:0.02,gold:0.02,platinum:0.05}},
   mpr:{platinum:100,gold:100,gold_u:50,dcard:0,none:0}},
 
-  mini_4:{n:"mini 6GB",fn:"ドコモ mini（6GB・期間限定+2GB）",data:"6GB",base:2750,col:"#6E6E6E",
+  mini_4:{n:"mini 6GB",fn:"ドコモ mini（6GB・期間限定+2GB）",data:"6GB",base:2750,col:"#6B6478",
   familyDisc:false,setDisc:true, capGb:6,
   mpr:{platinum:10,gold:10,gold_u:10,dcard:5,none:0},restricted:true},
-  mini_10:{n:"mini 12GB",fn:"ドコモ mini（12GB・期間限定+2GB）",data:"12GB",base:3850,col:"#6E6E6E",
+  mini_10:{n:"mini 12GB",fn:"ドコモ mini（12GB・期間限定+2GB）",data:"12GB",base:3850,col:"#6B6478",
   familyDisc:false,setDisc:true, capGb:12,
   mpr:{platinum:10,gold:10,gold_u:10,dcard:5,none:0},restricted:true},
 
-  ahamo:{n:"ahamo",fn:"ahamo（40GB・期間限定+10GB）",data:"40GB",base:2970,col:"#2B2B2B",
+  ahamo:{n:"ahamo",fn:"ahamo（40GB・期間限定+10GB）",data:"40GB",base:2970,col:"#332B3D",
   familyDisc:false,setDisc:false, capGb:40, oyakoFamEligible:true,
   mpr:{platinum:10,gold:10,gold_u:10,dcard:5,none:0},restricted:true},
-  ahamo_big:{n:"ahamo大盛り",fn:"ahamo大盛り（120GB・期間限定+10GB）",data:"120GB",base:4950,col:"#2B2B2B",
+  ahamo_big:{n:"ahamo大盛り",fn:"ahamo大盛り（120GB・期間限定+10GB）",data:"120GB",base:4950,col:"#332B3D",
   familyDisc:false,setDisc:false, capGb:120,
   mpr:{platinum:10,gold:10,gold_u:10,dcard:5,none:0},restricted:true},
-  ahamo_poi:{n:"ahamoポイ活",fn:"ahamoポイ活（120GB・期間限定+10GB）",data:"120GB",base:7150,col:"#2B2B2B",
+  ahamo_poi:{n:"ahamoポイ活",fn:"ahamoポイ活（120GB・期間限定+10GB）",data:"120GB",base:7150,col:"#332B3D",
   familyDisc:false,setDisc:false, capGb:120,
   poi:{cap:4000, rate:{none:0,dcard:0.03,gold_u:0.05,gold:0.05,platinum:0.10}},
   mpr:{platinum:0,gold:0,gold_u:0,dcard:0,none:0},restricted:true},
@@ -955,15 +955,15 @@ const PLANS = {
 
 // ---- カード定義 ----
 const CARDS = {
-  platinum:{n:"PLATINUM",fn:"dカード PLATINUM",fee:29700,disc:550,col:"#1A1A1A",emoji:"",ageOnly:false,
+  platinum:{n:"PLATINUM",fn:"dカード PLATINUM",fee:29700,disc:550,col:"#14101A",emoji:"",ageOnly:false,
     annualBonus:(s)=>Math.min(Math.floor(s/1e6),4)*10000}, // 年間ご利用額特典：100万円ごと1万円・最大4万円（4段階制）
-  gold:  {n:"GOLD",  fn:"dカード GOLD",  fee:11000,disc:550,col:"#4A4A4A",emoji:"",ageOnly:false,
+  gold:  {n:"GOLD",  fn:"dカード GOLD",  fee:11000,disc:550,col:"#5A4A6E",emoji:"",ageOnly:false,
     annualBonus:(s)=>s>=1e6?10000:0}, // 年間ご利用額特典：100万円以上で一律1万円（単一段階・複数の2026年最新情報で確認済み）
-  gold_u:{n:"GOLD U",fn:"dカード GOLD U",fee:3300,disc:550,col:"#555555",emoji:"",ageOnly:true,
+  gold_u:{n:"GOLD U",fn:"dカード GOLD U",fee:3300,disc:550,col:"#6B4494",emoji:"",ageOnly:true,
     annualBonus:()=>0}, // GOLD Uは年間ご利用額特典の対象外
-  dcard: {n:"dカード",fn:"dカード",fee:0,disc:220,col:"#1A1A1A",emoji:"",ageOnly:false,
+  dcard: {n:"dカード",fn:"dカード",fee:0,disc:220,col:"#14101A",emoji:"",ageOnly:false,
     annualBonus:()=>0},
-  none:  {n:"なし",fn:"カードなし",fee:0,disc:0,col:"#9A9A9A",emoji:"",ageOnly:false,
+  none:  {n:"なし",fn:"カードなし",fee:0,disc:0,col:"#9A93A6",emoji:"",ageOnly:false,
     annualBonus:()=>0},
 };
 
@@ -1045,7 +1045,7 @@ const DEVICE_CATALOG = {
     {n:"らくらくスマートフォン", p:67144, zMnp:9240, zHen:9240},
   ],
 };
-const LINE_COLORS=["#1A1A1A","#4A4A4A","#2B2B2B","#555555","#6E6E6E","#3A3A3A"];
+const LINE_COLORS=["#14101A","#5A4A6E","#332B3D","#6B4494","#6B6478","#332B3D"];
 const LINE_LABELS=["Aさん","Bさん","Cさん","Dさん","Eさん","Fさん"];
 
 let S={
@@ -1185,8 +1185,8 @@ function renderHomeDenwaDetail(){
   <div class="hks-row"><span class="hks-label" style="font-weight:800">homeでんわ合計</span><span class="hks-val" style="font-weight:800;color:var(--blue)">¥${(afterSupport+installment).toLocaleString()}/月</span></div>
   <div class="hks-row" style="border-top:1px solid var(--border);margin-top:4px;padding-top:6px"><span class="hks-label">契約事務手数料（初月）</span><span class="hks-val" style="color:var(--amber)">¥2,200</span></div>
   ${isPort?`<div class="hks-row"><span class="hks-label">番号継続登録料（初月・番号ポータビリティ）</span><span class="hks-val" style="color:var(--amber)">¥2,200</span></div>`:''}
-  <div class="hks-row"><span class="hks-label" style="font-size:12px;color:var(--ink4)">初期費用合計 ¥${numberFee.toLocaleString()}${isIkkatsu?`＋HP01一括¥${HD_DEVICE_PRICE.toLocaleString()}`:''}</span></div>
-  <div class="hks-row"><span class="hks-label" style="font-size:12px;color:var(--ink4)">月々サポート割は端末購入者に36ヶ月間、支払い方法によらず適用（37ヶ月目以降は通常料金）</span></div>
+  <div class="hks-row"><span class="hks-label" style="font-size:14.5px;color:var(--ink4)">初期費用合計 ¥${numberFee.toLocaleString()}${isIkkatsu?`＋HP01一括¥${HD_DEVICE_PRICE.toLocaleString()}`:''}</span></div>
+  <div class="hks-row"><span class="hks-label" style="font-size:14.5px;color:var(--ink4)">月々サポート割は端末購入者に36ヶ月間、支払い方法によらず適用（37ヶ月目以降は通常料金）</span></div>
   `;
 }
 
@@ -1222,10 +1222,10 @@ function renderDenkiDetail(){
   if(desc){
     if(plan==='green'){
       desc.innerHTML=`<b>Green</b>：基本料金 <b>+¥500/月</b><br>カードなし0.5% / dカード3% / GOLD・GOLD U6% / PLATINUM12% 還元${gasBonusNote}`;
-      desc.style.borderLeft='3px solid #2B2B2B';
+      desc.style.borderLeft='3px solid #332B3D';
     } else {
       desc.innerHTML=`<b>Basic</b>：基本料金 <b>追加なし</b><br>カードなし0.5% / dカード1% / GOLD・GOLD U2% / PLATINUM2% 還元${gasBonusNote}`;
-      desc.style.borderLeft='3px solid #6E6E6E';
+      desc.style.borderLeft='3px solid #6B6478';
     }
   }
   const inp=document.getElementById('inp-denki-bill');
@@ -1235,10 +1235,10 @@ function renderDenkiDetail(){
     const pts=calcDenkiPts(plan,card,monthlyBill);
     const rate=denkiRateFor(plan,card);
     const cardName=card==='none'?'カードなし':CARDS[card].n;
-    preview.innerHTML=`<div style="padding:8px 10px;border-radius:8px;background:${plan==='green'?'#F2F2F2':'#F2F2F2'};border:1.5px solid ${plan==='green'?'#C6C6C6':'#C6C6C6'}">
-    <div style="font-size:13.2px;color:var(--ink4);margin-bottom:3px">月間ポイント試算（${cardName}・${plan==='green'?'Green':'Basic'} ${rate}%）</div>
-    <div style="font-size:21.6px;font-weight:900;color:${plan==='green'?'var(--green)':'var(--ink2)'}">+${pts.toLocaleString()}pt<span style="font-size:13.2px;font-weight:400;color:var(--ink4)">/月</span></div>
-    <div style="font-size:12px;color:var(--ink4)">年間 +${(pts*12).toLocaleString()}pt</div>
+    preview.innerHTML=`<div style="padding:8px 10px;border-radius:8px;background:${plan==='green'?'#F0EEF3':'#F0EEF3'};border:1.5px solid ${plan==='green'?'#CAC3D4':'#CAC3D4'}">
+    <div style="font-size:15px;color:var(--ink4);margin-bottom:3px">月間ポイント試算（${cardName}・${plan==='green'?'Green':'Basic'} ${rate}%）</div>
+    <div style="font-size:21.6px;font-weight:900;color:${plan==='green'?'var(--green)':'var(--ink2)'}">+${pts.toLocaleString()}pt<span style="font-size:15px;font-weight:400;color:var(--ink4)">/月</span></div>
+    <div style="font-size:14.5px;color:var(--ink4)">年間 +${(pts*12).toLocaleString()}pt</div>
     </div>`;
   } else if(preview){preview.innerHTML='';}
 }
@@ -1265,10 +1265,10 @@ function renderGasDetail(){
   const preview=document.getElementById('gas-pts-preview');
   if(preview&&S.gasCfg.monthlyBill>0){
     const pts=calcGasPts(S.gasCfg.monthlyBill);
-    preview.innerHTML=`<div style="padding:8px 10px;border-radius:8px;background:#EDEDED;border:1.5px solid #C6C6C6">
-    <div style="font-size:13.2px;color:var(--ink4);margin-bottom:3px">月間ポイント試算（還元率 ${gasRate()}%・でんきセット${S.shared.denki?'あり':'なし'}）</div>
-    <div style="font-size:21.6px;font-weight:900;color:var(--amber)">+${pts.toLocaleString()}pt<span style="font-size:13.2px;font-weight:400;color:var(--ink4)">/月</span></div>
-    <div style="font-size:12px;color:var(--ink4)">年間 +${(pts*12).toLocaleString()}pt ／ ガス料金自体は地域ガス会社と同額</div>
+    preview.innerHTML=`<div style="padding:8px 10px;border-radius:8px;background:#EFEBF4;border:1.5px solid #CAC3D4">
+    <div style="font-size:15px;color:var(--ink4);margin-bottom:3px">月間ポイント試算（還元率 ${gasRate()}%・でんきセット${S.shared.denki?'あり':'なし'}）</div>
+    <div style="font-size:21.6px;font-weight:900;color:var(--amber)">+${pts.toLocaleString()}pt<span style="font-size:15px;font-weight:400;color:var(--ink4)">/月</span></div>
+    <div style="font-size:14.5px;color:var(--ink4)">年間 +${(pts*12).toLocaleString()}pt ／ ガス料金自体は地域ガス会社と同額</div>
     </div>`;
   } else if(preview){preview.innerHTML='';}
 }
@@ -1482,9 +1482,9 @@ function renderDeviceResult(id){
 }
 function deviceResultHTML(d,device){
   if(!d||!device?.price)return '';
-  if(d.type==='ikkatsu')return `<div style="font-size:13.2px;color:var(--ink3);padding:4px 8px;background:var(--bg);border-radius:6px">一括 ¥${d.base.toLocaleString()}${(device.deposit>0||device.discount>0)?`（本体¥${device.price.toLocaleString()}${device.deposit>0?`・頭金¥${device.deposit.toLocaleString()}`:''}${device.discount>0?`・割引−¥${device.discount.toLocaleString()}`:''}）`:''}</div>`;
-  if(d.type==='split')return `<div style="font-size:13.2px;color:var(--ink3);padding:4px 8px;background:var(--bg);border-radius:6px">${d.months}回 ／ 1回目 <b>¥${d.monthly_first.toLocaleString()}</b> ／ 2回目〜 <b>¥${d.monthly_norm.toLocaleString()}</b>/月</div>`;
-  if(d.type==='kakudoki')return `<div style="font-size:13.2px;color:var(--ink3);padding:4px 8px;background:var(--bg);border-radius:6px">1〜23回 ／ 1回目 <b>¥${d.monthly_first.toLocaleString()}</b> ／ 2〜23回 <b>¥${d.monthly_norm.toLocaleString()}</b><br>残価¥${d.zanka.toLocaleString()} → 24〜48回 ／ 24回目 <b>¥${d.monthly_zanka_first.toLocaleString()}</b> ／ 25〜48回 <b>¥${d.monthly_zanka_norm.toLocaleString()}</b></div>`;
+  if(d.type==='ikkatsu')return `<div style="font-size:15px;color:var(--ink3);padding:4px 8px;background:var(--bg);border-radius:6px">一括 ¥${d.base.toLocaleString()}${(device.deposit>0||device.discount>0)?`（本体¥${device.price.toLocaleString()}${device.deposit>0?`・頭金¥${device.deposit.toLocaleString()}`:''}${device.discount>0?`・割引−¥${device.discount.toLocaleString()}`:''}）`:''}</div>`;
+  if(d.type==='split')return `<div style="font-size:15px;color:var(--ink3);padding:4px 8px;background:var(--bg);border-radius:6px">${d.months}回 ／ 1回目 <b>¥${d.monthly_first.toLocaleString()}</b> ／ 2回目〜 <b>¥${d.monthly_norm.toLocaleString()}</b>/月</div>`;
+  if(d.type==='kakudoki')return `<div style="font-size:15px;color:var(--ink3);padding:4px 8px;background:var(--bg);border-radius:6px">1〜23回 ／ 1回目 <b>¥${d.monthly_first.toLocaleString()}</b> ／ 2〜23回 <b>¥${d.monthly_norm.toLocaleString()}</b><br>残価¥${d.zanka.toLocaleString()} → 24〜48回 ／ 24回目 <b>¥${d.monthly_zanka_first.toLocaleString()}</b> ／ 25〜48回 <b>¥${d.monthly_zanka_norm.toLocaleString()}</b></div>`;
   return '';
 }
 function buildDeviceHTML(l,plan,d){
@@ -1494,7 +1494,7 @@ function buildDeviceHTML(l,plan,d){
     `<optgroup label="${brand}">`+items.map((it,idx)=>`<option value="${brand}|${idx}" ${d.catalogKey===`${brand}|${idx}`?'selected':''}>${it.n}${it.p?'':'　※価格を入力してください'}</option>`).join('')+`</optgroup>`
   ).join('');
   return `
-  <div style="font-size:12px;color:var(--ink4);margin-bottom:3px">機種選択（ドコモオンラインショップ・確認済み一括価格）</div>
+  <div style="font-size:14.5px;color:var(--ink4);margin-bottom:3px">機種選択（ドコモオンラインショップ・確認済み一括価格）</div>
   <select class="sel" onchange="setLineDeviceModel(${l.id},this.value)" style="margin-bottom:6px">
   <option value="" ${!d.catalogKey?'selected':''} disabled>機種を選択してください</option>
   ${catalogOptions}
@@ -1505,18 +1505,18 @@ function buildDeviceHTML(l,plan,d){
   oninput="setLineDevice(${l.id},'name',this.value)">`:`<div style="font-size:14.4px;font-weight:700;padding:4px 2px 6px;color:var(--ink2)">${esc(d.name||'')}</div>`}
   <div style="display:flex;gap:5px">
   <div style="flex:3">
-  <div style="font-size:12px;color:var(--ink4);margin-bottom:3px">本体価格</div>
+  <div style="font-size:14.5px;color:var(--ink4);margin-bottom:3px">本体価格</div>
   <div style="display:flex;align-items:center;gap:3px">
-  <span style="font-size:13.2px;color:var(--ink3)">¥</span>
+  <span style="font-size:15px;color:var(--ink3)">¥</span>
   <input type="number" placeholder="0" value="${d.price||''}"
   style="width:100%;min-width:0;border:1.5px solid var(--border2);border-radius:8px;padding:5px 7px;font-size:14.4px;font-weight:700;font-family:inherit"
   oninput="setLineDevice(${l.id},'price',this.value)">
   </div>
   </div>
   <div style="flex:2">
-  <div style="font-size:12px;color:var(--ink4);margin-bottom:3px">頭金</div>
+  <div style="font-size:14.5px;color:var(--ink4);margin-bottom:3px">頭金</div>
   <div style="display:flex;align-items:center;gap:3px">
-  <span style="font-size:13.2px;color:var(--ink3)">¥</span>
+  <span style="font-size:15px;color:var(--ink3)">¥</span>
   <input type="number" placeholder="0" value="${d.deposit||''}"
   style="width:100%;min-width:0;border:1.5px solid var(--border2);border-radius:8px;padding:5px 7px;font-size:14.4px;font-weight:700;font-family:inherit"
   oninput="setLineDevice(${l.id},'deposit',this.value)">
@@ -1524,9 +1524,9 @@ function buildDeviceHTML(l,plan,d){
   </div>
   </div>
   <div style="margin-top:5px">
-  <div style="font-size:12px;color:var(--amber);margin-bottom:3px">割引金額（キャンペーン等・本体価格から差引）</div>
+  <div style="font-size:14.5px;color:var(--amber);margin-bottom:3px">割引金額（キャンペーン等・本体価格から差引）</div>
   <div style="display:flex;align-items:center;gap:3px">
-  <span style="font-size:13.2px;color:var(--ink3)">−¥</span>
+  <span style="font-size:15px;color:var(--ink3)">−¥</span>
   <input type="number" placeholder="0" value="${d.discount||''}"
   style="width:100%;min-width:0;border:1.5px solid var(--amber-border);border-radius:8px;padding:5px 7px;font-size:14.4px;font-weight:700;font-family:inherit;background:var(--amber-bg)"
   oninput="setLineDevice(${l.id},'discount',this.value)">
@@ -1541,10 +1541,10 @@ function buildDeviceHTML(l,plan,d){
     const hasAdj=(dep>0||disc>0);
     return `<div style="margin-top:6px;padding:7px 10px;border-radius:8px;background:${hasAdj?'var(--amber-bg)':'var(--bg)'};border:1.5px solid ${hasAdj?'var(--amber-border)':'var(--border2)'}">
       <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
-        <span style="font-size:13.2px;font-weight:800;color:${hasAdj?'var(--amber)':'var(--ink3)'}">${hasAdj?'値引き後の本体価格':'本体価格'}</span>
+        <span style="font-size:15px;font-weight:800;color:${hasAdj?'var(--amber)':'var(--ink3)'}">${hasAdj?'値引き後の本体価格':'本体価格'}</span>
         <span style="font-size:19.2px;font-weight:900;color:${hasAdj?'var(--amber)':'var(--ink)'}">¥${after.toLocaleString()}</span>
       </div>
-      ${hasAdj?`<div style="font-size:10.8px;color:var(--ink4);margin-top:2px;line-height:1.5">本体¥${price.toLocaleString()}${dep>0?`　頭金 −¥${dep.toLocaleString()}`:''}${disc>0?`　割引 −¥${disc.toLocaleString()}`:''}</div>`:''}
+      ${hasAdj?`<div style="font-size:13.5px;color:var(--ink4);margin-top:2px;line-height:1.5">本体¥${price.toLocaleString()}${dep>0?`　頭金 −¥${dep.toLocaleString()}`:''}${disc>0?`　割引 −¥${disc.toLocaleString()}`:''}</div>`:''}
     </div>`;
   })()}
   ${(()=>{
@@ -1554,25 +1554,25 @@ function buildDeviceHTML(l,plan,d){
     return `<select class="sel" onchange="setLineDevice(${l.id},'payment',this.value)" style="border-color:${plan.col};margin-top:6px">
     ${opts.map(([v,lb])=>`<option value="${v}" ${payment===v?'selected':''}>${lb}</option>`).join('')}
     </select>
-    ${!kakudokiOk?`<div style="font-size:10.8px;color:var(--ink4);margin-top:3px">この機種はカエドキプログラムの対象外です</div>`:''}`;
+    ${!kakudokiOk?`<div style="font-size:13.5px;color:var(--ink4);margin-top:3px">この機種はカエドキプログラムの対象外です</div>`:''}`;
   })()}
   ${payment==='kakudoki'?(()=>{
     const item=getCatalogItem(d);
     const keiyaku=d.keiyaku||'mnp';
     return `<div style="margin-top:6px;padding:8px 9px;border:1.5px solid var(--amber-border);border-radius:8px;background:var(--amber-bg)">
-    <div style="font-size:12px;color:var(--amber);font-weight:700;margin-bottom:5px">契約種別（残価が変わります）</div>
+    <div style="font-size:14.5px;color:var(--amber);font-weight:700;margin-bottom:5px">契約種別（残価が変わります）</div>
     <div style="display:flex;gap:6px;margin-bottom:7px">
-      <button onclick="setLineKeiyaku(${l.id},'mnp')" style="flex:1;padding:6px;border-radius:7px;border:1.5px solid ${keiyaku==='mnp'?'var(--amber)':'var(--border2)'};background:${keiyaku==='mnp'?'var(--amber)':'var(--white)'};color:${keiyaku==='mnp'?'#fff':'var(--ink3)'};font-size:13.2px;font-weight:800;font-family:inherit;cursor:pointer">のりかえ（MNP）</button>
-      <button onclick="setLineKeiyaku(${l.id},'henkou')" style="flex:1;padding:6px;border-radius:7px;border:1.5px solid ${keiyaku==='henkou'?'var(--amber)':'var(--border2)'};background:${keiyaku==='henkou'?'var(--amber)':'var(--white)'};color:${keiyaku==='henkou'?'#fff':'var(--ink3)'};font-size:13.2px;font-weight:800;font-family:inherit;cursor:pointer">機種変更</button>
+      <button onclick="setLineKeiyaku(${l.id},'mnp')" style="flex:1;padding:6px;border-radius:7px;border:1.5px solid ${keiyaku==='mnp'?'var(--amber)':'var(--border2)'};background:${keiyaku==='mnp'?'var(--amber)':'var(--white)'};color:${keiyaku==='mnp'?'#fff':'var(--ink3)'};font-size:15px;font-weight:800;font-family:inherit;cursor:pointer">のりかえ（MNP）</button>
+      <button onclick="setLineKeiyaku(${l.id},'henkou')" style="flex:1;padding:6px;border-radius:7px;border:1.5px solid ${keiyaku==='henkou'?'var(--amber)':'var(--border2)'};background:${keiyaku==='henkou'?'var(--amber)':'var(--white)'};color:${keiyaku==='henkou'?'#fff':'var(--ink3)'};font-size:15px;font-weight:800;font-family:inherit;cursor:pointer">機種変更</button>
     </div>
-    <div style="font-size:12px;color:var(--amber);font-weight:700;margin-bottom:4px">残価（24回目）${item&&(item.zMnp||item.zHen)?'　※自動入力':''}</div>
+    <div style="font-size:14.5px;color:var(--amber);font-weight:700;margin-bottom:4px">残価（24回目）${item&&(item.zMnp||item.zHen)?'　※自動入力':''}</div>
     <div style="display:flex;align-items:center;gap:4px">
-    <span style="font-size:13.2px;color:var(--ink3)">¥</span>
+    <span style="font-size:15px;color:var(--ink3)">¥</span>
     <input type="number" placeholder="0" value="${d.kakudoki_zanka||''}"
     style="flex:1;min-width:0;border:1.5px solid var(--amber-border);border-radius:8px;padding:5px 8px;font-size:14.4px;font-weight:700;font-family:inherit;background:var(--white)"
     oninput="setLineDevice(${l.id},'kakudoki_zanka',this.value)">
     </div>
-    ${item&&item.zMnp&&item.zHen?`<div style="font-size:10.8px;color:var(--ink4);margin-top:3px">MNP:¥${item.zMnp.toLocaleString()}／機種変更:¥${item.zHen.toLocaleString()}</div>`:''}
+    ${item&&item.zMnp&&item.zHen?`<div style="font-size:13.5px;color:var(--ink4);margin-top:3px">MNP:¥${item.zMnp.toLocaleString()}／機種変更:¥${item.zHen.toLocaleString()}</div>`:''}
     </div>`;
   })():''}
   <div id="dev-result-${l.id}">${deviceResultHTML(calcDevice(d),d)}</div>
@@ -1630,11 +1630,11 @@ function optHTML(target,id,opts){
     var op="setOpt('"+target+"',"+id+","+i+",'price',this.value)";
     var od="delOpt('"+target+"',"+id+","+i+")";
     return '<div class="opt-row" style="display:flex;align-items:center;gap:5px;margin-top:5px">'
-      +'<input type="text" placeholder="オプション名" value="'+esc(o.name||'')+'" style="flex:2;min-width:0;border:1.5px solid var(--border2);border-radius:7px;padding:5px 8px;font-size:13.2px;font-family:inherit" oninput="'+oi+'">'
-      +'<span style="font-size:13.2px;color:var(--ink3);flex-shrink:0">¥</span>'
-      +'<input type="number" placeholder="0" value="'+(o.price||'')+'" style="flex:1;min-width:0;border:1.5px solid var(--border2);border-radius:7px;padding:5px 7px;font-size:13.2px;font-weight:700;font-family:inherit" oninput="'+op+'">'
-      +'<span style="font-size:13.2px;color:var(--ink3);flex-shrink:0">/月</span>'
-      +'<button onclick="'+od+'" style="flex-shrink:0;padding:3px 7px;border-radius:6px;border:1.5px solid var(--border2);color:var(--ink4);font-size:13.2px;cursor:pointer">✕</button>'
+      +'<input type="text" placeholder="オプション名" value="'+esc(o.name||'')+'" style="flex:2;min-width:0;border:1.5px solid var(--border2);border-radius:7px;padding:5px 8px;font-size:15px;font-family:inherit" oninput="'+oi+'">'
+      +'<span style="font-size:15px;color:var(--ink3);flex-shrink:0">¥</span>'
+      +'<input type="number" placeholder="0" value="'+(o.price||'')+'" style="flex:1;min-width:0;border:1.5px solid var(--border2);border-radius:7px;padding:5px 7px;font-size:15px;font-weight:700;font-family:inherit" oninput="'+op+'">'
+      +'<span style="font-size:15px;color:var(--ink3);flex-shrink:0">/月</span>'
+      +'<button onclick="'+od+'" style="flex-shrink:0;padding:3px 7px;border-radius:6px;border:1.5px solid var(--border2);color:var(--ink4);font-size:15px;cursor:pointer">✕</button>'
       +'</div>';
   }).join('');
 }
@@ -2085,7 +2085,7 @@ function renderH5gDetail(){
   <div class="hks-row"><span class="hks-label">基本月額</span><span class="hks-val" style="color:var(--green)">
   ${is48?`¥${mth.toLocaleString()}（全48回）`:`¥${mthM1.toLocaleString()}（1回目）/ ¥${mth.toLocaleString()}（2〜48回目）`}
   </span></div>
-  <div class="hks-row"><span class="hks-label" style="font-size:12px;color:var(--ink4)">
+  <div class="hks-row"><span class="hks-label" style="font-size:14.5px;color:var(--ink4)">
   ${is48?`48回分割：月々サポート割と分割代が相殺→¥5,280/月${discPerMonth>0?`（本体値引−¥${discPerMonth.toLocaleString()}/月）`:''} 本体¥${H5G_HONTAL.toLocaleString()}${disc>0?`（値引後¥${(H5G_HONTAL-disc).toLocaleString()}）`:''}`
   :`一括：月々サポート割 1回目−¥${H5G_SUPPORT_M1.toLocaleString()} / 2〜48回目−¥${H5G_SUPPORT_M2.toLocaleString()} 本体¥${H5G_HONTAL.toLocaleString()}${disc>0?`（値引後¥${(H5G_HONTAL-disc).toLocaleString()}）`:''}（別途一括）`}
   </span></div>`;
@@ -2098,7 +2098,7 @@ function renderHikariSum(){
   const is10gCampaign=S.hkCfg.speed==='10g'&&S.hkCfg.campaign10g;
   el.innerHTML=`
   <div class="hks-row"><span class="hks-label">月額（光回線）</span><span class="hks-val" style="color:var(--blue)">¥${mth.toLocaleString()}</span></div>
-  ${optSum>0?`<div class="hks-row"><span class="hks-label" style="font-size:12px;color:var(--ink4)">　うちオプション合計</span><span class="hks-val" style="font-size:12px;color:var(--ink4)">+¥${optSum.toLocaleString()}</span></div>`:''}
+  ${optSum>0?`<div class="hks-row"><span class="hks-label" style="font-size:14.5px;color:var(--ink4)">　うちオプション合計</span><span class="hks-val" style="font-size:14.5px;color:var(--ink4)">+¥${optSum.toLocaleString()}</span></div>`:''}
   ${is10gCampaign?`<div class="hks-row"><span class="hks-label" style="color:var(--amber)">6ヶ月キャンペーン中</span><span class="hks-val" style="color:var(--amber)">通常 ¥6,380/月</span></div>`:''}
   ${kj>0?`<div class="hks-row"><span class="hks-label">工事費分割（参考）</span><span class="hks-val" style="color:var(--amber)">1回目¥${hkKoujiFirst().toLocaleString()} / 2〜${hkKoujiMonths()}回目¥${kj.toLocaleString()}</span></div>`:''}
   ${hkKoujiIsIkkatsu()?`<div class="hks-row"><span class="hks-label">工事費（別途一括）</span><span class="hks-val" style="color:var(--amber)">¥${hkKoujiTotal().toLocaleString()}</span></div>`:''}
@@ -2130,12 +2130,12 @@ function renderLines(){
     el.style.borderColor=line.open?col+'66':'var(--border)';
 
     const roleTag=isHolder
-      ?`<span style="font-size:12px;padding:2px 7px;border-radius:5px;font-weight:800;background:#EFEFEF;color:#555555;white-space:nowrap">保有者</span>`
+      ?`<span style="font-size:14.5px;padding:2px 7px;border-radius:5px;font-weight:800;background:#F0EEF3;color:#6B4494;white-space:nowrap">保有者</span>`
       :line.cardRole==="billedTogether"
-      ?`<span style="font-size:12px;padding:2px 7px;border-radius:5px;font-weight:800;background:#F0F0F0;color:#1A1A1A;white-space:nowrap">一括請求</span>`
+      ?`<span style="font-size:14.5px;padding:2px 7px;border-radius:5px;font-weight:800;background:#F2EEF7;color:#14101A;white-space:nowrap">一括請求</span>`
       :line.cardRole==="familyCard"
-      ?`<span style="font-size:12px;padding:2px 7px;border-radius:5px;font-weight:800;background:#F2F2F2;color:#2B2B2B;white-space:nowrap">家族カード</span>`
-      :`<span style="font-size:12px;padding:2px 7px;border-radius:5px;font-weight:800;background:#F2F2F2;color:#9A9A9A;white-space:nowrap">対象外</span>`;
+      ?`<span style="font-size:14.5px;padding:2px 7px;border-radius:5px;font-weight:800;background:#F0EEF3;color:#332B3D;white-space:nowrap">家族カード</span>`
+      :`<span style="font-size:14.5px;padding:2px 7px;border-radius:5px;font-weight:800;background:#F0EEF3;color:#9A93A6;white-space:nowrap">対象外</span>`;
 
     const planWarnMsg=plan.restricted
       ?(!plan.familyDisc&&!plan.setDisc?'! みんなドコモ割・セット割・dカード割 全て対象外（カウントのみ）'
@@ -2180,17 +2180,17 @@ function renderLines(){
     <div class="fl">${TEXT.lblDataTier}</div>
     ${plan.tiersYoung&&(line.age==='u22'||line.age==='u29')?`<div style="margin-bottom:5px">
     <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
-    <button style="padding:5px 11px;border-radius:18px;border:1.5px solid ${line.u22?'#555555':'var(--border2)'};font-size:13.2px;font-weight:700;color:${line.u22?'white':'var(--ink3)'};background:${line.u22?'#555555':'var(--white)'};cursor:pointer"
+    <button style="padding:5px 11px;border-radius:18px;border:1.5px solid ${line.u22?'#6B4494':'var(--border2)'};font-size:15px;font-weight:700;color:${line.u22?'white':'var(--ink3)'};background:${line.u22?'#6B4494':'var(--white)'};cursor:pointer"
     onclick="setLineU22(${line.id},${!line.u22})">U22/U29割引</button>
     </div>
-    ${line.u22?`<select class="sel" onchange="setLineYoungType(${line.id},this.value)" style="margin-bottom:4px;border-color:#555555;font-size:13.2px">
+    ${line.u22?`<select class="sel" onchange="setLineYoungType(${line.id},this.value)" style="margin-bottom:4px;border-color:#6B4494;font-size:15px">
     <option value="u29" ${line.age==='u29'?'selected':''} ${line.age!=='u29'?'disabled':''}>U29割（最大3か月）</option>
     <option value="u22" ${line.age==='u22'?'selected':''} ${line.age!=='u22'?'disabled':''}>U22割（最大7か月）</option>
     </select>`:''}
     </div>`:''}
-    ${line.u22&&plan.tiersYoung&&(line.age==='u22'||line.age==='u29')?`<select class="sel" onchange="setLineU22Tier(${line.id},Number(this.value))" style="font-size:13.2px;border-color:#555555">
+    ${line.u22&&plan.tiersYoung&&(line.age==='u22'||line.age==='u29')?`<select class="sel" onchange="setLineU22Tier(${line.id},Number(this.value))" style="font-size:15px;border-color:#6B4494">
     ${plan.tiersYoung.map((t,idx)=>`<option value="${idx}" ${(line.u22tierIdx??2)===idx?'selected':''}>${t.l}</option>`).join('')}
-    </select>`:`<select class="sel" onchange="setLineTier(${line.id},Number(this.value))" style="font-size:13.2px;border-color:${plan.col}">
+    </select>`:`<select class="sel" onchange="setLineTier(${line.id},Number(this.value))" style="font-size:15px;border-color:${plan.col}">
     ${plan.tiers.map(t=>`<option value="${t.v}" ${line.planTier===t.v&&!line.u22?'selected':''}>${t.l}</option>`).join('')}
     </select>`}
     </div>`:''}
@@ -2212,9 +2212,9 @@ function renderLines(){
       <div onclick="toggleLineSection(${line.id},'card')" style="padding:8px 10px;cursor:pointer;user-select:none">
       <div style="display:flex;align-items:center;gap:6px">
       <span style="font-size:14.4px;font-weight:800;color:var(--ink2);white-space:nowrap">カードの種類・利用額</span>
-      <span style="font-size:10.8px;color:var(--ink4);margin-left:auto;flex-shrink:0;display:inline-block;${open?'transform:rotate(180deg)':''}">▼</span>
+      <span style="font-size:13.5px;color:var(--ink4);margin-left:auto;flex-shrink:0;display:inline-block;${open?'transform:rotate(180deg)':''}">▼</span>
       </div>
-      <div style="font-size:12px;color:#555555;font-weight:700;margin-top:3px;line-height:1.4">${esc(summary)}</div>
+      <div style="font-size:14.5px;color:#6B4494;font-weight:700;margin-top:3px;line-height:1.4">${esc(summary)}</div>
       </div>
       ${open?`<div style="padding:0 10px 10px;display:flex;flex-direction:column;gap:9px;border-top:1px solid var(--border)">
       <div style="margin-top:9px">
@@ -2233,12 +2233,12 @@ function renderLines(){
       oninput="setLineShop(${line.id},this.value)">
       <span style="font-size:14.4px;color:var(--ink4)">/月</span>
       </div>
-      <div style="font-size:12px;color:var(--ink4);margin-top:3px">100円ごとに1pt還元${plan.poi?'＋ポイ活特典':''}</div>
+      <div style="font-size:14.5px;color:var(--ink4);margin-top:3px">100円ごとに1pt還元${plan.poi?'＋ポイ活特典':''}</div>
       </div>
       <div>
       <div class="fl" style="display:flex;align-items:center;justify-content:space-between">
       <span>年間ショッピング額（年間ご利用額特典用）</span>
-      <button onclick="resetAnnualShopAuto()" style="font-size:10.8px;color:var(--blue);text-decoration:underline;background:none;border:none;cursor:pointer;text-transform:none;letter-spacing:0;font-weight:700">自動計算に戻す</button>
+      <button onclick="resetAnnualShopAuto()" style="font-size:13.5px;color:var(--blue);text-decoration:underline;background:none;border:none;cursor:pointer;text-transform:none;letter-spacing:0;font-weight:700">自動計算に戻す</button>
       </div>
       <div style="display:flex;align-items:center;gap:6px">
       <span style="font-size:15.6px;color:var(--ink3)">¥</span>
@@ -2248,8 +2248,8 @@ function renderLines(){
       oninput="setAnnualShop(this.value)">
       <span style="font-size:14.4px;color:var(--ink4)">/年</span>
       </div>
-      <div id="annual-shop-badge" style="font-size:12px;margin-top:3px;font-weight:700"></div>
-      <div style="font-size:12px;color:var(--ink4);margin-top:1px">GOLD/PLATINUMのみ対象。100万円ごとに1万円相当・最大4万円。保有者＋家族カードの月間利用額合計×12で自動計算されます</div>
+      <div id="annual-shop-badge" style="font-size:14.5px;margin-top:3px;font-weight:700"></div>
+      <div style="font-size:14.5px;color:var(--ink4);margin-top:1px">GOLD/PLATINUMのみ対象。100万円ごとに1万円相当・最大4万円。保有者＋家族カードの月間利用額合計×12で自動計算されます</div>
       </div>
       </div>`:''}
       </div>`;
@@ -2262,9 +2262,9 @@ function renderLines(){
       <div onclick="toggleLineSection(${line.id},'card')" style="padding:8px 10px;cursor:pointer;user-select:none">
       <div style="display:flex;align-items:center;gap:6px">
       <span style="font-size:14.4px;font-weight:800;color:var(--ink2);white-space:nowrap">カードの種類・利用額</span>
-      <span style="font-size:10.8px;color:var(--ink4);margin-left:auto;flex-shrink:0;display:inline-block;${open?'transform:rotate(180deg)':''}">▼</span>
+      <span style="font-size:13.5px;color:var(--ink4);margin-left:auto;flex-shrink:0;display:inline-block;${open?'transform:rotate(180deg)':''}">▼</span>
       </div>
-      <div style="font-size:12px;color:var(--green);font-weight:700;margin-top:3px;line-height:1.4">${esc(summary)}</div>
+      <div style="font-size:14.5px;color:var(--green);font-weight:700;margin-top:3px;line-height:1.4">${esc(summary)}</div>
       </div>
       ${open?`<div style="padding:0 10px 10px;display:flex;flex-direction:column;gap:9px;border-top:1px solid var(--border)">
       <div style="margin-top:9px">
@@ -2272,7 +2272,7 @@ function renderLines(){
       <div style="display:flex;align-items:center;gap:7px;padding:6px 10px;border-radius:var(--r-sm);background:var(--green-bg);border:1.5px solid var(--green-border)">
       <span style="font-size:19.2px">${CARDS[line.card]?.emoji||''}</span>
       <div><div style="font-size:14.4px;font-weight:800;color:var(--green)">${CARDS[line.card]?.fn||line.card}</div>
-      <div style="font-size:12px;color:var(--ink4)">保有者（${holderLine()?esc(holderLine().name):'未設定'}）のカードに自動連動</div></div>
+      <div style="font-size:14.5px;color:var(--ink4)">保有者（${holderLine()?esc(holderLine().name):'未設定'}）のカードに自動連動</div></div>
       </div>
       </div>
       <div>
@@ -2285,7 +2285,7 @@ function renderLines(){
       oninput="setLineShop(${line.id},this.value)">
       <span style="font-size:14.4px;color:var(--ink4)">/月</span>
       </div>
-      <div style="font-size:12px;color:var(--ink4);margin-top:3px">100円ごとに1pt還元${plan.poi?'＋ポイ活特典':''}</div>
+      <div style="font-size:14.5px;color:var(--ink4);margin-top:3px">100円ごとに1pt還元${plan.poi?'＋ポイ活特典':''}</div>
       </div>
       </div>`:''}
       </div>`;
@@ -2310,20 +2310,20 @@ function renderLines(){
       ${(()=>{
         const man=line.discManualItems||{};
         const anyManual=Object.values(man).some(v=>v===true);
-        return `<span style="font-size:10.8px;font-weight:700;padding:2px 6px;border-radius:4px;white-space:nowrap;line-height:1.2;background:${anyManual?'#EDEDED':'#F2F2F2'};color:${anyManual?'var(--amber)':'var(--green)'}">${anyManual?'一部手動':'自動'}</span>`;
+        return `<span style="font-size:13.5px;font-weight:700;padding:2px 6px;border-radius:4px;white-space:nowrap;line-height:1.2;background:${anyManual?'#EFEBF4':'#F0EEF3'};color:${anyManual?'var(--amber)':'var(--green)'}">${anyManual?'一部手動':'自動'}</span>`;
       })()}
-      <span style="font-size:10.8px;color:var(--ink4);margin-left:auto;flex-shrink:0;display:inline-block;${open?'transform:rotate(180deg)':''}">▼</span>
+      <span style="font-size:13.5px;color:var(--ink4);margin-left:auto;flex-shrink:0;display:inline-block;${open?'transform:rotate(180deg)':''}">▼</span>
       </div>
-      <div style="font-size:12px;color:${applied.length?'var(--green)':'var(--ink4)'};font-weight:700;margin-top:3px;line-height:1.4">${summary}</div>
+      <div style="font-size:14.5px;color:${applied.length?'var(--green)':'var(--ink4)'};font-weight:700;margin-top:3px;line-height:1.4">${summary}</div>
       </div>
       ${open?`<div style="padding:0 10px 10px;display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--border)">
-      <div style="margin-top:8px;font-size:12px;color:var(--ink4);line-height:1.5">
+      <div style="margin-top:8px;font-size:14.5px;color:var(--ink4);line-height:1.5">
       ${(()=>{
         const man=line.discManualItems||{};
         const names={minna:'みんなドコモ割',hikariSet:'光/home 5Gセット割',denkiSet:'でんきセット割',cardPay:'dカードお支払い割'};
         const manualList=Object.keys(names).filter(k=>man[k]);
         return manualList.length
-          ? `手動設定中：${manualList.map(k=>names[k]).join('・')}　<button onclick="event.stopPropagation();resetLineDiscAuto(${line.id})" style="font-size:12px;color:var(--blue);text-decoration:underline;background:none;border:none;cursor:pointer;padding:0;font-weight:700">すべて自動に戻す</button>`
+          ? `手動設定中：${manualList.map(k=>names[k]).join('・')}　<button onclick="event.stopPropagation();resetLineDiscAuto(${line.id})" style="font-size:14.5px;color:var(--blue);text-decoration:underline;background:none;border:none;cursor:pointer;padding:0;font-weight:700">すべて自動に戻す</button>`
           : `契約状況（回線数・光/でんき・カード種類）から自動で適用しています。変更した項目だけが手動設定になります。`;
       })()}
       </div>
@@ -2334,19 +2334,19 @@ function renderLines(){
       <option value="2" ${line.minnaOverride==='2'?'selected':''}>2回線（−¥550）</option>
       <option value="3plus" ${line.minnaOverride==='3plus'?'selected':''}>3回線以上（−¥1,210）</option>
       </select>
-      ${!plan.familyDisc?`<div style="font-size:10.8px;color:var(--ink4);margin-top:2px">このプランはみんなドコモ割の対象外です</div>`:''}
+      ${!plan.familyDisc?`<div style="font-size:13.5px;color:var(--ink4);margin-top:2px">このプランはみんなドコモ割の対象外です</div>`:''}
       </div>
       <div>
       <label style="display:flex;align-items:center;gap:6px;font-size:14.4px;cursor:${plan.setDisc&&!plan.noHikariDenki?'pointer':'not-allowed'};padding:6px 9px;border:1.5px solid var(--border2);border-radius:8px;background:var(--white);opacity:${plan.setDisc&&!plan.noHikariDenki?'1':'0.5'}"><input type="checkbox" ${!(plan.setDisc&&!plan.noHikariDenki)?'disabled':''} ${line.applyHikariSet===true?'checked':''} onchange="setLineDiscFlag(${line.id},'applyHikariSet',this.checked)">光/home 5Gセット割を適用</label>
-      ${line.applyHikariSet===true && !S.shared.hikari && !S.shared.home5g?`<div style="font-size:10.8px;color:var(--ink4);margin-top:2px">ℹ️ このシミュレーター内で光/home 5Gを契約していなくても、既存契約等の条件を満たすものとして適用されます</div>`:''}
+      ${line.applyHikariSet===true && !S.shared.hikari && !S.shared.home5g?`<div style="font-size:13.5px;color:var(--ink4);margin-top:2px">ℹ️ このシミュレーター内で光/home 5Gを契約していなくても、既存契約等の条件を満たすものとして適用されます</div>`:''}
       </div>
       <div>
       <label style="display:flex;align-items:center;gap:6px;font-size:14.4px;cursor:${plan.setDisc&&!plan.noHikariDenki?'pointer':'not-allowed'};padding:6px 9px;border:1.5px solid var(--border2);border-radius:8px;background:var(--white);opacity:${plan.setDisc&&!plan.noHikariDenki?'1':'0.5'}"><input type="checkbox" ${!(plan.setDisc&&!plan.noHikariDenki)?'disabled':''} ${line.applyDenkiSet===true?'checked':''} onchange="setLineDiscFlag(${line.id},'applyDenkiSet',this.checked)">でんきセット割を適用</label>
-      ${line.applyDenkiSet===true && !S.shared.denki?`<div style="font-size:10.8px;color:var(--ink4);margin-top:2px">ℹ️ このシミュレーター内でドコモでんきを契約していなくても、既存契約等の条件を満たすものとして適用されます</div>`:''}
+      ${line.applyDenkiSet===true && !S.shared.denki?`<div style="font-size:13.5px;color:var(--ink4);margin-top:2px">ℹ️ このシミュレーター内でドコモでんきを契約していなくても、既存契約等の条件を満たすものとして適用されます</div>`:''}
       </div>
       ${plan.ahamoMaxCp?`<div>
       <label style="display:flex;align-items:center;gap:6px;font-size:14.4px;cursor:pointer;padding:6px 9px;border:1.5px solid var(--border2);border-radius:8px;background:var(--white)"><input type="checkbox" ${line.ahamoMaxCp===true?'checked':''} onchange="setLineDiscFlag(${line.id},'ahamoMaxCp',this.checked)">ahamo→MAXのりかえ割（−¥${plan.ahamoMaxCp.toLocaleString()}）</label>
-      <div style="font-size:10.8px;color:var(--ink4);margin-top:2px">ahamoを1年（365日）以上契約中の方がMAX／ポイ活MAXへ変更した場合。最大12か月・1回線1回限り</div>
+      <div style="font-size:13.5px;color:var(--ink4);margin-top:2px">ahamoを1年（365日）以上契約中の方がMAX／ポイ活MAXへ変更した場合。最大12か月・1回線1回限り</div>
       </div>`:''}
       <div>
       <div class="fl">dカードお支払い割</div>
@@ -2358,7 +2358,7 @@ function renderLines(){
       <option value="dcard" ${line.cardPayOverride==='dcard'?'selected':''}>dカード（−¥220）</option>
       <option value="gold" ${line.cardPayOverride==='gold'?'selected':''}>GOLD以上（−¥550）</option>
       </select>
-      ${!plan.setDisc?`<div style="font-size:10.8px;color:var(--ink4);margin-top:2px">このプランはお支払い割の対象外です</div>`:''}
+      ${!plan.setDisc?`<div style="font-size:13.5px;color:var(--ink4);margin-top:2px">このプランはお支払い割の対象外です</div>`:''}
       `}
       </div>
       </div>`:''}
@@ -2386,7 +2386,7 @@ function renderLines(){
     </div>
     ${line.plan==='ahamo'?`<div>
     <div class="fl">データオプション（ahamo）</div>
-    <select class="sel" onchange="setLineData(${line.id},this.value)" style="border-color:#2B2B2B">
+    <select class="sel" onchange="setLineData(${line.id},this.value)" style="border-color:#332B3D">
     <option value="none" ${(line.dataOpt||'none')==='none'?'selected':''}>なし</option>
     <option value="ahamo_ohmori" ${line.dataOpt==='ahamo_ohmori'?'selected':''}>大盛り（ahamo大盛りプランをご検討ください）</option>
     </select>
@@ -2401,9 +2401,9 @@ function renderLines(){
       <div onclick="toggleLineSection(${line.id},'device')" style="padding:8px 10px;cursor:pointer;user-select:none">
       <div style="display:flex;align-items:center;gap:6px">
       <span style="font-size:14.4px;font-weight:800;color:var(--ink2);white-space:nowrap">端末購入</span>
-      <span style="font-size:10.8px;color:var(--ink4);margin-left:auto;flex-shrink:0;display:inline-block;${open?'transform:rotate(180deg)':''}">▼</span>
+      <span style="font-size:13.5px;color:var(--ink4);margin-left:auto;flex-shrink:0;display:inline-block;${open?'transform:rotate(180deg)':''}">▼</span>
       </div>
-      <div style="font-size:12px;color:${d.price>0?'var(--amber)':'var(--ink4)'};font-weight:700;margin-top:3px;line-height:1.4">${esc(summary)}</div>
+      <div style="font-size:14.5px;color:${d.price>0?'var(--amber)':'var(--ink4)'};font-weight:700;margin-top:3px;line-height:1.4">${esc(summary)}</div>
       </div>
       ${open?`<div id="dev-section-${line.id}" style="display:flex;flex-direction:column;gap:6px;padding:0 10px 10px;border-top:1px solid var(--border)">
       ${buildDeviceHTML(line,plan,line.device||{name:'',price:0,deposit:0,discount:0,payment:'ikkatsu',kakudoki_zanka:0,catalogKey:'',keiyaku:'mnp'})}
@@ -2411,21 +2411,21 @@ function renderLines(){
       </div>`;
     })()}
     <div style="margin-top:6px;padding-top:8px;border-top:1px solid var(--border)">
-    <div style="font-size:13.2px;font-weight:800;color:var(--ink3);margin-bottom:4px">その他オプション</div>
+    <div style="font-size:15px;font-weight:800;color:var(--ink3);margin-bottom:4px">その他オプション</div>
     ${(line.options||[]).map((o,oi)=>`
       <div style="display:flex;align-items:center;gap:5px;margin-bottom:4px">
         <input type="text" placeholder="オプション名" value="${esc(o.name||'')}"
-          style="flex:2;min-width:0;border:1.5px solid var(--border2);border-radius:7px;padding:5px 8px;font-size:13.2px;font-family:inherit"
+          style="flex:2;min-width:0;border:1.5px solid var(--border2);border-radius:7px;padding:5px 8px;font-size:15px;font-family:inherit"
           oninput="setLineOpt(${line.id},${oi},'name',this.value)">
-        <span style="font-size:13.2px;color:var(--ink3);flex-shrink:0">¥</span>
+        <span style="font-size:15px;color:var(--ink3);flex-shrink:0">¥</span>
         <input type="number" placeholder="0" value="${o.price||''}"
-          style="flex:1;min-width:0;border:1.5px solid var(--border2);border-radius:7px;padding:5px 7px;font-size:13.2px;font-weight:700;font-family:inherit"
+          style="flex:1;min-width:0;border:1.5px solid var(--border2);border-radius:7px;padding:5px 7px;font-size:15px;font-weight:700;font-family:inherit"
           oninput="setLineOpt(${line.id},${oi},'price',this.value)">
-        <span style="font-size:13.2px;color:var(--ink3);flex-shrink:0">/月</span>
-        <button onclick="delLineOpt(${line.id},${oi})" style="flex-shrink:0;padding:3px 7px;border-radius:6px;border:1.5px solid var(--border2);color:var(--ink4);font-size:13.2px;cursor:pointer">✕</button>
+        <span style="font-size:15px;color:var(--ink3);flex-shrink:0">/月</span>
+        <button onclick="delLineOpt(${line.id},${oi})" style="flex-shrink:0;padding:3px 7px;border-radius:6px;border:1.5px solid var(--border2);color:var(--ink4);font-size:15px;cursor:pointer">✕</button>
       </div>
     `).join('')}
-    <button onclick="addLineOpt(${line.id})" style="width:100%;padding:5px;border:1.5px dashed var(--border2);border-radius:7px;color:var(--ink4);font-size:13.2px;cursor:pointer;background:none">＋ オプション追加</button>
+    <button onclick="addLineOpt(${line.id})" style="width:100%;padding:5px;border:1.5px dashed var(--border2);border-radius:7px;color:var(--ink4);font-size:15px;cursor:pointer;background:none">＋ オプション追加</button>
     </div>
     <div style="display:flex;gap:6px;align-self:flex-end">
     <button class="del-btn" onclick="copyLine(${line.id})" style="border-color:var(--blue-border);color:var(--blue)">コピー追加</button>
@@ -2567,7 +2567,7 @@ function calcInitialCostGroups(){
     if(hkKoujiIsIkkatsu())items.push({label:`工事費（一括 ¥${hkKoujiTotal().toLocaleString()}）`,amt:hkKoujiTotal()});
     else if(hkKoujiMonths())items.push({label:`工事費（${hkKoujiMonths()}回・1回目）`,amt:hkKoujiFirst()});
     const list=items.filter(it=>it.amt>0);
-    groups.push({title:hkName(),sub:'ドコモ光',color:'#1A1A1A',items:list,total:list.reduce((s,it)=>s+it.amt,0)});
+    groups.push({title:hkName(),sub:'ドコモ光',color:'#14101A',items:list,total:list.reduce((s,it)=>s+it.amt,0)});
   }
   if(S.shared.home5g){
     const items=[
@@ -2579,7 +2579,7 @@ function calcInitialCostGroups(){
       if(a>0)items.push({label:'本体代（一括）',amt:a});
     }
     const list=items.filter(it=>it.amt>0);
-    groups.push({title:'home 5G',sub:'インターネット',color:'#2B2B2B',items:list,total:list.reduce((s,it)=>s+it.amt,0)});
+    groups.push({title:'home 5G',sub:'インターネット',color:'#332B3D',items:list,total:list.reduce((s,it)=>s+it.amt,0)});
   }
   if(S.shared.homeDenwa){
     const numberFee=2200+(S.homeDenwaCfg.numberType==='portability'?2200:0);
@@ -2589,7 +2589,7 @@ function calcInitialCostGroups(){
     ];
     if(homeDenwaInitialDevice()>0)items.push({label:'HP01端末代（一括）',amt:homeDenwaInitialDevice()});
     const list=items.filter(it=>it.amt>0);
-    groups.push({title:'homeでんわ',sub:'固定電話',color:'#4A4A4A',items:list,total:list.reduce((s,it)=>s+it.amt,0)});
+    groups.push({title:'homeでんわ',sub:'固定電話',color:'#5A4A6E',items:list,total:list.reduce((s,it)=>s+it.amt,0)});
   }
   return groups;
 }
@@ -2758,14 +2758,14 @@ function buildPaymentGraph(){
   }
   const rows=periods.map((p,i)=>{
     const isFirst=i===0;
-    return `<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-radius:8px;background:${isFirst?'#F0F0F0':(i%2===0?'#FAFAFA':'#FFFFFF')};border:1px solid ${isFirst?'#C6C6C6':'#E2E2E2'};margin-bottom:4px">
-      <span style="font-size:14.4px;font-weight:700;color:${isFirst?'#1A1A1A':'#3A3A3A'}">${periodLabel(p)}</span>
-      <span style="font-size:16.8px;font-weight:900;color:${isFirst?'#1A1A1A':'#111111'}">¥${p.amt.toLocaleString()}${isFirst?'':'/月'}</span>
+    return `<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-radius:8px;background:${isFirst?'#F2EEF7':(i%2===0?'#FAF9FB':'#FFFFFF')};border:1px solid ${isFirst?'#CAC3D4':'#E3DFE9'};margin-bottom:4px">
+      <span style="font-size:14.4px;font-weight:700;color:${isFirst?'#14101A':'#332B3D'}">${periodLabel(p)}</span>
+      <span style="font-size:16.8px;font-weight:900;color:${isFirst?'#14101A':'#14101A'}">¥${p.amt.toLocaleString()}${isFirst?'':'/月'}</span>
     </div>`;
   }).join('');
   const changeNote=periods.length>1
-    ? `<div style="font-size:12px;color:var(--ink4);padding:4px 2px 0">金額が変わるのは${periods.slice(1).map(p=>p.from+'ヶ月目').join('・')}です（U22/U29割・親子割U15/家族の期限、端末分割の完済等による変化を反映）</div>`
-    : `<div style="font-size:12px;color:var(--ink4);padding:4px 2px 0">期限付きの割引や分割払いの完済による金額変化はありません</div>`;
+    ? `<div style="font-size:14.5px;color:var(--ink4);padding:4px 2px 0">金額が変わるのは${periods.slice(1).map(p=>p.from+'ヶ月目').join('・')}です（U22/U29割・親子割U15/家族の期限、端末分割の完済等による変化を反映）</div>`
+    : `<div style="font-size:14.5px;color:var(--ink4);padding:4px 2px 0">期限付きの割引や分割払いの完済による金額変化はありません</div>`;
   return `<div>${rows}${changeNote}</div>`;
 }
 
@@ -2893,8 +2893,8 @@ function renderRightContent(){
       :`一括（月々サポート割 2〜48回目−¥${H5G_SUPPORT_M2.toLocaleString()}）本体¥${H5G_HONTAL.toLocaleString()}${disc>0?`（値引後¥${(H5G_HONTAL-disc).toLocaleString()}）`:''}（別途）`;
     const h5gOptLines=(S.h5gCfg.options||[]).filter(o=>o.name||o.price)
       .map(o=>`<div class="hks-row"><span class="hks-label">　└ ${o.name||'オプション'}</span><span class="hks-val">+¥${(Number(o.price)||0).toLocaleString()}/月</span></div>`).join('');
-    qi('h5g-strip-wrap',`<div class="hk-strip" style="background:#F2F2F2;border-color:#C6C6C6">
-    <div class="hks-head" style="border-bottom-color:#C6C6C6">
+    qi('h5g-strip-wrap',`<div class="hk-strip" style="background:#F0EEF3;border-color:#CAC3D4">
+    <div class="hks-head" style="border-bottom-color:#CAC3D4">
     <div class="hks-head-l"><span class="hks-icon"></span><span class="hks-title" style="color:var(--green)">home 5G${is48?' （48回）':''}</span></div>
     <div class="hks-head-r">
     <div class="hks-monthly" style="color:var(--green)">¥${h5gMth.toLocaleString()}</div>
@@ -2915,8 +2915,8 @@ function renderRightContent(){
     const mth=homeDenwaMonthly();
     const isPort=S.homeDenwaCfg.numberType==='portability';
     const numberFee=2200+(isPort?2200:0);
-    qi('home-denwa-strip-wrap',`<div class="hk-strip" style="background:#F0F0F0;border-color:#C6C6C6">
-    <div class="hks-head" style="border-bottom-color:#C6C6C6">
+    qi('home-denwa-strip-wrap',`<div class="hk-strip" style="background:#F2EEF7;border-color:#CAC3D4">
+    <div class="hks-head" style="border-bottom-color:#CAC3D4">
     <div class="hks-head-l"><span class="hks-icon"></span><span class="hks-title" style="color:var(--blue)">homeでんわ（${S.homeDenwaCfg.plan==='basic'?'ベーシック':'ライト'}）${homeDenwaSetEligible()?'':' ※セット割対象外'}</span></div>
     <div class="hks-head-r">
     <div class="hks-monthly" style="color:var(--blue)">¥${mth.toLocaleString()}</div>
@@ -2936,16 +2936,16 @@ function renderRightContent(){
     const mPtsTotal=calcs.reduce((s,x)=>s+(x.c.mPts||0),0);
     const isPlatinum=holderL.card==='platinum';
     const pRate=isPlatinum?platinumMpr()/10:null;
-    qi('card-strip-wrap',`<div class="hk-strip" style="background:#EFEFEF;border-color:#C6C6C6">
-    <div class="hks-head" style="border-bottom-color:#C6C6C6">
-    <div class="hks-head-l"><span class="hks-icon">${hc.emoji||''}</span><span class="hks-title" style="color:#555555">ご利用カード：${hc.fn}${hc.ageOnly?'（18〜29歳限定）':''}</span></div>
+    qi('card-strip-wrap',`<div class="hk-strip" style="background:#F0EEF3;border-color:#CAC3D4">
+    <div class="hks-head" style="border-bottom-color:#CAC3D4">
+    <div class="hks-head-l"><span class="hks-icon">${hc.emoji||''}</span><span class="hks-title" style="color:#6B4494">ご利用カード：${hc.fn}${hc.ageOnly?'（18〜29歳限定）':''}</span></div>
     <div class="hks-head-r">
-    <div class="hks-monthly" style="color:#555555;font-size:18px">${hc.fee>0?`¥${hc.fee.toLocaleString()}`:'無料'}</div>
+    <div class="hks-monthly" style="color:#6B4494;font-size:18px">${hc.fee>0?`¥${hc.fee.toLocaleString()}`:'無料'}</div>
     <div class="hks-unit">${hc.fee>0?'年会費／年':'年会費'}</div>
     </div>
     </div>
     <div class="hks-info">
-    ${mPtsTotal>0?`<div class="hks-row"><span class="hks-label">ケータイ料金還元（対象回線合計）</span><span class="hks-val" style="color:#555555">+${mPtsTotal.toLocaleString()}pt/月</span></div>`:`<div class="hks-detail" style="color:var(--ink4)">ケータイ料金還元：対象プラン・カードなし（mini/ahamo/U15やdカード等は対象外）</div>`}
+    ${mPtsTotal>0?`<div class="hks-row"><span class="hks-label">ケータイ料金還元（対象回線合計）</span><span class="hks-val" style="color:#6B4494">+${mPtsTotal.toLocaleString()}pt/月</span></div>`:`<div class="hks-detail" style="color:var(--ink4)">ケータイ料金還元：対象プラン・カードなし（mini/ahamo/U15やdカード等は対象外）</div>`}
     <div class="hks-detail">お支払い割対象プランで−¥${hc.disc.toLocaleString()}／回線</div>
     ${isPlatinum?`<div class="hks-detail" style="color:var(--amber)">PLATINUMのケータイ/光還元率は月間カード利用額で変動（10万円未満10%／10万円以上15%／20万円以上20%）。入会初年度は一律20%。現在は${pRate}%として計算中</div>`:''}
     </div>
@@ -2958,8 +2958,8 @@ function renderRightContent(){
     const dRate=denkiRateFor(S.denkiCfg.plan,holderCardId);
     const dPts=calcDenkiPts(S.denkiCfg.plan,holderCardId,S.denkiCfg.monthlyBill);
     const dp=DENKI_PLANS[S.denkiCfg.plan];
-    qi('denki-strip-wrap',`<div class="hk-strip" style="background:#F2F2F2;border-color:#C6C6C6">
-    <div class="hks-head" style="border-bottom-color:#C6C6C6">
+    qi('denki-strip-wrap',`<div class="hk-strip" style="background:#F0EEF3;border-color:#CAC3D4">
+    <div class="hks-head" style="border-bottom-color:#CAC3D4">
     <div class="hks-head-l"><span class="hks-icon"></span><span class="hks-title" style="color:var(--green)">ドコモでんき（${dp.label}${dp.extra>0?`・+¥${dp.extra}/月`:''}）</span></div>
     <div class="hks-head-r">
     <div class="hks-monthly" style="color:var(--green);font-size:18px">+${dPts.toLocaleString()}pt</div>
@@ -2977,8 +2977,8 @@ function renderRightContent(){
   if(S.shared.gas && S.gasCfg.monthlyBill>0){
     const gRate=gasRate();
     const gPts=calcGasPts(S.gasCfg.monthlyBill);
-    qi('gas-strip-wrap',`<div class="hk-strip" style="background:#EDEDED;border-color:#C6C6C6">
-    <div class="hks-head" style="border-bottom-color:#C6C6C6">
+    qi('gas-strip-wrap',`<div class="hk-strip" style="background:#EFEBF4;border-color:#CAC3D4">
+    <div class="hks-head" style="border-bottom-color:#CAC3D4">
     <div class="hks-head-l"><span class="hks-icon"></span><span class="hks-title" style="color:var(--amber)">ドコモガス</span></div>
     <div class="hks-head-r">
     <div class="hks-monthly" style="color:var(--amber);font-size:18px">+${gPts.toLocaleString()}pt</div>
@@ -3045,14 +3045,14 @@ function renderRightContent(){
       <div>
       <div class="rcard-price" style="color:${col}">¥${(()=>{const dv=calcDevice(l.device);const devMth=dv&&dv.type!=='ikkatsu'?(dv.monthly_norm||0):0;return (c.monthly+devMth).toLocaleString();})()}</div>
       <div class="rcard-unit">/月${(()=>{const dv=calcDevice(l.device);return dv&&dv.type!=='ikkatsu'?'（端末込・税込）':'（税込）';})()}</div>
-      ${isH?`<div style="font-size:12px;font-weight:800;color:#555555;text-align:right;margin-top:3px">${CARDS[l.card].n} 保有者</div>`:isFC?`<div style="font-size:12px;font-weight:800;color:#2B2B2B;text-align:right;margin-top:3px">家族カード（${CARDS[l.card]?.n||''}）</div>`:isBT?`<div style="font-size:12px;font-weight:800;color:#1A1A1A;text-align:right;margin-top:3px">一括請求対象</div>`:''}
+      ${isH?`<div style="font-size:14.5px;font-weight:800;color:#6B4494;text-align:right;margin-top:3px">${CARDS[l.card].n} 保有者</div>`:isFC?`<div style="font-size:14.5px;font-weight:800;color:#332B3D;text-align:right;margin-top:3px">家族カード（${CARDS[l.card]?.n||''}）</div>`:isBT?`<div style="font-size:14.5px;font-weight:800;color:#14101A;text-align:right;margin-top:3px">一括請求対象</div>`:''}
       </div>
       </div>
       <div class="rcard-body">
       <div class="row"><span class="row-l">基本料金</span><span class="row-v">¥${c.base.toLocaleString()}</span></div>
-      <div class="row"><span class="row-l" style="font-size:12px;color:var(--ink4)">ユニバーサルサービス料など</span><span class="row-v" style="font-size:12px;color:var(--ink4)">+¥${UNIVERSAL_RELAY_TOTAL}</span></div>
+      <div class="row"><span class="row-l" style="font-size:14.5px;color:var(--ink4)">ユニバーサルサービス料など</span><span class="row-v" style="font-size:14.5px;color:var(--ink4)">+¥${UNIVERSAL_RELAY_TOTAL}</span></div>
       ${c.callFee>0?`<div class="row"><span class="row-l">　かけ放題等</span><span class="row-v">+¥${c.callFee.toLocaleString()}</span></div>`:''}
-      ${planWarnMsg?`<div class="row"><span class="row-l" style="color:var(--amber);font-size:13.2px">${planWarnMsg}</span><span class="row-v gray">−</span></div>`:''}
+      ${planWarnMsg?`<div class="row"><span class="row-l" style="color:var(--amber);font-size:15px">${planWarnMsg}</span><span class="row-v gray">−</span></div>`:''}
       ${c.discs.map(d=>`<div class="row"><span class="row-l">　${d.l}</span><span class="row-v red">−¥${d.a.toLocaleString()}</span></div>`).join('')}
       ${(l.options||[]).filter(o=>o.name||o.price).length>0?`<div class="row-div"></div>`:''}
       ${(l.options||[]).filter(o=>o.name||o.price).map(o=>`<div class="row"><span class="row-l" style="color:var(--ink3)">　${o.name||'オプション'}</span><span class="row-v" style="color:var(--ink3)">+¥${(Number(o.price)||0).toLocaleString()}</span></div>`).join('')}
@@ -3096,13 +3096,13 @@ function renderRightContent(){
       ${h5PX>0?`<div class="pts-row"><span>home 5G</span><span>+${h5PX.toLocaleString()}pt</span></div>`:''}
       </div></div>`;
       })()}
-      ${c.annualBonus>0?`<div class="row" style="padding:0 15px 8px"><span class="row-l" style="color:var(--amber);font-size:13.2px">年間ご利用額特典（参考・クーポン）</span><span class="row-v" style="color:var(--amber)">+¥${c.annualBonus.toLocaleString()}/年</span></div>`:''}
+      ${c.annualBonus>0?`<div class="row" style="padding:0 15px 8px"><span class="row-l" style="color:var(--amber);font-size:15px">年間ご利用額特典（参考・クーポン）</span><span class="row-v" style="color:var(--amber)">+¥${c.annualBonus.toLocaleString()}/年</span></div>`:''}
       ${(!isH&&!isBT&&!isFC)?`<div class="warn-box">dカード割引・ポイント還元なし</div>`:''}
       <div class="rcard-tags">
-      ${plan.restricted?`<span class="tag" style="background:#F2F2F2;color:#9A9A9A">高還元対象外</span>`:''}
-      ${plan.u15Old?`<span class="tag" style="background:#F2F2F2;color:#6E6E6E">旧プラン・既存契約者向け</span>`:plan.u15?`<span class="tag" style="background:#F2F2F2;color:#2B2B2B">U15専用（新規受付中）</span>`:''}
-      ${l.u22?`<span class="tag" style="background:#EFEFEF;color:#555555">${l.age==='u29'?'U29':'U22'}</span>`:''}
-      ${plan.poi?`<span class="tag" style="background:#EDEDED;color:#4A4A4A">ポイ活対象</span>`:''}
+      ${plan.restricted?`<span class="tag" style="background:#F0EEF3;color:#9A93A6">高還元対象外</span>`:''}
+      ${plan.u15Old?`<span class="tag" style="background:#F0EEF3;color:#6B6478">旧プラン・既存契約者向け</span>`:plan.u15?`<span class="tag" style="background:#F0EEF3;color:#332B3D">U15専用（新規受付中）</span>`:''}
+      ${l.u22?`<span class="tag" style="background:#F0EEF3;color:#6B4494">${l.age==='u29'?'U29':'U22'}</span>`:''}
+      ${plan.poi?`<span class="tag" style="background:#EFEBF4;color:#5A4A6E">ポイ活対象</span>`:''}
       </div>`;
     });
     const shown=printAll?calcs:calcs.filter(x=>x.l.id===S.activeLineId);
@@ -3258,9 +3258,9 @@ function showPrintMenu(){
   m.innerHTML=`<div style="background:#fff;border-radius:14px;max-width:340px;width:100%;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.25)">
     <div style="padding:14px 16px;border-bottom:1.5px solid var(--border);font-size:18px;font-weight:900">PDFに保存</div>
     <div style="padding:10px 12px;display:flex;flex-direction:column;gap:7px">
-      ${S.lines.length?`<button onclick="doPrint('all')" style="text-align:left;padding:12px 14px;border:2px solid var(--red);border-radius:10px;background:#F0F0F0;color:var(--red);font-size:15.6px;font-weight:800;font-family:inherit;cursor:pointer">全回線をまとめて<div style="font-size:12px;font-weight:600;color:var(--ink3);margin-top:2px">${S.lines.length}回線すべてを1つのPDFに</div></button>`:''}
-      ${cur?`<button onclick="doPrint('one')" style="text-align:left;padding:12px 14px;border:2px solid var(--border2);border-radius:10px;background:#fff;font-size:15.6px;font-weight:800;font-family:inherit;cursor:pointer">${esc(cur.name)}の分だけ<div style="font-size:12px;font-weight:600;color:var(--ink3);margin-top:2px">いま表示している回線のみ</div></button>`:''}
-      <button onclick="doPrint('svc')" style="text-align:left;padding:12px 14px;border:2px solid var(--border2);border-radius:10px;background:#fff;font-size:15.6px;font-weight:800;font-family:inherit;cursor:pointer">ネット・でんき・カード<div style="font-size:12px;font-weight:600;color:var(--ink3);margin-top:2px">サービスのページのみ</div></button>
+      ${S.lines.length?`<button onclick="doPrint('all')" style="text-align:left;padding:12px 14px;border:2px solid var(--red);border-radius:10px;background:#F2EEF7;color:var(--red);font-size:15.6px;font-weight:800;font-family:inherit;cursor:pointer">全回線をまとめて<div style="font-size:14.5px;font-weight:600;color:var(--ink3);margin-top:2px">${S.lines.length}回線すべてを1つのPDFに</div></button>`:''}
+      ${cur?`<button onclick="doPrint('one')" style="text-align:left;padding:12px 14px;border:2px solid var(--border2);border-radius:10px;background:#fff;font-size:15.6px;font-weight:800;font-family:inherit;cursor:pointer">${esc(cur.name)}の分だけ<div style="font-size:14.5px;font-weight:600;color:var(--ink3);margin-top:2px">いま表示している回線のみ</div></button>`:''}
+      <button onclick="doPrint('svc')" style="text-align:left;padding:12px 14px;border:2px solid var(--border2);border-radius:10px;background:#fff;font-size:15.6px;font-weight:800;font-family:inherit;cursor:pointer">ネット・でんき・カード<div style="font-size:14.5px;font-weight:600;color:var(--ink3);margin-top:2px">サービスのページのみ</div></button>
     </div>
     <div style="padding:0 12px 14px"><button onclick="document.getElementById('print-menu').remove()" style="width:100%;padding:10px;border:none;border-radius:9px;background:var(--border);color:var(--ink2);font-size:14.4px;font-weight:800;font-family:inherit;cursor:pointer">キャンセル</button></div>
   </div>`;
@@ -3399,24 +3399,24 @@ function showNetCompare(){
   const y4=plans.map(p=>({p,r:simulate(p,48)}));
 
   // サービスごとの色（優劣ではなく識別のための色分け）
-  const NET_COLORS={hk1g:'#1A1A1A',hk10g:'#555555',h5g:'#2B2B2B'};
+  const NET_COLORS={hk1g:'#14101A',hk10g:'#6B4494',h5g:'#332B3D'};
   function section(title,arr,months){
     const rows=arr.map(({p,r})=>{
-      const col=NET_COLORS[p.key]||'#111111';
+      const col=NET_COLORS[p.key]||'#14101A';
       return `<div style="border:1.5px solid ${col}44;background:${col}0D;border-left:4px solid ${col};border-radius:10px;padding:11px 13px;margin-bottom:8px">
         <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:4px">
           <span style="font-size:15.6px;font-weight:900;color:${col}">${p.label}</span>
           <span style="font-size:21.6px;font-weight:900;color:${col}">¥${r.net.toLocaleString()}</span>
         </div>
-        <div style="font-size:12px;color:#6E6E6E;line-height:1.6">${p.note}</div>
-        <div style="display:flex;gap:12px;font-size:12px;color:#6E6E6E;margin-top:4px;flex-wrap:wrap">
+        <div style="font-size:14.5px;color:#6B6478;line-height:1.6">${p.note}</div>
+        <div style="display:flex;gap:12px;font-size:14.5px;color:#6B6478;margin-top:4px;flex-wrap:wrap">
           <span>支払総額 ¥${r.cost.toLocaleString()}</span>
-          <span style="color:#2B2B2B">還元 +${r.pts.toLocaleString()}pt</span>
+          <span style="color:#332B3D">還元 +${r.pts.toLocaleString()}pt</span>
         </div>
       </div>`;
     }).join('');
     return `<div style="margin-bottom:16px">
-      <div style="font-size:14.4px;font-weight:800;color:#6E6E6E;margin-bottom:6px">■ ${title}（${months}ヶ月）</div>
+      <div style="font-size:14.4px;font-weight:800;color:#6B6478;margin-bottom:6px">■ ${title}（${months}ヶ月）</div>
       ${rows}
     </div>`;
   }
@@ -3431,13 +3431,13 @@ function showNetCompare(){
   inner.style.cssText='flex:1;max-width:560px;margin:0 auto;background:white;overflow-y:auto;padding:20px 16px 30px;-webkit-overflow-scrolling:touch';
   inner.innerHTML=`<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
     <div><div style="font-size:21.6px;font-weight:900">ネット種別ごとの負担額</div>
-    <div style="font-size:13.2px;color:#9A9A9A">2年後・4年後の実質負担の目安</div></div>
-    <button onclick="document.getElementById('net-modal').remove()" style="padding:6px 12px;background:#6E6E6E;color:white;border:none;border-radius:7px;font-size:14.4px;font-weight:700;cursor:pointer">✕ 閉じる</button>
+    <div style="font-size:15px;color:#9A93A6">2年後・4年後の実質負担の目安</div></div>
+    <button onclick="document.getElementById('net-modal').remove()" style="padding:6px 12px;background:#6B6478;color:white;border:none;border-radius:7px;font-size:14.4px;font-weight:700;cursor:pointer">✕ 閉じる</button>
     </div>
-    <div style="font-size:13.2px;color:#6E6E6E;background:#FAFAFA;border-radius:8px;padding:8px 12px;margin-bottom:14px;line-height:1.7">${cond}</div>
+    <div style="font-size:15px;color:#6B6478;background:#FAF9FB;border-radius:8px;padding:8px 12px;margin-bottom:14px;line-height:1.7">${cond}</div>
     ${section('2年後',y2,24)}
     ${section('4年後',y4,48)}
-    <div style="font-size:12px;color:#9A9A9A;line-height:1.8;margin-top:4px">
+    <div style="font-size:14.5px;color:#9A93A6;line-height:1.8;margin-top:4px">
     ※ 表示額は「ネット料金の支払総額 − 獲得ポイント」の実質負担です（1pt=1円換算）。<br>
     ※ セット割（スマホ1回線につき−¥1,210）は3種類とも同条件で適用されるため、比較には含めていません${setDiscLines>0?`（対象${setDiscLines}回線なら毎月−¥${setDiscTotal.toLocaleString()}が別途スマホ料金から引かれます）`:''}。<br>
     ※ 工事費・事務手数料を初期費用として含みます。home 5Gは工事不要・本体は48回分割（月々サポート割で相殺）。<br>
@@ -3499,39 +3499,39 @@ function showOtoku(){
     const profit=totalBenefit-cd.fee;
     const isProfit=profit>=0;
     const barPct=cd.fee>0?Math.min(100,Math.round(totalBenefit/cd.fee*100)):100;
-    const pc=isProfit?'#2B2B2B':'#1A1A1A';
-    const badge=isCurrent?`<span style="font-size:10.8px;padding:2px 6px;border-radius:4px;background:${cd.col};color:white;margin-left:4px">現在</span>`:'';
-    const bd=isCurrent?`border:2px solid ${cd.col};`:'border:1px solid #E2E2E2;';
-    const bg=isCurrent?`background:${cd.col}18;`:'background:#FAFAFA;';
+    const pc=isProfit?'#332B3D':'#14101A';
+    const badge=isCurrent?`<span style="font-size:13.5px;padding:2px 6px;border-radius:4px;background:${cd.col};color:white;margin-left:4px">現在</span>`:'';
+    const bd=isCurrent?`border:2px solid ${cd.col};`:'border:1px solid #E3DFE9;';
+    const bg=isCurrent?`background:${cd.col}18;`:'background:#FAF9FB;';
 
     let rows='';
-    if(totalCardDiscAnn>0)rows+=`<div style="display:flex;justify-content:space-between"><span>カード割引（${discTargetCount}回線×¥${cd.disc}/月）</span><span style="color:#2B2B2B;font-weight:700">+¥${totalCardDiscAnn.toLocaleString()}/年</span></div>`;
-    if(mobPtsAll>0)rows+=`<div style="display:flex;justify-content:space-between"><span>ケータイ料金還元</span><span style="color:#2B2B2B;font-weight:700">+${(mobPtsAll*12).toLocaleString()}pt/年</span></div>`;
-    if(poiPtsAll>0)rows+=`<div style="display:flex;justify-content:space-between"><span>ポイ活特典</span><span style="color:#2B2B2B;font-weight:700">+${(poiPtsAll*12).toLocaleString()}pt/年</span></div>`;
-    if(hkPts2+h5gPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>ネット回線ポイント</span><span style="color:#2B2B2B;font-weight:700">+${((hkPts2+h5gPts2)*12).toLocaleString()}pt/年</span></div>`;
-    if(sPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>ショッピング還元（¥${shopMth.toLocaleString()}/月）</span><span style="color:#2B2B2B;font-weight:700">+${(sPts2*12).toLocaleString()}pt/年</span></div>`;
-    if(dkPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>でんきポイント</span><span style="color:#2B2B2B;font-weight:700">+${(dkPts2*12).toLocaleString()}pt/年</span></div>`;
-    if(gsPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>ガスポイント</span><span style="color:#2B2B2B;font-weight:700">+${(gsPts2*12).toLocaleString()}pt/年</span></div>`;
-    if(famPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>ファミリー特典</span><span style="color:#2B2B2B;font-weight:700">+${(famPts2*12).toLocaleString()}pt/年</span></div>`;
-    if(annualBonus>0)rows+=`<div style="display:flex;justify-content:space-between"><span>年間ご利用額特典</span><span style="color:#2B2B2B;font-weight:700">+¥${annualBonus.toLocaleString()}</span></div>`;
-    rows+=`<div style="display:flex;justify-content:space-between;border-top:1px solid #E2E2E2;padding-top:4px;margin-top:2px;font-weight:700"><span>年間メリット合計</span><span style="color:#2B2B2B">¥${totalBenefit.toLocaleString()}</span></div>`;
-    if(cd.fee>0)rows+=`<div style="display:flex;justify-content:space-between;color:#1A1A1A"><span>年会費</span><span>−¥${cd.fee.toLocaleString()}</span></div>`;
+    if(totalCardDiscAnn>0)rows+=`<div style="display:flex;justify-content:space-between"><span>カード割引（${discTargetCount}回線×¥${cd.disc}/月）</span><span style="color:#332B3D;font-weight:700">+¥${totalCardDiscAnn.toLocaleString()}/年</span></div>`;
+    if(mobPtsAll>0)rows+=`<div style="display:flex;justify-content:space-between"><span>ケータイ料金還元</span><span style="color:#332B3D;font-weight:700">+${(mobPtsAll*12).toLocaleString()}pt/年</span></div>`;
+    if(poiPtsAll>0)rows+=`<div style="display:flex;justify-content:space-between"><span>ポイ活特典</span><span style="color:#332B3D;font-weight:700">+${(poiPtsAll*12).toLocaleString()}pt/年</span></div>`;
+    if(hkPts2+h5gPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>ネット回線ポイント</span><span style="color:#332B3D;font-weight:700">+${((hkPts2+h5gPts2)*12).toLocaleString()}pt/年</span></div>`;
+    if(sPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>ショッピング還元（¥${shopMth.toLocaleString()}/月）</span><span style="color:#332B3D;font-weight:700">+${(sPts2*12).toLocaleString()}pt/年</span></div>`;
+    if(dkPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>でんきポイント</span><span style="color:#332B3D;font-weight:700">+${(dkPts2*12).toLocaleString()}pt/年</span></div>`;
+    if(gsPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>ガスポイント</span><span style="color:#332B3D;font-weight:700">+${(gsPts2*12).toLocaleString()}pt/年</span></div>`;
+    if(famPts2>0)rows+=`<div style="display:flex;justify-content:space-between"><span>ファミリー特典</span><span style="color:#332B3D;font-weight:700">+${(famPts2*12).toLocaleString()}pt/年</span></div>`;
+    if(annualBonus>0)rows+=`<div style="display:flex;justify-content:space-between"><span>年間ご利用額特典</span><span style="color:#332B3D;font-weight:700">+¥${annualBonus.toLocaleString()}</span></div>`;
+    rows+=`<div style="display:flex;justify-content:space-between;border-top:1px solid #E3DFE9;padding-top:4px;margin-top:2px;font-weight:700"><span>年間メリット合計</span><span style="color:#332B3D">¥${totalBenefit.toLocaleString()}</span></div>`;
+    if(cd.fee>0)rows+=`<div style="display:flex;justify-content:space-between;color:#14101A"><span>年会費</span><span>−¥${cd.fee.toLocaleString()}</span></div>`;
 
-    const bar=cd.fee>0?(`<div style="height:7px;border-radius:4px;background:#E2E2E2;overflow:hidden;margin-bottom:3px"><div style="height:100%;width:${barPct}%;background:${pc};border-radius:4px"></div></div><div style="font-size:12px;color:#6E6E6E">年会費回収率 ${barPct}%</div>`):'<div style="font-size:12px;color:#2B2B2B">年会費無料 — メリットがそのままプラス</div>';
+    const bar=cd.fee>0?(`<div style="height:7px;border-radius:4px;background:#E3DFE9;overflow:hidden;margin-bottom:3px"><div style="height:100%;width:${barPct}%;background:${pc};border-radius:4px"></div></div><div style="font-size:14.5px;color:#6B6478">年会費回収率 ${barPct}%</div>`):'<div style="font-size:14.5px;color:#332B3D">年会費無料 — メリットがそのままプラス</div>';
 
     cardsHTML+=`<div style="${bd}${bg}border-radius:10px;padding:12px 14px;margin-bottom:10px">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
         <div style="display:flex;align-items:center;gap:7px">
           <span style="font-size:24px">${cd.emoji}</span>
           <div><div style="font-size:15.6px;font-weight:900;color:${cd.col}">${cd.fn}${badge}</div>
-          <div style="font-size:12px;color:#9A9A9A">年会費 ${cd.fee>0?'¥'+cd.fee.toLocaleString():'無料'}</div></div>
+          <div style="font-size:14.5px;color:#9A93A6">年会費 ${cd.fee>0?'¥'+cd.fee.toLocaleString():'無料'}</div></div>
         </div>
         <div style="text-align:right">
           <div style="font-size:24px;font-weight:900;color:${pc}">${isProfit?'＋':'−'}¥${Math.abs(profit).toLocaleString()}</div>
-          <div style="font-size:12px;color:#6E6E6E">/年（${isProfit?'お得':'! 損失'}）</div>
+          <div style="font-size:14.5px;color:#6B6478">/年（${isProfit?'お得':'! 損失'}）</div>
         </div>
       </div>
-      <div style="font-size:13.2px;color:#3A3A3A;display:flex;flex-direction:column;gap:3px;margin-bottom:8px;padding:8px 10px;background:white;border-radius:7px;border:1px solid #E2E2E2">${rows}</div>
+      <div style="font-size:15px;color:#332B3D;display:flex;flex-direction:column;gap:3px;margin-bottom:8px;padding:8px 10px;background:white;border-radius:7px;border:1px solid #E3DFE9">${rows}</div>
       ${bar}
       </div>`;
   });
@@ -3547,16 +3547,16 @@ function showOtoku(){
   inner.style.cssText='flex:1;max-width:540px;margin:0 auto;background:white;overflow-y:auto;padding:20px 16px 30px';
   inner.innerHTML=`<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
     <div><div style="font-size:21.6px;font-weight:900">dカード お得チェック</div>
-    <div style="font-size:13.2px;color:#9A9A9A">回線割引＋ポイント還元で年間いくらお得？</div></div>
-    <button onclick="document.getElementById('otoku-modal').remove()" style="padding:6px 12px;background:#6E6E6E;color:white;border:none;border-radius:7px;font-size:14.4px;font-weight:700;cursor:pointer">✕ 閉じる</button>
+    <div style="font-size:15px;color:#9A93A6">回線割引＋ポイント還元で年間いくらお得？</div></div>
+    <button onclick="document.getElementById('otoku-modal').remove()" style="padding:6px 12px;background:#6B6478;color:white;border:none;border-radius:7px;font-size:14.4px;font-weight:700;cursor:pointer">✕ 閉じる</button>
     </div>
-    <div style="font-size:13.2px;color:#6E6E6E;background:#FAFAFA;border-radius:8px;padding:8px 12px;margin-bottom:12px;line-height:1.7">
+    <div style="font-size:15px;color:#6B6478;background:#FAF9FB;border-radius:8px;padding:8px 12px;margin-bottom:12px;line-height:1.7">
     保有者: <b>${esc(holderL.name)}</b>（${CARDS[holderL.card].fn}） ／
     対象回線: <b>${discTargetCount}回線</b> ／
     月間利用額: <b>¥${shopMth.toLocaleString()}</b>${denkiNote}${gasNote}
     </div>
     ${cardsHTML}
-    <div style="font-size:12px;color:#9A9A9A;line-height:1.8;margin-top:4px">
+    <div style="font-size:14.5px;color:#9A93A6;line-height:1.8;margin-top:4px">
     ※ ポイントは1pt=1円換算。年間ご利用額特典はGOLD/PLATINUM、年間ショッピング額100万円ごとに1万円・最大4万円（クーポン形式）。<br>
     ※ でんき/ガスポイントは保有者カードの還元率で算出。ポイ活特典は保有者のプランがポイ活対象の場合のみ加算。
     </div>`;
