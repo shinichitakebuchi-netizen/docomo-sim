@@ -189,7 +189,7 @@ input{font-family:inherit}
 .hdr-dot{width:6px;height:6px;border-radius:50%;background:var(--white);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .hdr-badge-txt{font-size:15px;font-weight:600;color:var(--white);letter-spacing:.06em}
-.hdr-reset{display:flex;align-items:center;gap:5px;padding:6px 12px;border-radius:20px;border:1.5px solid #FF6F30;background:#FF6F30;color:#fff;font-size:14.4px;font-weight:700;transition:all .15s;flex-shrink:0;white-space:nowrap}
+.hdr-reset{transition:all .15s;cursor:pointer;font-family:inherit}
 .hdr-reset:active{background:#E85A1C;border-color:#E85A1C}
 .hdr-reset:hover{border-color:var(--red);color:var(--red);background:var(--red-light)}
 
@@ -508,7 +508,7 @@ tr:hover td{background:#FAFAFA}
   <div class="hdr-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></div>
   <span class="hdr-brand">Jafar</span>
   <div class="hdr-sep"></div>
-  <span class="hdr-title" data-txt="appTitle">料金シミュレーター</span><span style="font-size:13px;font-weight:700;color:rgba(255,255,255,.6);margin-left:2px">v8.9</span>
+  <span class="hdr-title" data-txt="appTitle">料金シミュレーター</span><span style="font-size:13px;font-weight:700;color:rgba(255,255,255,.6);margin-left:2px">v8.91</span>
 
   <!-- 左パネルの開閉。以降のボタンは左パネルの幅を基準に配置する -->
   <div class="hdr-tools">
@@ -517,7 +517,8 @@ tr:hover td{background:#FAFAFA}
       <span id="panel-toggle-icon">◀</span>
     </button>
     <button class="hdr-reset" onclick="resetAll()" title="リセット"
-      style="display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1.5px solid #FF6F30;background:#FF6F30;color:#fff;font-size:16px;font-weight:700;flex-shrink:0;padding:0">↺</button>
+      style="display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1.5px solid #FF6F30;background:#FF6F30;color:#fff;flex-shrink:0;padding:0;line-height:1">
+      <span style="font-size:22px;font-weight:400;line-height:1;display:block;margin-top:-1px">↺</span></button>
     <div class="hdr-actions">
       <button id="btn-compare" onclick="showCompare()" style="display:flex;align-items:center;justify-content:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:14.4px;font-weight:600;flex-shrink:0;white-space:nowrap">各比較</button>
       <button id="btn-kaitei" onclick="toggleKaitei()" style="display:flex;align-items:center;justify-content:center;gap:4px;padding:6px 12px;border-radius:20px;background:var(--white);color:var(--red);border:1.5px solid var(--white);font-size:14.4px;font-weight:600;flex-shrink:0;white-space:nowrap"><span id="kaitei-label">改定前</span></button>
