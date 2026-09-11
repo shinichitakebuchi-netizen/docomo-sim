@@ -508,7 +508,7 @@ tr:hover td{background:#FAFAFA}
   <div class="hdr-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></div>
   <span class="hdr-brand">Jafar</span>
   <div class="hdr-sep"></div>
-  <span class="hdr-title" data-txt="appTitle">料金シミュレーター</span><span style="font-size:13px;font-weight:700;color:rgba(255,255,255,.6);margin-left:2px">v9.0</span>
+  <span class="hdr-title" data-txt="appTitle">料金シミュレーター</span><span style="font-size:13px;font-weight:700;color:rgba(255,255,255,.6);margin-left:2px">v9.01</span>
 
   <!-- 左パネルの開閉。以降のボタンは左パネルの幅を基準に配置する -->
   <div class="hdr-tools">
@@ -3579,11 +3579,20 @@ function printRightPanel(onDone){
    他社比較（2026年9月時点・税込）
    各社公式サイトの料金・割引条件をもとに作成
    ============================================================ */
+// 各社の割引名称（内訳表示に使う）
+const RIVAL_DISC={
+  docomo:{fam:'みんなドコモ割（3回線以上）',net:'ドコモ光セット割',card:'dカードお支払い割'},
+  sb:{fam:'新みんな家族割（3回線以上）',net:'おうち割 光セット',card:'PayPayカード割'},
+  au:{fam:'家族割プラス（3回線以上）',net:'auスマートバリュー',card:'au PAY カードお支払い割'},
+  ym:{fam:'家族割引サービス',net:'おうち割 光セット(A)',card:'PayPayカード ゴールド割'},
+  uq:{fam:'家族セット割',net:'自宅セット割',card:'au PAY カードお支払い割'},
+};
 const RIVALS={
   docomo:{n:'ドコモ',c:'#CC0033',plans:[
     {n:'ドコモ MAX',d:'無制限',base:8448,disc:{fam:1210,net:1210,card:550}},
     {n:'ポイ活MAX',d:'無制限',base:11748,disc:{fam:1210,net:1210,card:550}},
-    {n:'ドコモ mini（〜3GB）',d:'〜3GB',base:2750,disc:{fam:0,net:1210,card:550}},
+    {n:'ドコモ mini（6GB）',d:'6GB',base:2750,disc:{fam:0,net:1210,card:550}},
+    {n:'ドコモ mini（12GB）',d:'12GB',base:3850,disc:{fam:0,net:1210,card:550}},
     {n:'ahamo',d:'40GB',base:2970,disc:{fam:0,net:0,card:0}},
   ]},
   sb:{n:'ソフトバンク',c:'#E60012',plans:[
@@ -3608,6 +3617,15 @@ const RIVALS={
     {n:'コミコミプランバリュー',d:'35GB＋10分かけ放題',base:3828,disc:{fam:0,net:0,card:0}},
   ]},
 };
+// 他社比較の内訳を開閉する
+function toggleRival(id){
+  const el=document.getElementById(id);
+  const arw=document.getElementById(id+'-arw');
+  if(!el)return;
+  const open=el.style.display==='none';
+  el.style.display=open?'block':'none';
+  if(arw)arw.textContent=open?'▲':'▼';
+}
 // 他社比較のHTMLを作る
 function buildRivalHtml(){
   const n=S.lines.length||1;
@@ -3620,11 +3638,16 @@ function buildRivalHtml(){
   const rows=Object.entries(RIVALS).map(([k,co])=>{
     const plans=co.plans.map(p=>{
       let v=p.base;
-      if(famOk)v-=p.disc.fam;
-      if(netOk)v-=p.disc.net;
-      if(cardOk)v-=p.disc.card;
-      v=Math.max(0,v);
-      return {...p,after:v};
+      const applied=[];   // 適用した割引の内訳
+      const notApplied=[];// 条件を満たさず適用できない割引
+      const nm=RIVAL_DISC[k]||{};
+      [['fam',famOk],['net',netOk],['card',cardOk]].forEach(([key,ok])=>{
+        const amt=p.disc[key]||0;
+        if(!amt)return;
+        if(ok){ v-=amt; applied.push({n:nm[key]||key,a:amt}); }
+        else  { notApplied.push({n:nm[key]||key,a:amt}); }
+      });
+      return {...p,after:Math.max(0,v),applied,notApplied};
     });
     return {k,co,plans};
   });
@@ -3640,14 +3663,30 @@ function buildRivalHtml(){
   ${rows.map(r=>`
     <div style="border:1.5px solid var(--border);border-left:4px solid ${r.co.c};border-radius:10px;padding:11px 13px;margin-bottom:9px">
       <div style="font-size:14px;font-weight:700;color:${r.co.c};margin-bottom:7px">${r.co.n}</div>
-      ${r.plans.map(p=>{
+      ${r.plans.map((p,pi)=>{
         const best=(p.d==='無制限'&&p.after===minUn);
-        return `<div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px solid var(--border)">
-          <div style="flex:1;min-width:0">
-            <div style="font-size:13px;font-weight:600">${p.n}${best?'<span style="font-size:10px;color:var(--green);margin-left:5px">無制限で最安</span>':''}</div>
-            <div style="font-size:11px;color:var(--ink4)">${p.d}　基本 ¥${p.base.toLocaleString()}</div>
+        const id=`rv-${r.k}-${pi}`;
+        const totalDisc=p.applied.reduce((s,x)=>s+x.a,0);
+        return `<div style="border-bottom:1px solid var(--border)">
+          <div onclick="toggleRival('${id}')" style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 0;cursor:pointer;user-select:none">
+            <div style="flex:1;min-width:0">
+              <div style="font-size:13px;font-weight:600">${p.n}${best?'<span style="font-size:10px;color:var(--green);margin-left:5px">無制限で最安</span>':''}</div>
+              <div style="font-size:11px;color:var(--ink4)">${p.d}　基本 ¥${p.base.toLocaleString()}${totalDisc?`　割引 −¥${totalDisc.toLocaleString()}`:''}</div>
+            </div>
+            <div style="font-size:16px;font-weight:700;color:${r.co.c};white-space:nowrap">¥${p.after.toLocaleString()}</div>
+            <span id="${id}-arw" style="font-size:10px;color:var(--ink4);flex-shrink:0">▼</span>
           </div>
-          <div style="font-size:16px;font-weight:700;color:${r.co.c};white-space:nowrap">¥${p.after.toLocaleString()}</div>
+          <div id="${id}" style="display:none;padding:2px 0 9px 2px">
+            <div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0;color:var(--ink3)">
+              <span>基本料金</span><span>¥${p.base.toLocaleString()}</span></div>
+            ${p.applied.map(d=>`<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0;color:var(--green)">
+              <span>${d.n}</span><span>−¥${d.a.toLocaleString()}</span></div>`).join('')}
+            ${p.notApplied.length?p.notApplied.map(d=>`<div style="display:flex;justify-content:space-between;font-size:11.5px;padding:3px 0;color:var(--ink4)">
+              <span>${d.n}（条件未達）</span><span>−¥${d.a.toLocaleString()}</span></div>`).join(''):''}
+            <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;padding:6px 0 0;margin-top:4px;border-top:1.5px solid var(--border)">
+              <span>割引後</span><span style="color:${r.co.c}">¥${p.after.toLocaleString()}</span></div>
+            ${p.notApplied.length?`<div style="font-size:11px;color:var(--ink4);margin-top:5px;line-height:1.6">条件を満たせば、さらに −¥${p.notApplied.reduce((s,x)=>s+x.a,0).toLocaleString()} まで下がります</div>`:''}
+          </div>
         </div>`;
       }).join('')}
     </div>`).join('')}
