@@ -508,7 +508,7 @@ tr:hover td{background:#FAFAFA}
   <div class="hdr-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></div>
   <span class="hdr-brand">Jafar</span>
   <div class="hdr-sep"></div>
-  <span class="hdr-title" data-txt="appTitle">料金シミュレーター</span><span style="font-size:13px;font-weight:700;color:rgba(255,255,255,.6);margin-left:2px">v8.91</span>
+  <span class="hdr-title" data-txt="appTitle">料金シミュレーター</span><span style="font-size:13px;font-weight:700;color:rgba(255,255,255,.6);margin-left:2px">v9.0</span>
 
   <!-- 左パネルの開閉。以降のボタンは左パネルの幅を基準に配置する -->
   <div class="hdr-tools">
@@ -3575,6 +3575,90 @@ function printRightPanel(onDone){
    ネット種別の比較（ドコモ光1G / 10G / home 5G）
    2年後・4年後の累計負担を比較する
    ============================================================ */
+/* ============================================================
+   他社比較（2026年9月時点・税込）
+   各社公式サイトの料金・割引条件をもとに作成
+   ============================================================ */
+const RIVALS={
+  docomo:{n:'ドコモ',c:'#CC0033',plans:[
+    {n:'ドコモ MAX',d:'無制限',base:8448,disc:{fam:1210,net:1210,card:550}},
+    {n:'ポイ活MAX',d:'無制限',base:11748,disc:{fam:1210,net:1210,card:550}},
+    {n:'ドコモ mini（〜3GB）',d:'〜3GB',base:2750,disc:{fam:0,net:1210,card:550}},
+    {n:'ahamo',d:'40GB',base:2970,disc:{fam:0,net:0,card:0}},
+  ]},
+  sb:{n:'ソフトバンク',c:'#E60012',plans:[
+    {n:'ペイトク2',d:'無制限',base:10538,disc:{fam:1210,net:1100,card:550}},
+    {n:'テイガク無制限',d:'無制限',base:8008,disc:{fam:1210,net:1100,card:550}},
+    {n:'ミニフィット2（〜2GB）',d:'〜2GB',base:5258,disc:{fam:550,net:1100,card:550}},
+    {n:'ミニフィット2（〜5GB）',d:'〜5GB',base:6358,disc:{fam:550,net:1100,card:550}},
+  ]},
+  au:{n:'au',c:'#EB5505',plans:[
+    {n:'使い放題MAX＋',d:'無制限',base:7788,disc:{fam:1210,net:1100,card:0}},
+    {n:'スマホミニプラン＋（〜1GB）',d:'〜1GB',base:4928,disc:{fam:1210,net:1100,card:0}},
+    {n:'スマホミニプラン＋（〜5GB）',d:'〜5GB',base:8228,disc:{fam:1210,net:1100,card:0}},
+  ]},
+  ym:{n:'ワイモバイル',c:'#E4002B',plans:[
+    {n:'シンプル3 S（5GB）',d:'5GB',base:2365,disc:{fam:0,net:1100,card:770}},
+    {n:'シンプル3 M（30GB）',d:'30GB',base:4015,disc:{fam:0,net:1100,card:770}},
+    {n:'シンプル3 L（35GB）',d:'35GB',base:5115,disc:{fam:0,net:1100,card:770}},
+  ]},
+  uq:{n:'UQモバイル',c:'#E60044',plans:[
+    {n:'トクトクプラン2（〜5GB）',d:'〜5GB',base:3278,disc:{fam:0,net:1650,card:0}},
+    {n:'トクトクプラン2（〜30GB）',d:'〜30GB',base:4378,disc:{fam:0,net:1650,card:0}},
+    {n:'コミコミプランバリュー',d:'35GB＋10分かけ放題',base:3828,disc:{fam:0,net:0,card:0}},
+  ]},
+};
+// 他社比較のHTMLを作る
+function buildRivalHtml(){
+  const n=S.lines.length||1;
+  const famOk=n>=3;                       // 3回線以上で家族割の最大額
+  const netOk=S.shared.hikari||S.shared.home5g;
+  const holderL=holderLine();
+  const cardOk=holderL&&holderL.card!=='none';
+  const cond=`${n}回線${famOk?'（家族割あり）':''}${netOk?'／自宅ネットあり':'／自宅ネットなし'}${cardOk?'／カード払い':''}`;
+
+  const rows=Object.entries(RIVALS).map(([k,co])=>{
+    const plans=co.plans.map(p=>{
+      let v=p.base;
+      if(famOk)v-=p.disc.fam;
+      if(netOk)v-=p.disc.net;
+      if(cardOk)v-=p.disc.card;
+      v=Math.max(0,v);
+      return {...p,after:v};
+    });
+    return {k,co,plans};
+  });
+  // 無制限プランの最安を調べる
+  const unlimited=[];
+  rows.forEach(r=>r.plans.forEach(p=>{ if(p.d==='無制限')unlimited.push({co:r.co.n,n:p.n,v:p.after}); }));
+  const minUn=unlimited.length?Math.min(...unlimited.map(x=>x.v)):0;
+
+  return `
+  <div style="font-size:12px;color:var(--ink3);background:var(--bg);border-radius:8px;padding:8px 12px;margin-bottom:14px;line-height:1.7">
+    適用条件：${cond}<br>各社の割引条件を揃えて比較しています
+  </div>
+  ${rows.map(r=>`
+    <div style="border:1.5px solid var(--border);border-left:4px solid ${r.co.c};border-radius:10px;padding:11px 13px;margin-bottom:9px">
+      <div style="font-size:14px;font-weight:700;color:${r.co.c};margin-bottom:7px">${r.co.n}</div>
+      ${r.plans.map(p=>{
+        const best=(p.d==='無制限'&&p.after===minUn);
+        return `<div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px solid var(--border)">
+          <div style="flex:1;min-width:0">
+            <div style="font-size:13px;font-weight:600">${p.n}${best?'<span style="font-size:10px;color:var(--green);margin-left:5px">無制限で最安</span>':''}</div>
+            <div style="font-size:11px;color:var(--ink4)">${p.d}　基本 ¥${p.base.toLocaleString()}</div>
+          </div>
+          <div style="font-size:16px;font-weight:700;color:${r.co.c};white-space:nowrap">¥${p.after.toLocaleString()}</div>
+        </div>`;
+      }).join('')}
+    </div>`).join('')}
+  <div style="font-size:11px;color:var(--ink4);line-height:1.8;margin-top:8px">
+    ※ 2026年9月時点の各社公式サイトの料金（税込）をもとにしています。<br>
+    ※ 家族割は3回線以上、ネットは各社の指定サービス、カードは各社指定のカード払いを条件としています。<br>
+    ※ ワイモバイル・UQは家族割とネット割の併用不可のため、ネット割のみで計算しています。<br>
+    ※ ポイント還元は含みません。実際の料金は契約内容・キャンペーンにより異なります。
+  </div>`;
+}
+
 // カード種別とネット種別をタブで切り替えて比較する
 function showCompare(tab){
   tab=tab||'card';
@@ -3591,9 +3675,10 @@ function showCompare(tab){
       <div style="font-size:19px;font-weight:700">くらべる</div>
       <button onclick="document.getElementById('cmp-modal').remove()" style="padding:7px 13px;background:var(--bg);color:var(--ink3);border:1.5px solid var(--border2);border-radius:8px;font-size:13px;font-weight:600;font-family:inherit;cursor:pointer">閉じる</button>
     </div>
-    <div style="display:flex;gap:6px;margin-bottom:14px">
-      <button id="cmp-tab-card" onclick="switchCmp('card')" style="flex:1;padding:10px;border-radius:9px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;border:1.5px solid var(--border2)">カード種別</button>
-      <button id="cmp-tab-net" onclick="switchCmp('net')" style="flex:1;padding:10px;border-radius:9px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;border:1.5px solid var(--border2)">ネット種別</button>
+    <div style="display:flex;gap:5px;margin-bottom:14px">
+      <button id="cmp-tab-card" onclick="switchCmp('card')" style="flex:1;padding:10px 4px;border-radius:9px;font-size:13.5px;font-weight:600;font-family:inherit;cursor:pointer;border:1.5px solid var(--border2)">カード</button>
+      <button id="cmp-tab-net" onclick="switchCmp('net')" style="flex:1;padding:10px 4px;border-radius:9px;font-size:13.5px;font-weight:600;font-family:inherit;cursor:pointer;border:1.5px solid var(--border2)">ネット</button>
+      <button id="cmp-tab-rival" onclick="switchCmp('rival')" style="flex:1;padding:10px 4px;border-radius:9px;font-size:13.5px;font-weight:600;font-family:inherit;cursor:pointer;border:1.5px solid var(--border2)">他社</button>
     </div>
     <div id="cmp-body"></div>`;
   m.appendChild(inner);
@@ -3602,15 +3687,16 @@ function showCompare(tab){
   switchCmp(tab);
 }
 function switchCmp(tab){
-  const bc=document.getElementById('cmp-tab-card'), bn=document.getElementById('cmp-tab-net');
-  [[bc,tab==='card'],[bn,tab==='net']].forEach(([b,on])=>{
+  const bc=document.getElementById('cmp-tab-card'), bn=document.getElementById('cmp-tab-net'), br=document.getElementById('cmp-tab-rival');
+  [[bc,tab==='card'],[bn,tab==='net'],[br,tab==='rival']].forEach(([b,on])=>{
     if(!b)return;
     b.style.background=on?'var(--red)':'var(--white)';
     b.style.color=on?'#fff':'var(--ink3)';
     b.style.borderColor=on?'var(--red)':'var(--border2)';
   });
   const body=document.getElementById('cmp-body');
-  if(body)body.innerHTML=(tab==='card')?buildOtokuHtml():buildNetHtml();
+  if(!body)return;
+  body.innerHTML=(tab==='card')?buildOtokuHtml():(tab==='net')?buildNetHtml():buildRivalHtml();
 }
 
 function buildNetHtml(){
